@@ -1,0 +1,127 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt4.js"></script>
+    <script type="text/javascript" src="mas4_animations.js"></script>
+    <title>Effects of sample concentration Dependence of Absorbance (Beer Law)</title>
+</head>
+
+<body>  
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>నమూనా ఏకాగ్రత యొక్క ప్రభావాలు శోషణం యొక్క ఆధారపడటం (బీర్ లా)</h3><br>
+        <button id="reset_btn">ప్రయోగాన్ని రీసెట్ చేయండి</button>
+    </div><br>
+
+    <!-- Second row consists of three columns with one column containing buttons ie manual and data, the other containing concentration scale and another containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1200" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>మాన్యువల్</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. పవర్ బటన్ పై క్లిక్ చేసి వాయిద్యం ఆన్ చేసి, వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.</p>
+                        <p>2. పొటాషియం పర్మాంగనేట్ యొక్క తగిన సాంద్రతలు (చెప్పండి, 0.1 mM, 0.5 mM మరియు 1.0 mM) మూడు సజల పరిష్కారాలను సిద్ధం చేయండి. ఈ వర్చువల్ ల్యాబ్ ప్రయోగంలో, కొలత కోసం పరిష్కారాన్ని ఎంచుకోవడానికి ఏకాగ్రత పట్టీపై క్లిక్ చేసి లాగండి. అత్యల్ప ఏకాగ్రత పరిష్కారంతో ప్రారంభించండి. (ఎందుకు?)</p>
+                        <p>3. శుభ్రమైన, పొడి బీకర్ తీసుకోవడానికి బీకర్‌పై క్లిక్ చేయండి.</p>
+                        <p>4. శుభ్రమైన, పొడి బీకర్‌లో ద్రావణాన్ని పోయడానికి వాల్యూమెట్రిక్ ఫ్లాస్క్‌పై క్లిక్ చేయండి.</p>
+                        <p>5. బీకర్ నుండి తగిన పరిమాణంలో ద్రావణాన్ని సేకరించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి.</p>
+                        <p>6. దానిపై క్లిక్ చేయడం ద్వారా క్యూట్ తీసుకోండి.</p>
+                        <p>7. మైక్రో పైపెట్ నుండి క్యూవెట్‌పై క్లిక్ చేయడం ద్వారా ద్రావణాన్ని కువెట్‌లోకి పోయండి. (నిజమైన కొలతలలో, కువెట్ దాని వాల్యూమ్‌లో మూడింట రెండు వంతుల వరకు నిండి ఉంటుంది.)</p>
+                        <p>8. తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.</p>
+                        <p>9. నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనా నమూనాను నమూనా హోల్డర్‌లో మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్‌ను ఒకేసారి రిఫరెన్స్ హోల్డర్‌లో ఉంచవచ్చు.</p>
+                        <p>10. కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై స్కాన్ బటన్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్ ఆపరేషన్‌లో, నమూనా కోసం తగిన తరంగదైర్ఘ్యం సంఘటన కాంతిని ఎంచుకోవచ్చు మరియు తరంగదైర్ఘ్యం స్కాన్‌ను కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా అమలు చేస్తారు. ఒకరు స్కాన్‌ను శోషణ లేదా ట్రాన్స్మిటెన్స్ మోడ్‌లో అమలు చేయవచ్చు. స్కాన్ డేటా కంప్యూటర్ పేరుతో ఫైల్ పేరుతో నిల్వ చేయబడుతుంది. స్పెక్ట్రోఫోటోమీటర్ ఒకే పుంజం పరికరం అయితే, మొదట నమూనా ఖాళీ లేదా సూచన ఒక కువెట్‌లో తీసుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ నమూనా తరువాత నడుస్తుంది. సంబంధిత తరంగదైర్ఘ్యాల కోసం నమూనా డేటా నుండి సూచన డేటాను తీసివేయాలి.</p>
+                        <p>కొత్త కొలత ప్రారంభించడానికి రీసెట్ బటన్ పై 11.Click.</p>
+                        <p>12. తదుపరి అధిక ఏకాగ్రతతో కొలతను పునరావృతం చేయండి.</p>
+                        <p>13. డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా మొత్తం డేటాను సేకరించండి.</p>
+                        <p>వివిధ సాంద్రతల కోసం వివిధ తరంగదైర్ఘ్యాల వద్ద నమూనా యొక్క శోషణ డేటాను ప్లాట్ చేయండి మరియు గరిష్ట శోషణల తరంగదైర్ఘ్యాన్ని నిర్ణయించండి, అనగా స్పెక్ట్రల్ పీక్-పొజిషన్స్.</p>
+                        <p>15. ఒక నిర్దిష్ట తరంగదైర్ఘ్యం (చెప్పండి, 525 ఎన్ఎమ్) వర్సెస్ ఏకాగ్రత కోసం శోషణ విలువలను ప్లాట్ చేయండి మరియు లీనియర్ రిగ్రెషన్‌ను లెక్కించండి.</p>
+                        <p>16. 545 nm మరియు 570 nm అనే రెండు ఇతర తరంగదైర్ఘ్యాల కోసం శోషణ విలువలు వర్సెస్ ఏకాగ్రత యొక్క ప్లాటింగ్ పునరావృతం చేయండి మరియు సరళ రిగ్రెషన్లను లెక్కించండి.</p>
+                        <p>పైన పేర్కొన్న మూడు తరంగదైర్ఘ్యాల కోసం ఏకాగ్రత వర్సెస్ ఏకాగ్రత విలువల స్థానంలో ట్రాన్స్మిటెన్స్ తీసుకునే ఇలాంటి మూడు ప్లాట్లను నిర్మించండి మరియు సరళ రిగ్రెషన్లను లెక్కించండి.</p>
+                        <p>శోషణ మరియు ప్రసార విలువలు ఏకాగ్రతతో సరళ సంబంధం కలిగి ఉన్నాయా లేదా అనే విషయాన్ని గమనించి బీర్ చట్టాన్ని ధృవీకరించండి.</p>
+                        <p>ఇచ్చిన తరంగదైర్ఘ్యం కోసం సంబంధిత ఏకాగ్రత ద్వారా శోషణ డేటాను విభజించడం ద్వారా శోషణ కొలతలను 1 mM గా ration తకు సాధారణీకరించండి. ఇచ్చిన తరంగదైర్ఘ్యం వద్ద సాధారణీకరించిన డేటా (ప్రయోగాత్మక లోపం లోపల) ఏకాగ్రత -ప్రత్యేకంగా ఉందా? మీ ఫలితాలను చర్చించండి.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <img id="scale_image" src="images/scale_image.png">
+            <input type="range" id="slider" min="0" max="2" step="1" value="0" autocomplete="off"> 
+        </div>         
+
+        <!-- This column conatins the shelf with apparatus on top of it.-->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/only_shelf.png">
+            <!-- This column conatins the shelf dropdown box to choose the type of the solution and apparatus-->
+            <select id="solution" autocomplete="off">
+                <option selected="">పొటాషియం పర్మాంగనేట్</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div>
+    <br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+<!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" src="images/scan0.1mm.png">
+    <img id="scanimage2" src="images/scan0.5mm.png">
+    <img id="scanimage3" src="images/scan1mm.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for 10 mm sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 5 mm sample -->
+    <video id="graph2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 1 mm sample -->
+    <video id="graph3" class="video"><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+</body></html>

@@ -1,0 +1,130 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt4.js"></script>
+    <script type="text/javascript" src="mas4_animations.js"></script>
+    <title>Effects of sample concentration Dependence of Absorbance (Beer Law)</title>
+</head>
+
+<body >  
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class= "row">
+        <h3>Effects of sample concentration Dependence of Absorbance (Beer Law)</h3><br/>
+        <button id="reset_btn">Reset Experiment</button>
+    </div><br/>
+
+    <!-- Second row consists of three columns with one column containing buttons ie manual and data, the other containing concentration scale and another containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br/><br/>
+
+            <div id="manual" style = "z-index:1200" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times</span>
+                        <h2>Manual</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. Turn on the instrument by clicking on the power button and wait for 30 min for initialization of the instrument.  </p>
+                        <p>2. Prepare three aqueous solutions of appropriate concentrations (say, 0.1 mM, 0.5 mM and 1.0 mM) of potassium permanganate. In this virtual lab experiment, click and drag on the concentration bar to select the solution for measurement. Begin with the lowest concentration solution. (Why?)   </p>
+                        <p>3. Click on the beaker to take a clean, dry beaker.</p>
+                        <p>4. Click on the volumetric flask to pour the solution into the clean, dry beaker.</p>
+                        <p>5. Click on the micropipette to collect appropriate quantity of solution from the beaker. </p>
+                        <p>6. Take a cuvette by clicking on it. </p>
+                        <p>7.Pour the solution from the micropipette into the cuvette by clicking on the cuvette. (In real measurements, the cuvette is filled to about two-third of its volume.)   </p>
+                        <p> 8.Click on the spectrophotometer lid to open it.   </p>
+                        <p> 9.Click on the cuvette to place it in the sample holder. One has to use water as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. In this case, one can place the sample in the sample holder and the sample bank or reference in the reference holder simultaneously.  </p>
+                        <p> 10. Run the wavelength scan by clicking on the Computer monitor and then on the Scan button and observe the wavelength scan. In the real spectrophotometer operation, an appropriate wavelength range of incident light for the sample can be chosen and the wavelength scan are run via the accompanied computer software. One can run the scan in absorbance or transmittance mode. The scan data is stored in the computer with a file name. If the spectrophotometer is a single beam instrument, then first the sample blank or reference is taken in a cuvette and the wavelength scan is run followed by the sample. One has to subtract the reference data from the sample data for respective wavelengths.  </p>
+                        <p> 11.Click on Reset button to start new measurement.  </p>
+                        <p> 12.Repeat the measurement with next higher concentration and so on. </p>
+                        <p> 13.Collect all data by clicking on the Data tab. </p>
+                        <p> 14.Plot the absorbance data of the sample at various wavelengths for different concentrations and determine the wavelength of maximum absorptions i.e., spectral peak-positions.  </p>
+                        <p> 15.Plot the absorbance values for a particular wavelength (say, 525 nm) vs. concentration and calculate linear regression. </p>
+                        <p> 16.Repeat the plotting of the absorbance values vs. concentration for two other wavelengths say, 545 nm and 570 nm and calculate linear regressions.</p>
+                        <p> 17.Construct similar three plots taking transmittance in place of absorbance values vs. concentration for the above three wavelengths and calculate linear regressions.</p>
+                        <p> 18.Verify the Beer Law observing whether absorbance and transmittance values have linear correlation with concentration or not.</p>
+                        <p> 19.Normalize absorbance measurements to 1 mM concentration by dividing the absorbance data by the corresponding concentration for a given wavelength. Are the normalized data (within experimental error) concentration -specific at a given wavelength? Discuss your results. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <img id = "scale_image" src="images/scale_image.png">
+            <input type="range" id="slider" min="0" max="2" step="1"  value="0" autocomplete="off"> 
+        </div>         
+
+        <!-- This column conatins the shelf with apparatus on top of it.-->
+        <div class="col-sm-6" id="apparatus">
+            <img id = "shelf" src="images/only_shelf.png">
+            <!-- This column conatins the shelf dropdown box to choose the type of the solution and apparatus-->
+            <select id="solution" autocomplete="off">
+                <option selected>Potassium permanganate</option>
+            </select>
+            <img id="flask"   src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker"  src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div>
+    <br/><br/><br/>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id = "table_with_spec" src="images/table_with_spec.png">
+            <img id ="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id ="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id ="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id = "reference" src = "images/reference.png">
+            <img id="ref_cuvette" >
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo" ></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+<!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen"  src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img  id="clockHand"  src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan"  src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1"  src="images/scan0.1mm.png">
+    <img id="scanimage2"  src="images/scan0.5mm.png">
+    <img id="scanimage3"  src="images/scan1mm.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id ="scan_btn" src="images/vertical_button.png" >
+    <!-- Video that plots a graph for 10 mm sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 5 mm sample -->
+    <video id="graph2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 1 mm sample -->
+    <video id="graph3" class="video"><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+</body>
+</center>
+</html>

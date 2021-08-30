@@ -1,0 +1,98 @@
+
+.inj {
+            position: absolute;
+        }
+
+        .column {
+            float: left;
+        }
+
+        .left {
+            width: 10%;
+
+            style="background-color:#bbb;"
+        }
+
+        .right {
+            width: 90;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 30.33%;
+
+            padding: 2px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group button {
+            background-color: Red
+                /*#4CAF50*/
+            ;
+            /* Green background */
+            border: 1px solid green;
+            /* Green border */
+            color: white;
+            /* White text */
+            padding: 5px 10px;
+            /* Some padding */
+            cursor: pointer;
+            /* Pointer/hand icon */
+            width: 23%;
+            /* Set a width if needed 20%*/
+            margin: 5;
+            /* increase margin*/
+            display: block;
+            /* Make the buttons appear below each other */
+        }
+
+        .btn-group button:not(:last-child) {
+            border-bottom: none;
+            /* Prevent double borders */
+        }
+
+        /* Add a background color on hover */
+        .btn-group button:hover {
+            background-color: Pink
+                /*#3e8e41*/
+            ;
+        }
+
+        svg {
+            border: 3px solid #eee;
+            display: block;
+            margin: 1em auto;
+        }
+
+        .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 1.5s normal infinite;
+            reverse
+        }
+
+        @keyframes dash {
+            from {
+                stroke-dashoffset: 1000;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+
+        .inj {
+            position: obsolute;
+        }

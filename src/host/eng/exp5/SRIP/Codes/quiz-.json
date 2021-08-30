@@ -1,0 +1,262 @@
+{
+    "artciles": [
+        {
+            "quiztitle":"Quiz for Experiment",
+            "containers":"5"
+        },
+        {
+            "q": "How many types of proton environment are present for benzene ?",
+            "option": [
+                "3",
+                "2",
+                "1"
+            ],
+            "answer": "2",
+            "description": "Benzene has one environment on it's own and another for the H atoms attached to it."
+        },
+        {
+            "q": "What is the characteristic spin (I) of 1H?",
+            "option": [
+                "1/2",
+                "3/2",
+                "5/2"
+            ],
+            "answer": "1/2",
+            "description": "Theory based"
+        },
+        {
+            "q": " Which values can a nuclear spin quantum number have?",
+            "option": [
+                "0",
+                "5/3",
+                "6/7"
+            ],
+            "answer": "5/3",
+            "description": "Theory based"
+        },
+        {
+            "q": "NMR spectroscopy is used for determining structure in which of the following materials?",
+            "option": [
+                "Radioactive materials",
+                "Liquids",
+                "Gases"
+            ],
+            "answer": "Liquids",
+            "description": "NMR spectroscopy is used for determining structure in liquids. It is also used for determining the structure in soluble chemical compounds."
+        },
+        {
+            "q": "NMR is the study of absorption of __________ by nuclei in a magnetic field?",
+            "option": [
+                "Radioactive radiation",
+                "Radiofroquency radiation,
+                "Microwaves"
+            ],
+            "answer": "Radiofroquency radiation",
+            "description": "NMR is the study of absorption of radio frequency radiation by nuclei in a magnetic field. For a particular nucleus an NMR absorption spectrum may consist of one to several groups of absorption lines."
+        },
+        {
+            "q": "NMR spectrometer provides ____________ and _____________ method of determining structure in soluble chemical compounds.",
+            "option": [
+                "Accurate,Destructive",
+                "Accurate,Non-Destructive",
+                "Inaccurate,Destructive"
+            ],
+            "answer": "Accurate,Non-Destructive",
+            "description": "NMR spectrometer provides accurate and non-destructive method of determining structure in soluble chemical compounds."
+        },
+        {
+            "q": "NMR spectroscopy indicates the chemical nature of the __________ and spatial positions of
+_______",
+            "option": [
+                "Protons,Neutrons",
+                "Nuclues,Electrons",
+                "Nucleus,Neighbouring Nuclei"
+            ],
+            "answer": "Nucleus,Neighbouring Nuclei",
+            "description": "NMR spectroscopy indicates the chemical nature of the nuclei and spatial positions of neighbouring nuclei."
+        },
+        {
+            "q": "In NMR spectroscopy, the spinning nuclei in strong magnetic field must be irradiated by which of the following?",
+            "option": [
+                "Perpendicular and strong field",
+                "Perpendicular and weak field",
+                "Parallel and strong field"
+            ],
+            "answer": "Perpendicular and weak field",
+            "description": "Theory"
+        },
+        {
+            "q": "Elementary particles such as electrons and nucleus have the property of spin.",
+            "option": [
+                "True",
+                "Flase",
+                "None of the above"
+            ],
+            "answer": "True",
+            "description": "Theory"
+        },
+        {
+            "q": "The difference between the field necessary for resonance in the sample and in some arbitrary chosen compound is which of the following?",
+            "option": [
+                "Resonanace Shift",
+                "Chemical Shift",
+                "Matrix effect"
+            ],
+            "answer": "Chemical Shift",
+            "description": "Theory"
+        },
+        {
+            "q": "What are the units of chemical shift?",
+            "option": [
+                "ppm",
+                "km",
+                "m/sec"
+            ],
+            "answer": "ppm",
+            "description": "Theory"
+        },
+        {
+            "q": "O2 has which spin?",
+            "option": [
+                "Integral",
+                "Half Integral",
+                "Zero"
+            ],
+            "answer": "Zero",
+            "description": "Number of protons=Number of Neutrons"
+        },
+        {
+            "q": "The amount of energy available in radio frequency radiation is sufficient for which of the following?",
+            "option": [
+                "Excite an atom",
+                "Vibrate an atom",
+                "Affect the nuclear spin of an atom"
+            ],
+            "answer": "Affect the nuclear spin of an atom",
+            "description": "The amount of energy available in radio frequency radiation is sufficient for affecting the nuclear spin of an atom. It constitute the most fundamental part of spectroscopy."
+        },
+        {
+            "q": "Which waves does NMR use for detection of structure of substances?",
+            "option": [
+                "Microwaves",
+                "UV radiation",
+                "Radio Waves"
+            ],
+            "answer": "Radio Waves",
+            "description": "As radio waves are the lowest form of EM waves, they are used in NMR."
+        },
+        {
+            "q": "When energy is absorbed by the sample, the absorption can be observed as a change in signal developed by which of the following components?",
+            "option": [
+                "Amplifier",
+                "Radio frequency Detector",
+                "Photon Detector"
+            ],
+            "answer": "Radio frequency Detector",
+            "description": "When energy is absorbed by the sample, the absorption can be observed as a change in signal developed by radiofrequency detector. It is then given to an amplifier."
+        },
+        {
+            "q": "What is the formula of acetaldehyde?",
+            "option": [
+                "C2H4O",
+                "C3H6O",
+                "C7H6O"
+            ],
+            "answer":"C2H4O ",
+            "description": "Theory"
+        },
+        {
+            "q": "What are the units on X-axis of the graph in the experiment?",
+            "option": [
+                "Hz",
+                "ppm",
+                "m"
+            ],
+            "answer": "ppm",
+            "description": "Theory"
+        },
+        {
+            "q": "which of the following nuclides will NOT be considered suitable for use with NMR spectroscopy?",
+            "option": [
+                "Option 2H",
+                "Option 19F",
+                "Option 20Ne"
+            ],
+            "answer": "20Ne",
+            "description": "20
+ start superscript, 20, end superscriptNe is the nuclide that is NOT suitable for use with NMR spectroscopy with an atomic number of 10. It must have 10 protons and 10 neutrons, both even."
+        },
+        {
+            "q": "Which of the following statements most accurately describes the characteristics of 
+1 H-NMR spectroscopy?",
+            "option": [
+                "Labile protons such as -OH and -NH have no characteristic chemical shift.",
+                "The energy needed to flip energy states of the nuclei correspond to energies in the microwave region.",
+                "For a half-spin nuclei,there are 2 possible energy levels:lower occupied by spins aligned against and higher occupied by spins aligned with the magnetic field."
+            ],
+            "answer": "Labile protons such as -OH and -NH have no characteristic chemical shift.",
+            "description": "NMR spectroscopy uses non-ionizing EM radiation to flip the nuclei into the different energy states. More specifically, the nuclei absorb energies that are in the radio wave region, which is the region of lowest energy and longest wavelength."
+        },
+        {
+            "q": "Which of the following statements most accurately describes the chemical shift in 
+1H-NMR?",
+            "option": [
+                "Electronegative atoms enhance the shielding of hydrogens and cause downfield shifts, and the extent of this shift is proportional to the electronegativity of the atom and proximity to the hydrogen.",
+                "The applied magnetic field causes the p electrons of aromatic compounds to circulate and produce a secondary magnetic field that causes the deshielding of the aromatic hydrogens."
+                "Aryl, carbonyl, and allylic groups are electron-donating by induction and cause a downfield shift of a hydrogen on an adjacent carbon."
+            ],
+            "answer": "The applied magnetic field causes the p electrons of aromatic compounds to circulate and produce a secondary magnetic field that causes the deshielding of the aromatic hydrogens.",
+            "description": "Theory"
+        },
+        {
+            "q": "Apart from 1H,which other element is most commonly used in NMR?",
+            "option": [
+                "12C",
+                "29He",
+                "13C"
+            ],
+            "answer": "12C",
+            "description": "Theory"
+        },
+        {
+            "q": "What is the possible number of spin states? (I denoted the spin)",
+            "option": [
+                "2I+1",
+                "2I+3",
+                "5I+1"
+            ],
+            "answer": "2I+1",
+            "description": "Theory"
+        },
+        {
+            "q": "What is respresented on the Y-Axis ",
+            "option": [
+                "Intensity",
+                "Concentration",
+                "Magnetic Field"
+            ],
+            "answer": "Intensity",
+            "description": "Theory"
+        },
+        {
+            "q": "The area under an NMR resonance is proportional to _____________________",
+            "option": [
+                "the number of nuclei that give rise to that resonance",
+                "total number of nuclei in that compound",
+                "total number of nuclei in that radio waves"
+            ],
+            "answer": "the number of nuclei that give rise to that resonance",
+            "description": "Theory"
+        },
+        {
+            "q": "One proton on an adjacent carbon will split a proton into a _________",
+            "option": [
+                "Doublet",
+                "Triplet",
+                "Quartet "
+            ],
+            "answer": "Doublet",
+            "description": "Theory"
+        }
+    ]
+}

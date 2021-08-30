@@ -1,0 +1,656 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="వర్చువల్ ల్యాబ్‌లకు స్వాగతం - భారత మంత్రిత్వ శాఖ యొక్క మానవ వనరుల అభివృద్ధి ప్రభుత్వ మంత్రిత్వ శాఖ" name="description"/>
+  <meta content="వర్చువల్ ల్యాబ్‌లకు స్వాగతం - భారత మంత్రిత్వ శాఖ యొక్క మానవ వనరుల అభివృద్ధి ప్రభుత్వ మంత్రిత్వ శాఖ" name="author"/>
+  <title>
+   వర్చువల్ ల్యాబ్‌లకు స్వాగతం - భారత మంత్రిత్వ శాఖ యొక్క మానవ వనరుల అభివృద్ధి ప్రభుత్వ మంత్రిత్వ శాఖ
+  </title>
+  <link href="http://vlabs.iiit.ac.in/src/css/style.css" rel="stylesheet"/>
+  <link href="http://vlabs.iiit.ac.in/src/scss/style.scss" rel="stylesheet"/>
+  <link href="../images/favicon.ico" rel="shortcut icon"/>
+  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Important Owl stylesheet -->
+  <link href="../vendors/owl-carousel/owl.carousel.css" rel="stylesheet"/>
+  <link href="../vendors/owl-carousel/owl.theme.css" rel="stylesheet"/>
+  <link href="../vendors/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="tabs.js" type="text/javascript">
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-67558473-1', 'auto');ga('send', 'pageview');
+  </script>
+ </head>
+ <body>
+  <div id="lab">
+   <!-- The Lab Document Container-->
+   <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+   <header id="lab-header">
+    <div class="logo" id="experiment-header-logo">
+     <!-- Enclose the logo image of your lab or write it in 
+	text-->
+     <a href="http://virtual-labs.ac.in/">
+      <div class="imagemap">
+       <img alt="" src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" usemap="#logos"/>
+       <map name="logos">
+        <area alt="Vlab" coords="0,0,505,98" href="http://www.vlab.co.in/" shape="rect" title="Vlab"/>
+        <area alt="IIIT" coords="734,0,1022,97" href="http://www.iiit.ac.in/" shape="rect" title="IIIT"/>
+        <area alt="Default" nohref="nohref" shape="default" title="Default"/>
+       </map>
+      </div>
+     </a>
+    </div>
+    <div class="heading" id="lab-header-heading">
+     <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+     <a href="../index.html">
+      ABSORPTION SPECTROSCOPY VIRTUAL LAB
+     </a>
+    </div>
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+   </header>
+   <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+   <article id="lab-article">
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+     <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+     <div class="heading" id="lab-article-heading">
+      సోడియం బోరోహైడ్రైడ్ చేత బంగారు కణాల ఉత్ప్రేరక తగ్గింపు
+     </div>
+     <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+     <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+     </ul>
+    </nav>
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+     <!-- First section of the article-->
+     <section id="lab-article-section-1">
+      <div class="icon" id="lab-article-section-1-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/introduction.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+      <div class="heading" id="lab-article-section-1-heading">
+       పరిచయం
+      </div>
+      <!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-1-content">
+       <p>
+        UV- కనిపించే శోషణ స్పెక్ట్రోస్కోపీని ఉపయోగించడం ద్వారా అనేక ప్రతిచర్యల యొక్క గతిశాస్త్రానికి సంబంధించిన సమాచారం పొందబడింది. ప్రతిచర్య యొక్క పురోగతి, అనగా, ప్రతిచర్యలు లేదా ఉత్పత్తుల సాంద్రతలలో మార్పు స్పెక్ట్రోఫోటోమెట్రిక్‌గా అనుసరించవచ్చు, వాటిలో ఒకటి కాంతి శోషక పదార్థం. ఉదాహరణకు, సేంద్రీయ రంగుల యొక్క ఆక్సీకరణ లేదా తగ్గింపు ప్రతిచర్యను సులభంగా శోషణ స్పెక్ట్రోస్కోపీ పద్ధతిలో అనుసరించవచ్చు, ఎందుకంటే రంగులు రంగు సమ్మేళనాలు. సేంద్రీయ మరియు అకర్బన రంగు సమ్మేళనాలతో పాటు, వాటి చెదరగొట్టబడిన రాష్ట్రాల్లోని కొన్ని లోహ కణాలు విభిన్న రంగులను చూపుతాయి. అందువల్ల, కొన్ని కణాలను తగ్గించే ఏజెంట్ ద్వారా లోహ అయాన్ల తగ్గింపు నుండి ఇటువంటి కణాల ఏర్పాటును కూడా UV- కనిపించే స్పెక్ట్రోఫోటోమెట్రీని ఉపయోగించి అధ్యయనం చేయవచ్చు. ఈ ప్రయోగంలో మేము మొదట సజల సర్ఫాక్టెంట్ మాధ్యమంలో వేర్వేరు పరిమాణ బంగారు కణాల ఏర్పాటును అధ్యయనం చేసి, ఆపై ఈ కణాల ద్వారా ఉత్ప్రేరకమైన సోడియం బోరోహైడ్రైడ్ ద్వారా సేంద్రీయ రంగు, ఇయోసిన్ తగ్గించడాన్ని అధ్యయనం చేస్తాము.
+       </p>
+      </div>
+     </section>
+     <!-- Second section of the article-->
+     <section id="lab-article-section-2">
+      <div class="icon" id="lab-article-section-2-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/objective.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-2-heading">
+       ఆబ్జెక్టివ్
+      </div>
+      <!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-2-content">
+       <p>
+       </p>
+       <ul>
+        <li>
+         ప్రతిచర్యల యొక్క గతిశాస్త్ర అధ్యయనంలో శోషణ స్పెక్ట్రోస్కోపీ వాడకాన్ని ప్రదర్శించడానికి.
+        </li>
+        <li>
+         స్పెక్ట్రోఫోటోమెట్రిక్ పద్ధతుల ద్వారా ఉత్పత్తి నిర్మాణం లేదా ప్రతిచర్య క్షీణతను పర్యవేక్షించడం ద్వారా ప్రతిచర్య యొక్క గతిశాస్త్రం ఎలా అనుసరిస్తుందో చూపించడానికి.
+        </li>
+        <li>
+         సోడియం బోరోహైడ్రైడ్ చేత బంగారు కణాలు మరియు ఇయోసిన్ యొక్క బంగారు కణాల ఉత్ప్రేరక తగ్గింపు యొక్క ప్రతిచర్యలను అధ్యయనం చేయడానికి.
+        </li>
+       </ul>
+       <p>
+       </p>
+      </div>
+     </section>
+     <!-- Second section of the article-->
+     <section id="lab-article-section-3">
+      <div class="icon" id="lab-article-section-3-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/theory.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-3-heading">
+       థియరీ
+      </div>
+      <!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-3-content">
+       <p>
+        <b>
+         బంగారు కణ నిర్మాణ ప్రతిచర్య యొక్క గతిశాస్త్రం:
+        </b>
+        చిన్న లోహ కణాలపై కాంతి పడిపోయినప్పుడు, కాంతి లోహ కణ మరియు విద్యుద్వాహకము యొక్క ఇంటర్ఫేస్ వద్ద ఉపరితల ఎలక్ట్రాన్-వాయువు యొక్క సామూహిక పొందికైన డోలనాలను ఉత్తేజపరుస్తుంది. లోహ కణాలలో లోహ ఉపరితల ఎలక్ట్రాన్-వాయువు యొక్క ఈ సామూహిక పొందికైన డోలనాన్ని స్థానికీకరించిన ఉపరితల ప్లాస్మోన్ ప్రతిధ్వని (LSPR) అంటారు. బంగారం, వెండి మరియు రాగి వంటి కొన్ని లోహాలకు విద్యుదయస్కాంత స్పెక్ట్రం కనిపించే పరిధిలో ఎల్‌ఎస్‌పిఆర్ వస్తుంది. అందువల్ల, ఎల్‌ఎస్‌పిఆర్ ఆస్తితో ఇటువంటి కణాల నిర్మాణం మరియు అభివృద్ధిని శోషణ స్పెక్ట్రోస్కోపీని ఉపయోగించి అధ్యయనం చేయవచ్చు. లోహ కణాలు, సూత్రప్రాయంగా, తగిన ప్రతిచర్య మాధ్యమంలో వాటి అయాన్లను తగ్గించడం ద్వారా తయారు చేయవచ్చు. ఉదాహరణకు, పసుపు రంగు సజల బంగారం (III) అయాన్ ద్రావణానికి తగ్గించే ఏజెంట్ సోడియం బోరోహైడ్రైడ్ అదనంగా బంగారు కణాల ple దా రంగు చెదరగొట్టడాన్ని ఉత్పత్తి చేస్తుంది. వెండి మరియు బంగారు అయాన్లను సులభంగా తగ్గించవచ్చు కాబట్టి, ట్రిటాన్-ఎక్స్ 100 (టిఎక్స్ -100), ఆల్కహాల్స్ వంటి అణువుల సమక్షంలో ఇటువంటి అయాన్ల ఫోటో-రేడియేషన్లు కూడా వాటిని లోహ స్థితులకు తగ్గించగలవు. ఈ ప్రయోగంలో, TX-100, తటస్థ సర్ఫ్యాక్టెంట్‌ను తగ్గించే ఏజెంట్-కమ్-పార్టికల్ స్టెబిలైజర్‌గా ఉపయోగిస్తారు. ఈ ఫోటో-రేడియేషన్ చాలా చిన్న బంగారు కణాలను ఉత్పత్తి చేస్తుంది. ఈ చిన్న బంగారు కణాలను విత్తన కణాలుగా ఉపయోగించవచ్చు మరియు ఎక్కువ బంగారు అయాన్లను చేర్చి పెద్ద పరిమాణ కణాలుగా పెంచుకోవచ్చు మరియు ఆస్కార్బిక్ ఆమ్లం (టేబుల్ 1) వంటి బలహీనమైన తగ్గించే ఏజెంట్ సహాయంతో వాటిని తగ్గించవచ్చు. ఈ దశలో బలహీనమైన తగ్గించే ఏజెంట్ అవసరం, తద్వారా విత్తన కణాల ఉపరితలంపై మాత్రమే న్యూక్లియేషన్ (తగ్గింపు) సంభవిస్తుంది మరియు విత్తన కణాలు పరిమాణాలలో పెరుగుతాయి కాని సజాతీయ న్యూక్లియేషన్ ద్వారా కొత్త కణాలు ఏర్పడవు. ఇది దాదాపు మోనోడిస్పెర్స్డ్ పెద్ద పరిమాణ కణాల ఏర్పాటును నిర్ధారిస్తుంది. దాదాపు గోళాకార ఘర్షణ బంగారు కణాలు ple దా రంగులో ఉంటాయి మరియు తరంగదైర్ఘ్యం 530 nm చుట్టూ గ్రహిస్తాయి.
+కణాల పెరుగుదల ప్రతిచర్య సాపేక్షంగా నెమ్మదిగా ఉన్నందున, వృద్ధి ప్రతిచర్యను స్పెక్ట్రోఫోటోమీటర్ సులభంగా అనుసరించవచ్చు. కణాల పెరుగుదల ప్రక్రియలో శోషణలో మార్పు కారణంగా విత్తనం నుండి ప్రారంభమయ్యే కణాల పెరుగుదలను స్పెక్ట్రోఫోటోమెట్రిక్‌గా అనుసరించవచ్చు. విత్తనాల నిష్పత్తిని బంగారు అయాన్ సాంద్రతలకు మార్చడం ద్వారా వివిధ పరిమాణాల బంగారు కణ నమూనాలను తయారు చేయవచ్చు. విత్తన-మధ్యవర్తిత్వ పెద్ద బంగారు కణాల అభివృద్ధి సిగ్మోయిడల్ ఆకారపు వక్రతను చూపిస్తుంది, శోషణ వర్సెస్ సమయం పన్నాగం పెరిగినప్పుడు. ఇది కణాల యొక్క ఆటోటాలిటిక్ పెరుగుదలను సూచిస్తుంది. సమయానికి సంబంధించి శోషణ అభివృద్ధి కోసం ఆటోకాటలిటిక్ ప్లాట్ ద్వారా దీనిని ధృవీకరించవచ్చు, అనగా, ln a / (1-a) vs. t ఇక్కడ a = A
+        <sub>
+         t
+        </sub>
+        / A
+        <sub>
+         ∞
+        </sub>
+        , A శోషణతో.
+        <b>
+         సోడియం బోరోహైడ్రైడ్ చేత ఇయోసిన్ యొక్క బంగారు కణ-ఉత్ప్రేరక తగ్గింపు యొక్క గతిశాస్త్రం:
+        </b>
+        ఎయోసిన్ అనేది సేంద్రీయ నీటిలో కరిగే ప్రకాశవంతమైన ఎరుపు రంగు, ఇది జీవశాస్త్రం, వైద్య విజ్ఞానం, వస్త్ర మరణం, సిరా తయారీ మొదలైన వాటిలో ఉపయోగించబడింది. దీని తగ్గిన రూపం రంగులేనిది మరియు అందువల్ల దాని తగ్గింపును దాని శోషణ గరిష్ట తీవ్రత తగ్గడం ద్వారా సులభంగా పర్యవేక్షించవచ్చు. . 535 ఎన్ఎమ్ తరంగదైర్ఘ్యం వద్ద ఇయోసిన్ శోషణ తగ్గుదల జరిగింది. కణాలు లేనప్పుడు, ప్రయోగాత్మక సమయ ప్రమాణంలో సజల ద్రావణంలో సోడియం బోరోహైడ్రైడ్ ద్వారా ఇయోసిన్ తగ్గించే సంకేతాన్ని గమనించలేరు. ఏదేమైనా, బంగారు కణాల సమక్షంలో తగ్గింపు రేటు చాలా వేగంగా మారుతుంది. ఇక్కడ బంగారు కణాలు ఉత్ప్రేరకాలుగా పనిచేస్తాయి. బంగారు కణ పరిమాణం మరియు ఏకాగ్రత (టేబుల్ 1) పై ఆధారపడి, తగ్గింపు రేటు మారుతూ ఉంటుంది, అయినప్పటికీ ఇక్కడ తయారుచేసిన అన్ని కణాల మొత్తం బంగారం (1 × 10)
+        <sup>
+         -4
+        </sup>
+        M).
+ఇయోసిన్కు సంబంధించి ఒక నకిలీ-మొదటి ఆర్డర్ గతిశాస్త్రం, అనగా, లాగ్ (ఎ
+        <sub>
+         t
+        </sub>
+        - ఎ
+        <sub>
+         ది
+        </sub>
+        ) వర్సెస్ సమయం (టి) ఈ సందర్భంలో ఉపయోగించవచ్చు, ఇక్కడ A.
+        <sub>
+         t
+        </sub>
+        t మరియు A ఏ సమయంలోనైనా శోషణను సూచిస్తుంది
+        <sub>
+         ది
+        </sub>
+        రంగు కలపడానికి ముందు సజల బంగారు కణ వ్యవస్థ కోసం. అందువల్ల ఈ ప్లాట్ల నుండి సూడో-ఫస్ట్-ఆర్డర్ రేట్ స్థిరాంకాలు (కె) మరియు సంబంధిత సహసంబంధ గుణకాల విలువలను నిర్ణయించవచ్చు.
+       </p>
+      </div>
+     </section>
+     <section id="lab-article-section-4">
+      <div class="icon" id="lab-article-section-4-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/procedure.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-4-heading">
+       విధానము
+      </div>
+      <!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-4-content">
+       <p>
+        <b>
+         A. బంగారు విత్తనాల పరిష్కారం తయారీ.
+        </b>
+       </p>
+       <ol>
+        <li>
+         2.94 ఎంఎల్ 10
+         <sup>
+          -2
+         </sup>
+         M TX-100 మరియు 0.06 mL 4.975 × 10
+         <sup>
+          -3
+         </sup>
+         M Au- (III) (HAuCl4. XH2O) పరిష్కారాలు 1 cmquartz cuvette లో తీసుకోబడతాయి.
+        </li>
+        <li>
+         క్యూవెట్ ఒక జెర్మిసైడల్ (యువి) దీపం నుండి 3 సెం.మీ దూరంలో ఉంచబడుతుంది మరియు 30 నిమిషాలు UV కాంతితో వికిరణం చేయబడుతుంది.
+పసుపు రంగు ద్రావణం ple దా రంగులోకి మారుతుంది, ఇది చక్కటి ఘర్షణ బంగారు నానోపార్టికల్స్ ఏర్పడడాన్ని సూచిస్తుంది.
+        </li>
+        <li>
+         పవర్ బటన్‌పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ పరికరాన్ని ఆన్ చేయండి మరియు వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.
+        </li>
+        <li>
+         తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.
+        </li>
+        <li>
+         పరికరం యొక్క నమూనా సెల్ హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి.
+ఈ కొలతలో సజల టిఎక్స్ -100 ద్రావణాన్ని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది.
+        </li>
+        <li>
+         కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై ‘స్కాన్’ టాబ్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్‌లో, నమూనా కోసం తగిన తరంగదైర్ఘ్యం సంఘటన కాంతిని ఎంచుకోవచ్చు మరియు తరంగదైర్ఘ్యం స్కాన్‌ను కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా అమలు చేస్తారు. ఒకరు స్కాన్‌ను శోషణ లేదా ట్రాన్స్మిటెన్స్ మోడ్‌లో అమలు చేయవచ్చు. స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది.
+        </li>
+        <li>
+         దాన్ని తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై మళ్లీ క్లిక్ చేయండి.
+        </li>
+        <li>
+         ఇన్స్ట్రుమెంట్ టేబుల్‌కు తీసుకెళ్లడానికి కువెట్‌పై క్లిక్ చేయండి.
+        </li>
+        <li>
+         డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి.
+        </li>
+        <li>
+         వివిధ తరంగదైర్ఘ్యాల వద్ద నమూనా యొక్క శోషణ (మరియు ప్రసారం) ను ప్లాట్ చేయండి మరియు గరిష్ట శోషణ యొక్క తరంగదైర్ఘ్యాన్ని నిర్ణయించండి, అనగా, స్పెక్ట్రల్ పీక్-పొజిషన్. ఘర్షణ బంగారు కణాలు తరంగదైర్ఘ్యం 520 ఎన్ఎమ్ దగ్గర గరిష్ట కాంతిని గ్రహిస్తాయి.
+        </li>
+       </ol>
+       <p>
+       </p>
+       <p>
+        <b>
+         వివిధ పరిమాణాల ఘర్షణ బంగారు కణాలు మరియు వాటి పరిణామం యొక్క కైనెటిక్ అధ్యయనాల తయారీ.
+        </b>
+        విత్తన కణాలు పెద్ద బంగారు కణాల ఉత్పత్తికి ఉపయోగించే ముందు వాటిని 3-4 గం వరకు వదిలివేస్తారు. రెండు-దశల విత్తన మధ్యవర్తిత్వ (పునరుక్తి లేని) వృద్ధి పద్ధతి ద్వారా వివిధ పరిమాణాల ఘర్షణ బంగారు కణాలను తయారు చేయవచ్చు.
+మూడు వేర్వేరు పరిమాణాల బంగారు కణాలను తయారుచేసే పరిస్థితులు క్రింది పట్టికలో ఇవ్వబడ్డాయి.
+       </p>
+       <ol>
+        <li>
+         పవర్ బటన్‌పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ పరికరాన్ని ఆన్ చేయండి మరియు వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.
+        </li>
+        <li>
+         నమూనా 1 తయారీ కోసం ఈ క్రింది విధంగా కొనసాగండి.
+        </li>
+        <li>
+         దానిపై క్లిక్ చేసి మైక్రోపిపెట్ తీసుకోండి.
+        </li>
+        <li>
+         విత్తన ద్రావణంలో అవసరమైన పరిమాణాన్ని సేకరించడానికి మైక్రోపిపెట్‌పై మళ్లీ క్లిక్ చేయండి.
+        </li>
+        <li>
+         మరోసారి పైపెట్‌పై క్లిక్ చేయడం ద్వారా క్యూపెట్‌లో అవసరమైన పరిమాణంలో u (III) అయాన్ ద్రావణానికి మైక్రోపిపెట్ నుండి విత్తన ద్రావణాన్ని జోడించండి.
+        </li>
+        <li>
+         ఆస్కార్బిక్ ఆమ్ల ద్రావణంపై క్లిక్ చేయడం ద్వారా ఒకేసారి 0.04 mL 10-2 M ఆస్కార్బిక్ ఆమ్లాన్ని జోడించండి (డ్రాప్ ద్వారా డ్రాప్ చేయకూడదు).
+        </li>
+        <li>
+         ఆస్కార్బిక్ ఆమ్లం కలిపిన వెంటనే, విత్తనం నుండి కణాల అభివృద్ధి యొక్క గతిశాస్త్రం సమయం (331 at C వద్ద) with = 520 nm వద్ద శోషణ విలువ పెరుగుదలను అనుసరించి అనుసరించాలి.
+        </li>
+        <li>
+         తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.
+        </li>
+        <li>
+         పరికరం యొక్క నమూనా సెల్ హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి.
+ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనా నమూనాను నమూనా హోల్డర్‌లో మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్‌ను ఒకేసారి రిఫరెన్స్ హోల్డర్‌లో ఉంచవచ్చు.
+        </li>
+        <li>
+         ఛాంబర్ మూతపై క్లిక్ చేయడం ద్వారా దాన్ని మూసివేయండి.
+        </li>
+        <li>
+         స్కాన్ పేజీని తెరవడానికి కంప్యూటర్ మానిటర్‌పై క్లిక్ చేయండి.
+        </li>
+        <li>
+         ‘స్కాన్’ బటన్‌పై క్లిక్ చేసి గతిశాస్త్ర మోడ్‌లో స్కాన్‌ను అమలు చేయండి మరియు స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్‌లో, కాంతి యొక్క సరైన తరంగదైర్ఘ్యం ఎంపిక చేయబడింది (ఇక్కడ λ = 520 nm), దీనితో శోషణ పెరుగుదల వర్సెస్ టైమ్ స్కాన్ తోడు కంప్యూటర్ సాఫ్ట్‌వేర్‌ను ఉపయోగించడం ద్వారా నిర్వహిస్తారు.
+        </li>
+        <li>
+         స్కాన్ పూర్తయినప్పుడు నమూనా 2 మరియు నమూనా 3 యొక్క గతి కొలతలను ప్రారంభించడానికి ‘తదుపరి’ టాబ్‌పై క్లిక్ చేయండి.
+        </li>
+        <li>
+         పై దశలను పునరావృతం చేయండి మరియు నమూనా 2 మరియు నమూనా 3 బంగారు కణాల అభివృద్ధిని అధ్యయనం చేయండి. ఈ విధంగా విత్తన కణాన్ని బట్టి u (III) అయాన్ గా ration త నిష్పత్తిని బట్టి వివిధ పరిమాణాల బంగారు కణాలను తయారు చేస్తుంది. అన్ని నమూనాలను ఇయోసిన్ తగ్గింపుకు ఉత్ప్రేరకంగా ఉపయోగించే ముందు ~ 12 గంటలు మిగిలి ఉన్నాయి. వారి సన్నాహాల నుండి 3-4 గంటలలోపు ఉత్ప్రేరక రేటు చాలా నెమ్మదిగా ఉన్నట్లు కనుగొనబడింది.
+        </li>
+        <li>
+         డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి.
+        </li>
+        <li>
+         నమూనా కోసం శోషణ వర్సెస్ సమయాన్ని ప్లాట్ చేయండి. ప్లాట్ యొక్క స్వభావం ఏమిటి: సిగ్మోయిడల్?
+        </li>
+        <li>
+         డేటా యొక్క ఆటోకాటలిటిక్ ఫిట్ కోసం ప్రయత్నించండి.
+        </li>
+       </ol>
+       <p>
+       </p>
+       <p>
+        <b>
+         సి. ఉత్ప్రేరక ఎయోసిన్ తగ్గింపు కైనటిక్స్ అధ్యయనం.
+        </b>
+       </p>
+       <ol>
+        <li>
+         పవర్ బటన్‌పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ పరికరాన్ని ఆన్ చేయండి మరియు వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.
+        </li>
+        <li>
+         ఒక కువెట్టిలో ఇచ్చిన సగటు పరిమాణంలోని కణాలను కలిగి ఉన్న నమూనా యొక్క 2 ఎంఎల్ తీసుకోండి.
+        </li>
+        <li>
+         0.04 mL 10 ను జోడించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి
+         <sup>
+          -2
+         </sup>
+         M ఇయోసిన్ ద్రావణం మరియు తరువాత 0.40 mL 0.50 M సోడియం బోరోహైడ్రైడ్ (NaBH4) ద్రావణాన్ని క్యూవెట్‌లో ఉండే కణ ద్రావణానికి.
+        </li>
+        <li>
+         NaBH4 ను కలిపిన వెంటనే, కణ ఉత్ప్రేరక ఇయోసిన్ తగ్గింపు యొక్క గతిశాస్త్రం తరువాత time = 535 nm వద్ద శోషక విలువ తగ్గడాన్ని అనుసరిస్తుంది (30 1 at C వద్ద).
+        </li>
+        <li>
+         తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.
+        </li>
+        <li>
+         పరికరం యొక్క నమూనా సెల్ హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి.
+ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనా నమూనాను నమూనా హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో (తరచుగా వెనుకవైపు) ఒకేసారి ఉంచవచ్చు.
+        </li>
+        <li>
+         స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయడం ద్వారా దాన్ని మూసివేయండి.
+        </li>
+        <li>
+         కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై ‘స్కాన్’ టాబ్‌పై క్లిక్ చేసి, స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్‌లో, కాంతి యొక్క తగిన తరంగదైర్ఘ్యం ఎంపిక చేయబడింది (ఇక్కడ λ = 535 nm), దీనితో శోషణ తగ్గుదల వర్సెస్ టైమ్ స్కాన్ తోడు కంప్యూటర్ సాఫ్ట్‌వేర్‌ను ఉపయోగించడం ద్వారా నిర్వహిస్తారు.
+        </li>
+        <li>
+         స్కాన్ పూర్తయినప్పుడు నమూనా 2 మరియు నమూనా 3 తో గతి కొలతలను ప్రారంభించడానికి ‘తదుపరి’ టాబ్‌పై క్లిక్ చేయండి.
+        </li>
+        <li>
+         పై దశలను పునరావృతం చేయండి మరియు నమూనా 2 మరియు నమూనా 3 బంగారు కణాల ద్వారా ఇయోసిన్ యొక్క ఉత్ప్రేరక తగ్గింపు యొక్క గతిశాస్త్రాలను అధ్యయనం చేయండి.
+        </li>
+        <li>
+         ‘డేటా’ టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి.
+        </li>
+        <li>
+         ప్రతి నమూనా కోసం శోషణ వర్సెస్ సమయాన్ని ప్లాట్ చేయండి. ప్లాట్ యొక్క స్వభావం ఏమిటి?
+        </li>
+        <li>
+         డేటా యొక్క మొదటి ఆర్డర్ సరిపోయే ప్రయత్నం.
+        </li>
+       </ol>
+       <p>
+       </p>
+      </div>
+     </section>
+     <section id="lab-article-section-5">
+      <div class="icon" id="lab-article-section-5-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/experiment.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-5-heading">
+       సిమ్యులేటర్
+      </div>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-5-content">
+       <p>
+        <a href="./media/10.html" target="_blank">
+         ప్రయోగశాలకు వెళ్లడానికి ఇక్కడ క్లిక్ చేయండి
+        </a>
+       </p>
+      </div>
+     </section>
+     <section id="lab-article-section-6">
+      <div class="icon" id="lab-article-section-6-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img src="../images/quiz.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-6-heading">
+       క్విజ్
+      </div>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-6-content">
+       <p align="justify">
+       </p>
+       <h3>
+        ప్రయోగ ముందు
+       </h3>
+       <ol>
+        <li>
+         లోహ కణాల యొక్క ఏ ఆస్తిని వాటి నిర్మాణ గతిశాస్త్ర అధ్యయనంలో ఉపయోగిస్తారు?
+        </li>
+        <li>
+         బంగారు కణాలు కాంతిని ఎందుకు గ్రహిస్తాయి?
+        </li>
+        <li>
+         కణాల విస్తరణ ప్రతిచర్యలో ఆస్కార్బిక్ ఆమ్లం వంటి బలహీనమైన తగ్గించే ఏజెంట్‌ను ఎందుకు ఉపయోగించాలి?
+        </li>
+        <li>
+         సోడియం బోరోహైడ్రైడ్ ద్వారా ఇయోసిన్ తగ్గించడంలో బంగారు కణాలను ఎందుకు ఉపయోగించాలి?
+        </li>
+       </ol>
+       <p>
+       </p>
+       <p>
+       </p>
+       <h3>
+        పోస్ట్ ప్రయోగం
+       </h3>
+       <ol>
+        <li>
+         ఇయోసిన్ తగ్గింపు ప్రతిచర్య ప్రారంభానికి మీరు ఏదైనా ప్రేరణ కాలాన్ని గమనించారా?
+        </li>
+        <li>
+         చెదరగొట్టబడిన బంగారు కణాల ple దా రంగును మీరు ఎలా వివరిస్తారు?
+        </li>
+        <li>
+         ఉత్ప్రేరకంలో పాల్గొన్న తరువాత బంగారు కణాల రంగుకు ఏమి జరుగుతుంది?
+        </li>
+        <li>
+         సోడియం బోరోహైడ్రైడ్ ద్వారా కణాల ఉత్ప్రేరక తగ్గింపు తర్వాత ఇయోసిన్ రంగుకు ఏమి జరుగుతుంది?
+        </li>
+        <li>
+         కణాల విస్తరణ ప్రతిచర్య మొత్తం అభివృద్ధి వ్యవధిలో ఆటోకాటలిటిక్ వృద్ధిని అనుసరిస్తుందా?
+        </li>
+       </ol>
+       <p>
+       </p>
+      </div>
+     </section>
+     <section id="lab-article-section-7">
+      <div class="icon" id="lab-article-section-7-icon">
+       <!-- Enclose the icon image for the section. -->
+       <img id="feedback" src="../images/references.jpg"/>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-7-heading">
+       ప్రస్తావనలు
+      </div>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-7-content">
+       <p>
+       </p>
+       <ol>
+        <li>
+         టి. కె. సౌ, ఎ. పాల్ మరియు టి. పాల్, జె. ఫిజి. కెం. బి 2001,105, 9266-9272.
+        </li>
+        <li>
+         “ఫండమెంటల్స్ ఆఫ్ యువి-కనిపించే స్పెక్ట్రోస్కోపీ: వర్క్‌బుక్”, పబ్లికేషన్ నంబర్ 5980-1398 ఇ, ఎజిలెంట్ టెక్నాలజీస్ (2000) నుండి వచ్చిన ప్రైమర్.
+        </li>
+        <li>
+         బి. వాలూర్, “మాలిక్యులర్ ఫ్లోరోసెన్స్: ప్రిన్సిపల్స్ అండ్ అప్లికేషన్స్”, 2002, విలే-విసిహెచ్ వెర్లాగ్ జిఎంబిహెచ్, 69469, వీన్‌హీమ్, జర్మనీ.
+        </li>
+        <li>
+         జె. ఆర్. లాకోవిచ్, “ప్రిన్సిపల్స్ ఆఫ్ ఫ్లోరోసెన్స్ స్పెక్ట్రోస్కోపీ”, 2 వ ఎడిషన్, 1999, క్లువర్ అకాడెమిక్ / ప్లీనం పబ్లిషర్స్, న్యూయార్క్.
+        </li>
+        <li>
+         పి. అట్కిన్స్ మరియు జె. డి పౌలా, “ఫిజికల్ కెమిస్ట్రీ”, డబ్ల్యూ. హెచ్. ఫ్రీమాన్ &amp; కంపెనీ, డిసెంబర్ 2009.
+        </li>
+        <li>
+         ఎఫ్. రూసాక్ మరియు ఎ. రూసాక్, “కెమికల్ అనాలిసిస్: మోడరన్ ఇన్స్ట్రుమెంటేషన్ మెథడ్స్ అండ్ టెక్నిక్స్”, రెండవ ఎడిషన్, 2007, జాన్ విలే &amp; సన్స్ లిమిటెడ్.
+        </li>
+        <li>
+         ఎస్. బెక్, “అక్రోస్ ది స్పెక్ట్రమ్: ఇన్స్ట్రుమెంటేషన్ ఫర్ యువి / విస్ స్పెక్ట్రోఫోటోమెట్రీ”, ది సైంటిస్ట్ 12 [3]: 20, ఫిబ్రవరి 02, 1998.
+        </li>
+        <li>
+         ఆర్. స్జాబ్యాక్, జె. నైగ్రెన్ మరియు ఎం. కుబిస్టా, “ఫ్లోరోసెసిన్ యొక్క శోషణ మరియు ఫ్లోరోసెంట్ లక్షణాలు”, స్పెక్ట్రోచిమికా ఆక్టా పార్ట్ ఎ 51, ఎల్ 7 - ఎల్ 21 (1995).
+        </li>
+        <li>
+         ఎఫ్. ఎ. సెటిల్ (ఎడిటర్), ‘హ్యాండ్‌బుక్ ఆఫ్ ఇన్స్ట్రుమెంటల్ టెక్నిక్స్ ఫర్ ఎనలిటికల్ కెమిస్ట్రీ”, పియర్సన్ ఎడ్యుకేషన్ లిమిటెడ్ (2004).
+        </li>
+        <li>
+         D. హార్వే, “మోడరన్ ఎనలిటికల్ కెమిస్ట్రీ”, మెక్‌గ్రా-హిల్ ఎడ్యుకేషన్ (2000).
+        </li>
+        <li>
+         టి. ఓవెన్, “ఫండమెంటల్స్ ఆఫ్ మోడరన్ యువి-కనిపించే స్పెక్ట్రోస్కోపీ”, ప్రైమర్, ఎజిలెంట్ టెక్నాలజీస్ (2000).
+        </li>
+       </ol>
+       <p>
+       </p>
+      </div>
+     </section>
+     <section id="lab-article-section-99">
+      <div class="icon" id="lab-article-section-99-icon">
+       <!-- Enclose the icon image for the section. -->
+       <a href="../?q=experiments">
+        <img src="../images/experiments.jpg"/>
+        <p>
+        </p>
+        ప్రయోగాలు
+       </a>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-99-heading">
+      </div>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-99-content">
+      </div>
+     </section>
+     <section id="lab-article-section-100">
+      <div class="icon" id="lab-article-section-100-icon">
+       <!-- Enclose the icon image for the section. -->
+       <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb02">
+        <img id="feedback" src="../images/feedback.jpg"/>
+        <p>
+        </p>
+        అభిప్రాయం
+       </a>
+      </div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div class="heading" id="lab-article-section-100-heading">
+      </div>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div class="content" id="lab-article-section-100-content">
+      </div>
+     </section>
+    </div>
+    <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+    <aside class="default" id="lab-article-sidebar">
+     <!-- put the content that you want to appear in the 
+        sidebar-->
+    </aside>
+    <!-- Article footer can display related content and 
+      additional links -->
+    <footer class="default" id="footer">
+     <div class="footer-top" id="contact">
+      <div class="container">
+       <div class="row">
+        <div class="col-lg-4 col-md-6 footer-contact">
+         <h4>
+          కమ్యూనిటీ లింకులు
+         </h4>
+         <p>
+          <a ;="" href="http://www.sakshat.ac.in/" style="color: white">
+           ఇంటర్వ్యూ పోర్టల్
+          </a>
+         </p>
+         <p>
+          <a ;="" href="http://outreach.vlabs.ac.in/" style="color: white">
+           ఔట్రీచ్ పోర్టల్
+          </a>
+         </p>
+         <p>
+          <a ;="" href="./faq-vlabs.html" style="color: white">
+           తరచుగా అడిగే ప్రశ్నలు: వర్చువల్ ల్యాబ్స్
+          </a>
+         </p>
+         <p>
+          <a ;="" href="./faq-eoi.html" style="color: white">
+           తరచుగా అడిగే ప్రశ్నలు: వర్చువల్ ల్యాబ్స్ వర్క్‌షాప్
+          </a>
+         </p>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-contact">
+         <h4>
+          సంప్రదించండి
+         </h4>
+         <p>
+          <strong>
+           ఫోన్:
+          </strong>
+          సాధారణ సమాచారం: 011-64674687
+          <br/>
+          అభివృద్ధి / ఔట్రీచ్ : +91 9177792945
+          <br/>
+          <strong>
+           ఇమెయిల్:
+          </strong>
+          support@vlab.co.in
+          <br/>
+         </p>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+         <h4>
+          మమ్మల్ని అనుసరించు
+         </h4>
+         <div class="social-links">
+          <a class="twitter" href="https://twitter.com/TheVirtualLabs">
+           <i class="fa fa-twitter">
+           </i>
+          </a>
+          <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+           <i class="fa fa-facebook">
+           </i>
+          </a>
+          <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+           <i class="fa fa-youtube">
+           </i>
+          </a>
+          <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+           <i class="fa fa-linkedin">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="container-fluid" style="background-color: #1f1d1d;">
+      <div class="copyright" style="padding-bottom: 30px;">
+       <a href="http://creativecommons.org/licenses/by-nc-sa/3.0">
+        <strong>
+         Creative Commons (CC-BY-NC-SA-3.0)
+        </strong>
+       </a>
+       <strong>
+        Disclaimer
+       </strong>
+      </div>
+     </div>
+    </footer>
+   </article>
+   <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+   <footer class="default" id="lab-footer">
+    <!-- Put the content here-->
+   </footer>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,79 @@
+{
+"stuff": [
+    
+    {
+        "ques" : "Mass spectrometers are used to determine which of the following?",
+        "choice1" : "Composition in sample",
+        "choice2" : "Concentration of elements in sample",
+        "choice3" : "Relative mass of atoms",
+        "choice4" : "Properties of sample",
+        "answer" : "Relative mass of atoms. Explanation: Mass spectrometers are used to determine the relative mass of atoms and molecules. Aston made the instrument more accurate."
+    },
+    {
+        "ques" : "Who invented mass spectrometers?",
+        "choice1" : "J.J Thompson",
+        "choice2" : "Goldstein",
+        "choice3" : "Nikola Tesla",
+        "choice4"  : "Aston",
+        "answer" : " Aston Explanation: J.J Thompson introduced mass spectrometers. Aston modified the instrument to make it more accurate."
+    },
+    {
+        "ques" : "In mass spectrometer, the sample that has to be analysed is bombarded with which of the following?",
+        "choice1" :  "Protons",
+        "choice2" :  "Electrons",
+        "choice3" :  "Neutrons",
+        "choice4"  : "Alpha Particles",
+        "answer" : "Electrons Explanation: In mass spectrometer, the sample which is to be analysed is bombarded with electrons. As a result, ions are produced."
+    },
+    {
+        "ques" : "Mass spectrometer separates ions on the basis of which of the following? ",
+        "choice1" : "Mass",
+        "choice2" : "Charge",
+        "choice3" : "Molecular Weight",
+        "choice4"  : "Mass to Charge ratio",
+        "answer" : "Mass to Charge ratio Explanation: Mass spectrometer separates ions on the basis of mass to charge ratio. Most of the ions are singly charged. Hence, the mass to charge ratio is equal to the mass."
+    },
+    {
+        "ques" : "In mass spectrometer, the ions are sorted out in which of the following ways?",
+        "choice1" : "By accelerating them through electric field",
+        "choice2" : "By accelerating them through magnetic field",
+        "choice3" : "By accelerating them through electric and magnetic field",
+        "choice4"  : "By applying a high voltage",
+        "answer" : "By accelerating them through electric and magnetic field. Explanation: In mass spectrometer, the ions are sorted out by accelerating them through electric and magnetic field. A record of number of different kinds of ions is called mass spectrum."
+    },
+    {
+        "ques" : "No two molecules will be fragmented and ionized in exactly the same manner.",
+        "choice1" : "True",
+        "choice2" : "False",
+        "answer" : "True Explanation: No two molecules will be fragmented and ionized in exactly the same manner. This is how different molecules are identified in a complex mixture."
+    },
+    {
+        "ques" : "The procedure for mass spectroscopy starts with which of the following processes?",
+        "choice1" : "The sample is bombarded by electron beam",
+        "choice2" : "The ions are separated by passing them into electric and magnetic field",
+        "choice3" : "The sample is converted into gaseous state",
+        "answer" : "The sample is converted into gaseous state Explanation: The procedure for mass spectroscopy starts with converting the sample into gaseous state. This is done by chemical processes."
+    },
+    {
+        "ques" : "In mass spectrometer, the ion currents are measured using which of the following?",
+        "choice1" : "Scintillation counter",
+        "choice2" : "Ion counter",
+        "choice3" : "Electrometer tube",
+        "answer" : "Electrometer tube. Explanation: The ion currents are measured using sensitive electrometer tube. The ions reaching the collecting plate are measured."
+    },
+    {
+        "ques" : "Which of the following ions pass through the slit and reach the collecting plate?",
+        "choice1" : "Negative ions of all masses",
+        "choice2" : "Positive ions of all masses",
+        "choice3" : "Positive ions of specific mass",
+        "answer" : "Positive ions of specific mass Explanation: Positive ions of specific mass pass through the slit and reach the collecting plate. These ions are measured."
+    },
+    {
+        "ques" : "Which of the following statements is not true about mass spectrometry?",
+        "choice1" : "Impurities of masses different from the one being analysed interferes with the result",
+        "choice2" : "It has great sensitivity",
+        "choice3" : "It is suitable for data storage",
+        "answer" : "Impurities of masses different from the one being analysed interferes with the result. Explanation: Impurities of masses different from the one being analysed does not interfere with the result in mass spectroscopy. This is a major advantage of this technique."
+    }
+]
+}

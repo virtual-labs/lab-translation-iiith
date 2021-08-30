@@ -1,0 +1,157 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mas_expt8.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="../../libraries/jQueryRotate.js"></script>
+      <script type="text/javascript" src="mas_expt8.js"></script>
+      <script type="text/javascript" src="mas8_animations.js"></script>
+      <title>Simultaneous estimation method for multicomponent samples: Principle of additivity of absorbance</title>
+  </head>
+
+
+<!-- Body is divided into three rows -->
+<body>  
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>మల్టీకంపొనెంట్ నమూనాల కోసం ఏకకాల అంచనా పద్ధతి: శోషణ యొక్క సంకలితం యొక్క సూత్రం</h3><br>
+        <button id="reset_btn">ప్రయోగాన్ని రీసెట్ చేయండి</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>మాన్యువల్</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;font-size:18px;">
+                        <p>1. ప్రతి విశ్లేషణకు ఐదు అమరిక ప్రమాణాలను సిద్ధం చేయండి:</p>
+                        <p>ఇథనాల్‌లో 0.025 mM, 0.020 mM, 0.015 mM, 0.010 mM, మరియు 0.005 mM కొమారిన్ 343 పరిష్కారాలు మరియు 0.020mM, 0.015 mM, 0.01 mM, 0.005 mM మరియు 0.0025mM కొమారిన్ 6 పరిష్కారాలు.</p>
+                        <p>1: 1 (v / v) మిశ్రమాన్ని 0.025mM కొమారిన్ 343 మరియు 0.020 mM కూమరిన్ 6 యొక్క మిశ్రమాన్ని కూడా సిద్ధం చేసింది.</p>
+                        <p>విశ్లేషించాల్సిన పరిష్కారాలు డ్రాప్-డౌన్ మెను నుండి అమ్మబడతాయి. ఏకాగ్రత స్కేల్ బార్ల నుండి పరిష్కార సాంద్రతలు ఎంపిక చేయబడతాయి.</p>
+                        <p>2. కంప్యూటర్ మరియు పరికర శక్తులపై మారండి; పరికరం యొక్క 'సన్నాహక' కోసం 30 నిమిషాలు వేచి ఉండండి.</p>
+                        <p>3. వాయిద్యంలో ఒకరు కాంతి వనరులను (UV మరియు కనిపించేవి) ఎంచుకోవచ్చు, చీలిక వెడల్పు, స్కాన్ వేగం మరియు% ట్రాస్మిటెన్స్ లేదా శోషణ ప్రదర్శన, తరంగదైర్ఘ్యం ఆసక్తి శ్రేణి మొదలైనవి ఎంచుకోవచ్చు.</p>
+                        <p>4. ఇచ్చిన మార్గం పొడవుతో రెండు శుభ్రమైన మరియు పొడి క్వార్ట్క్స్ కర్వెట్లను తీసుకోండి (ఇక్కడ మేము 1 సెం.మీ మార్గం పొడవు కర్వెట్‌ను ఉపయోగించాము).</p>
+                        <p>5. ఒక వక్రతను నమూనా ఖాళీతో నింపండి (ప్రస్తుత సందర్భంలో ఇథనాల్) మరియు మరొక వక్రతను తక్కువ సాంద్రత కలిగిన కూమ్స్రిన్ 343 ద్రావణంతో నింపండి.</p>
+                        <p>6. నమూనా హోల్డర్‌లో నమూనాను ఖాళీగా ఉంచండి మరియు నమూనా హోల్డర్‌లో నమూనాను ఉంచండి.</p>
+                        <p>7. స్కాన్ (ఎ వర్సెస్ లాంబ్డా) ను అమలు చేయండి.</p>
+                        <p>8. అదేవిధంగా తక్కువ సాంద్రతల నుండి అధిక సాంద్రతలకు వెళ్లే అన్ని ఇతర నమూనాల కోసం స్పెక్ట్రల్ స్కాన్‌లను అమలు చేయండి. ప్రతిసారీ ద్రావణం నుండి చిన్న భాగాన్ని తీసుకొని కువెట్ను శుభ్రం చేయాలి.</p>
+                        <p>9. కొమారిన్ 6 పరిష్కారాల కోసం 5 నుండి 8 దశలను పునరావృతం చేయండి.</p>
+                        <p>10. కౌమరిన్ 343 మరియు కొమారిన్ 6 పరిష్కారాలను కలిగి ఉన్న బహుళ-భాగాల పరిష్కారం (మిశ్రమం) నమూనా కోసం స్కాన్‌ను అమలు చేయండి.</p>
+                        <p>11. కొమారిన్ 343 మరియు కొమారిన్ రెండింటికీ గరిష్ట శోషణ (లాంబ్డా_మాక్స్) యొక్క తరంగదైర్ఘ్యాలను నిర్ణయించండి 6. ఇప్పుడు అన్ని పరిష్కారాల కోసం ఇచ్చిన లాంబ్డా_మాక్స్ వద్ద తరంగదైర్ఘ్యాలను, శోషణను కనుగొనండి మరియు ఈ డేటాను కలిగి ఉన్న పట్టికను సిద్ధం చేయండి.</p>
+                        <p>12. శోషణ విలువలను 0f 2.5 * 10 గా నిర్ణయించండి. - పెండింగ్‌లో ఉంది</p>
+                        <p>13. ఏదైనా లాంబ్డా_మాక్స్ కోసం, సంబంధం నుండి మిశ్రమంలోని వ్యక్తిగత భాగాల శోషణ విలువల మొత్తాన్ని లెక్కించండి: AX + Y = (AX0 / CX0) .CX + (AY0) / CY0) .CY (eq 4 చూడండి).</p>
+                        <p>14. పైన పేర్కొన్న మొత్తాన్ని మిశ్రమం యొక్క కొలిచిన శోషక విలువతో పోల్చండి = అదే గరిష్టంగా అమిక్స్.</p>
+                        <p>15. మరొక లాంబ్డా_మాక్స్ కోసం అమిక్స్ = AX + Y రియల్‌షిప్‌ను తనిఖీ చేయండి.</p>
+                        <p>16. కొమారిన్ 343 మరియు కొమారిన్ 6 పరిష్కారాల కోసం రెండు తరంగదైర్ఘ్యాల కోసం (చెప్పండి, లాంబ్డా = 420 ఎన్ఎమ్ మరియు 463 ఎన్ఎమ్) శోషణకు వ్యతిరేకంగా ఏకాగ్రతను ప్లాట్ చేయడం ద్వారా అమరిక ప్లాట్లను నిర్మించండి. అమరిక ప్లాట్ల వాలులను నిర్ణయించండి మరియు అందువల్ల కౌమరిన్ 343 మరియు కొమారిన్ 6 కోసం రెండు వేర్వేరు తరంగదైర్ఘ్యాల కోసం లాంబ్డా యొక్క సంబంధిత విలువలు.</p>
+                        <p>17. పై రెండు తరంగదైర్ఘ్యాల వద్ద 1: 1 మిశ్రమ నమూనా యొక్క శోషణ విలువలను నిర్ణయించండి.</p>
+                        <p>18. మిశ్రమ శోషణ మరియు లాంబ్డా యొక్క విలువలను ఉపయోగించి, రెండు భాగాల వ్యవస్థకు బీర్ లాంబెర్ట్ చట్టాన్ని పరిష్కరించడం ద్వారా మిశ్రమంలో కూమరిన్ 343 మరియు కూమరిన్ 6 రెండింటి యొక్క సాంద్రతను నిర్ణయించండి.</p>
+                        <p>19. మిశ్రమంలో కూమరిన్ 343 మరియు కొమారిన్ 6 యొక్క వాస్తవ సాంద్రతలను వాటి అసలు సాంద్రతలు మరియు మిశ్రమాన్ని తయారు చేయడానికి తీసుకున్న వాల్యూమ్‌ల నుండి లెక్కించండి.</p>
+                        <p>20. శోషణ కొలతల నుండి నిర్ణయించబడిన ఏకాగ్రత విలువలను శోషణ విలువల సంకలితం యొక్క సూత్రం యొక్క ప్రామాణికతను ధృవీకరించడానికి మిశ్రమాన్ని సిద్ధం చేయడానికి తీసుకున్న వాస్తవ సాంద్రతల నుండి లెక్కించిన ఏకాగ్రత విలువలతో పోల్చండి.</p>
+                        <p>21. కొమారిన్ 343 మరియు కొమారిన్ 6 రెండింటినీ కలిగి ఉన్న ద్రావణం నుండి పొందిన స్పెక్ట్రం యొక్క మల్టీ-పీక్ ఫిట్టింగ్ చేయండి.</p>
+                        <p>22. మీ ఫలితాలను చర్చించండి.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+           <img id="data_button" src="images/data_button.png">
+
+           <div id="scale">
+                <img id="scale_image" src="images/scale1.png">
+                <input type="range" id="slider" min="0" max="4" step="1" value="0" autocomplete="off"> 
+           </div>
+
+        </div>
+
+        <!-- This column conatins the shelf with apparatus on top of it.-->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/shelf.png">
+            <select id="solution" autocomplete="off">
+                <option value="Coumarin343">కౌమరిన్ 343</option>
+                <option value="Coumarin6">కౌమరిన్ 6</option>
+                <option value="1:1mixture">1: 1 మిశ్రమం</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div>
+    <br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" class="scanimage" src="images/scan1.png">
+    <img id="scanimage2" class="scanimage" src="images/scan2.png">
+    <img id="scanimage3" class="scanimage" src="images/scan3.png">
+    <img id="scanimage4" class="scanimage" src="images/scan4.png">
+    <img id="scanimage5" class="scanimage" src="images/scan5.png">
+    <img id="scanimage6" class="scanimage" src="images/scan6.png">
+    <img id="scanimage7" class="scanimage" src="images/scan7.png">
+    <img id="scanimage8" class="scanimage" src="images/scan8.png">
+    <img id="scanimage9" class="scanimage" src="images/scan9.png">
+    <img id="scanimage10" class="scanimage" src="images/scan10.png">
+    <img id="scanimage11" class="scanimage" src="images/scan11.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for type coumarim343 concentration sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <video id="graph2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <video id="graph3" class="video"><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <video id="graph4" class="video"><source src="videos/graph4.mp4" type="video/mp4"></video>
+    <video id="graph5" class="video"><source src="videos/graph5.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type coumarim6 concentration sample -->
+    <video id="graph6" class="video"><source src="videos/graph6.mp4" type="video/mp4"></video>
+    <video id="graph7" class="video"><source src="videos/graph7.mp4" type="video/mp4"></video>
+    <video id="graph8" class="video"><source src="videos/graph8.mp4" type="video/mp4"></video>
+    <video id="graph9" class="video"><source src="videos/graph9.mp4" type="video/mp4"></video>
+    <video id="graph10" class="video"><source src="videos/graph10.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 1:1mixture concentration sample -->
+    <video id="graph11" class="video"><source src="videos/graph11.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+</body></html>

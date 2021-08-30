@@ -1,0 +1,126 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment :  Absorption (and transmittance) measurements of a colourless and a coloured light absorbing substance in a solution by using a spectrophotometer
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt1.js"></script>
+    <script type="text/javascript" src="mas1_animations.js"></script>
+    <title>Absorption (and transmittance) measurements of a colourless and a coloured light absorbing substance in a solution by using a spectrophotometer</title>
+</head>
+
+<body>  
+<div>
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>స్పెక్ట్రోఫోటోమీటర్ ఉపయోగించి ఒక ద్రావణంలో రంగులేని మరియు రంగు కాంతిని గ్రహించే పదార్ధం యొక్క శోషణ (మరియు ప్రసారం) కొలతలు</h3><br>
+        <button id="reset_btn">ప్రయోగాన్ని రీసెట్ చేయండి</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1200" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>మాన్యువల్</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. స్పెక్ట్రోఫోటోమీటర్‌తో పరిచయం.</p>
+                        <p>2. పవర్ బటన్‌పై క్లిక్ చేసే పరికరాన్ని ఆన్ చేసి, వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.</p>
+                        <p>3. క్రింది రెండు పరిష్కారాలను సిద్ధం చేయండి: ఎ) పొటాషియం డైక్రోమేట్ (K2Cr2O7) యొక్క ~ 0.001 M మరియు బి) స్వేదనజలంలో m 5mg / L కెఫిన్. ఇక్కడ పరిష్కారాలు రెండు వాల్యూమెట్రిక్ ఫ్లాస్క్‌లలో చూపించబడ్డాయి. డ్రాప్-డౌన్ మెను నుండి కావలసిన పరిష్కారంపై క్లిక్ చేయడం ద్వారా కొలత కోసం ఒక పరిష్కారాన్ని ఎంచుకోవచ్చు.</p>
+                        <p>4. శుభ్రమైన, పొడి బీకర్ తీసుకోవడానికి బీకర్‌పై క్లిక్ చేయండి.</p>
+                        <p>5. శుభ్రమైన, పొడి బీకర్‌లో ద్రావణాన్ని పోయడానికి వాల్యూమెట్రిక్ ఫ్లాస్క్‌పై క్లిక్ చేయండి.</p>
+                        <p>6. బీకర్ నుండి తగిన పరిమాణంలో ద్రావణాన్ని సేకరించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, ఒకరు మైక్రోపిపెట్‌కు తగిన చిట్కాను అటాచ్ చేసి, దాన్ని ద్రావణంలో ముంచడానికి ముందు దానిపై అవసరమైన వాల్యూమ్‌కు స్కేల్‌ను సెట్ చేస్తారు.</p>
+                        <p>7. దానిపై క్లిక్ చేయడం ద్వారా క్యూట్ తీసుకోండి.</p>
+                        <p>8. మైక్రోపిపెట్ నుండి క్యూవెట్‌పై క్లిక్ చేయడం ద్వారా ద్రావణాన్ని కువెట్‌లోకి పోయాలి. వాస్తవ కొలతలలో, కువెట్ దాని వాల్యూమ్‌లో మూడింట రెండు వంతుల వరకు నిండి ఉంటుంది.</p>
+                        <p>9. తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.</p>
+                        <p>10. నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనా నమూనాను నమూనా హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో (తరచుగా వెనుకవైపు) ఒకేసారి ఉంచవచ్చు.</p>
+                        <p>11. తెరపై, స్పెక్ట్రల్ స్కాన్ యొక్క తరంగదైర్ఘ్యం పరిధిని నమోదు చేయండి.<br>కెఫిన్ కోసం: ప్రారంభం: 590 ఎన్ఎమ్ ముగింపు: 290 ఎన్ఎమ్.<br>K2Cr2O7 కోసం: ప్రారంభం: 700 nm ముగింపు: 325 nm. నిజమైన ఆపరేషన్‌లో, నమూనా కోసం సంఘటన కాంతి యొక్క తరంగదైర్ఘ్యం పరిధి ఎంచుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా నడుస్తుంది. ఒకరు స్కాన్‌ను శోషక (ఎ) లేదా ట్రాన్స్మిటెన్స్ (% టి) మోడ్‌లో అమలు చేయవచ్చు.</p>
+                        <p>12. తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయడానికి కొలత సెటప్ స్క్రీన్‌పై ఆకుపచ్చ ‘స్టార్ట్’ బటన్‌పై క్లిక్ చేయండి. తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి. స్పెక్ట్రోఫోటోమీటర్ ఒకే పుంజం పరికరం అయితే, మొదట నమూనా ఖాళీ లేదా సూచన ఒక కువెట్‌లో తీసుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ నమూనా తరువాత నడుస్తుంది. సంబంధిత తరంగదైర్ఘ్యాల కోసం నమూనా డేటా నుండి సూచన డేటాను తీసివేయాలి.</p>
+                        <p>13. స్పెక్ట్రల్ స్కాన్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. పరికరం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.</p>
+                        <p>14. మరొక నమూనా కోసం కొలతను పునరావృతం చేయండి.</p> 
+                        <p>15. డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి.</p> 
+                        <p>16. నమూనా రెండింటికి మాదిరి వర్సెస్ తరంగదైర్ఘ్యం యొక్క శోషణ (లేదా ప్రసారం) ను ప్లాట్ చేయండి మరియు వీలైతే, రెండు నమూనాల స్పెక్ట్రాను అతివ్యాప్తి చేయండి.</p>
+                        <p>17. రెండు నమూనాల కోసం ప్రధాన శిఖరాల కోసం గరిష్ట శోషణ యొక్క తరంగదైర్ఘ్యాలను నిర్ణయించండి</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+        </div>
+
+        <!--This column contains a shelf with apparatus on it -->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/shelf.png">
+            <select id="solution" autocomplete="off">
+                <option value="potassium" selected="">పొటాషియం డైక్రోమేట్</option>
+                <option value="caffeine">కాఫిన్</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div><br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" class="common" src="images/transparent.png">
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
+    <img id="input_data" class="data_validation" src="images/form1.png">
+    <!--Displays the graph by clicking on start button -->
+    <img id="start_btn" class="data_validation" src="images/vertical_button.png">
+    <!--graph input values -->
+    <input id="input1" class="data_validation" type="text" autocomplete="off">
+    <input id="input2" class="data_validation" type="text" autocomplete="off">    
+    <!-- background image for the graphs instruction -->
+    <img id="instruction_bkgd" class="common" src="images/graph_instruction.png">
+    <!-- graphs instruction is displayed here....-->
+    <div id="graph_instruction" class="common"></div>
+    <!-- Video that plots a graph for type 1 sample -->
+    <video id="video1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 2 sample -->
+    <video id="video2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page and the videos-->
+    <img id="disposegraph" src="images/vertical_button.png">
+   
+
+</div></body></html>

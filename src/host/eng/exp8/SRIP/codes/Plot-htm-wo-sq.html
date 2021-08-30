@@ -1,0 +1,173 @@
+<!Doctype html>
+<html>
+<body>
+
+<head>
+<!-- for styling -->
+<style> 
+    .title{ 
+    margin-bottom: 10px; 
+    text-align:center; 
+    width: 210px; 
+    color:grey;//green; 
+    border: solid black 2px; 
+    } 
+
+    input[type="button"] 
+    { 
+    background-color:grey;//green; 
+    color: black; 
+    border: solid black 2px; 
+    width:100% 
+    } 
+
+    input[type="text"] 
+    { 
+    background-color:white; 
+    border: solid black 2px; 
+    //width:100% 
+    } 
+</style> 
+
+<style>
+/* Add a background color on hover */
+.btn-gr button:hover {
+  background-color: Pink/*#3e8e41*/;
+}
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="anime.min.js"></script>
+<script src="./path-to-two/two.js"></script>
+</script>
+
+
+<head>  
+<script>
+window.onload = function () {
+//btn5.onclick = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Mass Spectroscopy Graph"
+	},
+	axisY:{
+		includeZero: false
+	},
+	data: [{        
+		type: "line",       
+		dataPoints: [
+			{ y: 450 },
+			{ y: 414},
+			{ y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+			{ y: 460 },
+			{ y: 450 },
+			{ y: 500 },
+			{ y: 480 },
+			{ y: 480 },
+			{ y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+			{ y: 500 },
+			{ y: 480 },
+			{ y: 510 }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+        <br>
+        <br>
+<div id="chartContainer" style="height: 300px; width: 500px;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+<!-- create table -->
+<body> 
+     <div>      
+     </div>
+    <table border="1"> 
+        <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+        </tr> 
+        <tr> 
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+        </tr> 
+        <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+        </tr> 
+    </table> 
+   
+
+
+</body>
+<script> 
+    //function that display value 
+    function dis(val) 
+    { 
+        document.getElementById("result").value+=val 
+    } 
+    
+    //function that evaluates the digit and return result 
+    function solve() 
+    { 
+        let x = document.getElementById("result").value 
+        let y = eval(x) 
+        document.getElementById("result").value = y 
+    } 
+    
+    //function that clear the display 
+    function clr() 
+    { 
+        document.getElementById("result").value = "" 
+    } 
+</script>
+<br>
+<br>
+<form action="/action_page.php">
+    Q.1 Identify the molecular ion pack:<br> 
+    Ans: <input type="text" name="Ans:" >
+    
+    <input type="submit" value="Submit Answer">
+    <br> <br> 
+    Q.2  Identify the base peak:<br>
+    Ans: <input type="text" name="Ans:" >
+    
+    <input type="submit" value="Submit Answer">
+  </form> 
+  
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+        alert("Ans submitted: " + $("#test").val());
+      });
+    });
+    </script>
+</html>

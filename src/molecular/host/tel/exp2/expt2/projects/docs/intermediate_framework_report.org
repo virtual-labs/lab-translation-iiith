@@ -1,0 +1,69 @@
+#+TITLE: Frameworks and Libraries for Recreating Experiments
+#+AUTHOR: Anshuman Karthik, Harsha Vattem
+* p5
+** Introduction
+   p5 is a drawing framework with similar goals as the Processing language. It
+   helps in convenient implementation of interactivity and animation with the
+   capacity to introduce objects and style them easily.
+** Areas of Use
+   There are many uses of p5, relevant to the context of creating a lab. These
+   include:
+   + Easier implementation of methods to HTML elements, seeing as they can be
+     created from the script. This includes creating buttons, sliders,etc.
+   + Rotation of objects is much simpler, seeing as direct rotation methods are
+     available. Although JQuery can be used to achieve the same purpose, it
+     should be noted that p5 helps integrate everything into one piece of code,
+     and helps in simplifying it quite a bit.
+   + Drawing simple shapes is possible through p5. This helps in creating
+     schematics of new experiments, after which a graphical interface can be
+     applied.
+   + In various experiments with graphing, p5 provides graphing
+     libraries (developer contributed). These, coupled with animations can help
+     in plotting time dependent graphs were needed.
+   + Use in experiments is possible as well, using multiple user created
+     libraries.
+   + There exist in built animation functions which run fast loops, thereby
+     making repetition/iteration significantly easier.
+** Drawbacks
+   + p5 creates a canvas upon which drawing an animation can be done. This
+     makes interactions with other HTML elements difficult.
+   + It can be overcome by awkward methods of moving your canvas around, which
+     could also lead to blocks in the case of complex animation.
+   + It doesn't shorten the code for some experiments much. However it has user
+     contributed libraries that can help in others, for instance, collision
+     libraries for civil engineering labs.
+* Google Web Designer
+** Introduction
+   Google Web Designer is a code generating software for HTML5. It works with
+   drawing objects, making text boxes, etc. It is primarily used for creating
+   ads but can be used to generate other HTML5 content.
+** Areas of Use
+   + It makes for convenient creating of divisions, shapes and other various
+     but simple objects. Styling can also be done easily.
+   + It can be used for 3D object manipulation. This, however doesn't have much
+     scope as far as the current labs are considered.
+   + It can make simple animations without having to dive into the source
+     code. Thus it can be used to create simple schematics of *some* experiments.
+** Drawbacks
+   + It is in its beta version, and hence runs into various bugs (further
+     described)
+   + There is a lack of documentation thus preventing full implementation of
+     all the features.
+   + It doesn't incorporate functions like sliders and menus, which are common in the
+     experiments of lab.
+   + If a small change in functionality is required, the user is unable to
+     modify and then use the generated code. Thus,specific results cannot be
+     realized.
+   + In some machines, the generated code can't even be accessed, again, a
+     result of it being in beta version.
+   + Certain buttons and features don't have any effect when done in sequence
+     with something else.
+   + It is generally used for advertisements and can only thus perform simple
+     CSS animations.
+   + You can't append existing code to generated code and edit it.
+   + The usage of the generated code is limited to only certain browsers. We
+     ran into problems with Firefox and we found similar complaints about
+     Opera-GWD compatibility.
+   + Code generated runs into some issues when published and opened using
+     Firefox. The code sometimes hangs and the browser becomes unresponsive.
+         

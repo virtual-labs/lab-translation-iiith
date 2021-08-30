@@ -1,0 +1,196 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment :  Absorption (and transmittance) measurements of a colourless and a coloured light absorbing substance in a solution by using a spectrophotometer
+     Author : Rama Shanbhag -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="वर्चुअल लैब्स में आपका स्वागत है - एमएचआरडी भारत सरकार की पहल" name="description"/>
+  <meta content="वर्चुअल लैब्स में आपका स्वागत है - एमएचआरडी भारत सरकार की पहल" name="author"/>
+  <title>
+   वर्चुअल लैब्स में आपका स्वागत है - एमएचआरडी भारत सरकार की पहल
+  </title>
+  <link href="http://vlabs.iiit.ac.in/src/css/style.css" rel="stylesheet"/>
+  <link href="http://vlabs.iiit.ac.in/src/scss/style.scss" rel="stylesheet"/>
+  <link href="../images/favicon.ico" rel="shortcut icon"/>
+  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Important Owl stylesheet -->
+  <link href="../vendors/owl-carousel/owl.carousel.css" rel="stylesheet"/>
+  <link href="../vendors/owl-carousel/owl.theme.css" rel="stylesheet"/>
+  <link href="../vendors/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="tabs.js" type="text/javascript">
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-67558473-1', 'auto');ga('send', 'pageview');
+  </script>
+ </head>
+ <body>
+  <div>
+   <!-- Body is divided into three rows -->
+   <!-- First row consists of title of the experiment and the reset button -->
+   <div class="row">
+    <h3>
+     किसी घोल में रंगहीन व रंगीन प्रकाश-अवशोषी पदार्थ के अवशोषण (व पारगम्‍यता) को एक स्पेक्ट्रोफोटोमीटर के द्वारा मापना
+    </h3>
+    <br/>
+    <button id="reset_btn">
+     प्रयोग को रीसेट करें
+    </button>
+   </div>
+   <br/>
+   <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+   <div class="row">
+    <div class="col-sm-6">
+     <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+     <img id="manual_button" src="images/manual_button.png"/>
+     <br/>
+     <br/>
+     <div class="modal" id="manual" style="z-index:1200">
+      <!-- Modal content -->
+      <div class="modal-content">
+       <div class="modal-header">
+        <span class="close">
+         ×
+        </span>
+        <h2>
+         मैन्यूअल
+        </h2>
+       </div>
+       <div class="modal-body" style="text-align:left;">
+        <p>
+         1. स्पेक्ट्रोफोटोमीटर से परिचित होना।
+        </p>
+        <p>
+         2. पाॅवर बटन पर क्लिक कर उपकरण को चालू करें और उपकरण के इनिशिअलाइज़/तैयार होने के लिए 30 मिनट तक प्रतीक्षा करें।
+        </p>
+        <p>
+         3. निम्नलिखित दो घोल तैयार करें-एक) ~ 0.001 एम. पोटेशियम डाइक्रोमेट (K2Cr2O7) और दो) ~ 5mg/एल कैफीन, डिस्टिल्ड वाटर में। ये घोल, दो वॉल्यूमीट्रिक फ्लास्कों पर दिखाए गए हैं। ड्रॉप-डाउन मेन्‍यू से इच्छित घोल पर क्लिक करके माप के लिए एक घोल का चयन कर सकते हैं।
+        </p>
+        <p>
+         4. साफ, सूखा बीकर लेने के लिए बीकर पर क्लिक करें।
+        </p>
+        <p>
+         5. स्वच्छ, सूखे बीकर में घोल डालने के लिए वॉल्यूमीट्रिक फ्लास्क पर क्लिक करें।
+        </p>
+        <p>
+         6. बीकर से सही मात्रा में घोल इकट्ठा करने के लिए माइक्रोप्रिपेट पर क्लिक करें। वास्तविक ऑपरेशन में, माइक्रोप्रिपेट पर एक उपयुक्त नोक लगायी जाती है और घोल में डुबोने से पहले ज़रूरी वॉल्यूम के हिसाब से स्‍केल को सेट किया जाता है।
+        </p>
+        <p>
+         7. उस पर क्लिक करके एक क्युवेट लें।
+        </p>
+        <p>
+         8. क्युवेट पर क्लिक करके, माइक्रोपिपेट से क्‍युवेट में घोल उड़ेलें। वास्तविक मापन में, क्युवेट को लगभग उसके दो-तिहाई आयतन तक भरा जाता है।
+        </p>
+        <p>
+         9. स्पेक्ट्रोफोटोमीटर का ढक्कन खोलने के लिए उस पर क्लिक करें।
+        </p>
+        <p>
+         10. सैंपल होल्डर में रखने के लिए क्युवेट पर क्लिक करें। इस मापन में पानी को रिक्त नमूने या संदर्भ के बतौर उपयोग करना होता है। यहां पर एक डबल बीम स्पेक्ट्रोफोटोमीटर दिखाया गया है। इस मामले में कोई भी सैम्पल को सैम्पल होल्डर में (अक्सर सामने वाले) और सैंपल बैंक या रिफरेंस को रिफरेंस होल्डर (अक्सर पीछे वाले) में रखा जा सकता है।
+        </p>
+        <p>
+         11. स्क्रीन पर स्‍पेक्‍ट्रल स्कैन की वेवलेंग्थ रेंज को दर्ज करें।
+         <br/>
+         कैफीन के लिए-प्रारंभ : 590 एनएम, अंत : 290 एनएम।
+         <br/>
+         K2Cr2O7 के लिए-प्रारंभ : 700 एनएम, अंत : 325 एनएम। वास्तविक ऑपरेशन में, चुने गए सैंपल के लिए इनसिडेन्ट लाइट की वेवलेंग्थ रेंज और वेवलेंग्थ स्कैन को अकम्पनीड कंप्यूटर सॉफ्टवेयर के माध्यम से चलाया जाता है। स्कैन को एब्ज़ार्बंस (A) या ट्रांसमिटंस (%T) मोड में चला सकते हैं।
+        </p>
+        <p>
+         12. तरंग-माप स्कैन को चलाने के लिए मेज़रमेंट सेट-अप स्क्रीन पर हरे ’स्टार्ट’ बटन पर क्लिक करें। वेवलेंग्थ स्कैन को ध्‍यान से देखें। यदि स्पेक्ट्रोफोटोमीटर सिंगल बीम उपकरण है, तो पहले रेफरंस सैंपल को एक क्युवेट में लेकर तरंग-माप स्कैन चलाने के बाद सैंपल चलाया जाता है। संबंधित तरंग-मापों के लिए सैंपल डेटा से संदर्भ डेटा को घटाना होता है।
+        </p>
+        <p>
+         13. स्पेक्ट्रल स्कैन पूरा होने पर क्लोज़ बटन पर क्लिक करें। वास्तविक ऑपरेशन में, स्कैन डेटा को कंप्यूटर में संग्रहीत किया जाता है। उपकरण डेटा संग्रहीत करता है और इसलिए सैंपल फ़ाइल नेम के लिए पूछता है। एक फ़ाइल नेम देकर डेटा सेव किया जाता है।
+        </p>
+        <p>
+         14. दूसरे सैंपल के लिए माप को दोहराएं।
+        </p>
+        <p>
+         15. डेटा टैब पर क्लिक करके डेटा एकत्र करें।
+        </p>
+        <p>
+         16. दोनों सैंपल के लिए अवशोषण (या पारगमन) बनाम वेवलेंग्थ को प्लॉट करें और यदि संभव हो तो, दोनों नमूनों के स्पेक्ट्रमों को एक के ऊपर एक रखें/ओवरले करें।
+        </p>
+        <p>
+         17. दोनों नमूनों के मेन पीक के लिए अधिकतम अब्ज़ॉर्प्शन की वेवलेंथ्स की गणना करें
+        </p>
+       </div>
+      </div>
+     </div>
+     <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+     <img id="data_button" src="images/data_button.png"/>
+    </div>
+    <!--This column contains a shelf with apparatus on it -->
+    <div class="col-sm-6" id="apparatus">
+     <img id="shelf" src="images/shelf.png"/>
+     <select autocomplete="off" id="solution">
+      <option selected="" value="potassium">
+       पोटेशियम डाइक्रोमेट
+      </option>
+      <option value="caffeine">
+       कैफीन
+      </option>
+     </select>
+     <img id="flask" src="images/flask.png"/>
+     <img id="pipette" src="images/pipette.png"/>
+     <img id="beaker" src="images/beaker.png"/>
+     <img id="cuvette" src="images/cuvette.png"/>
+    </div>
+   </div>
+   <br/>
+   <br/>
+   <br/>
+   <!-- Third row consists of table with various devices on it  -->
+   <div class="row">
+    <div class="col-sm-12" id="table">
+     <img id="table_with_spec" src="images/table_with_spec.png"/>
+     <img id="computerimage" src="images/computer.png"/>
+     <!-- button to scan the sample on the computer-->
+     <img id="comp_trans_button" src="images/vertical_button.png"/>
+     <!-- button to open and close the spectrophotometer lid -->
+     <img id="spectrolid_trans_button" src="images/vertical_button.png"/>
+     <!-- reference cuvette -->
+     <img id="reference" src="images/reference.png"/>
+     <img id="ref_cuvette"/>
+     <!-- text that shows the instructions to be followed next -->
+     <div id="demo">
+     </div>
+     <!-- button to switch on and switch off the spectrophotometer -->
+     <img id="power_trans_button" src="images/vertical_button.png"/>
+    </div>
+   </div>
+   <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+   <img id="clockScreen" src="images/clock.png"/>
+   <!-- Image of the hand of the clock -->
+   <img id="clockHand" src="images/hand.png"/>
+   <!-- Image of the greyed background displayed as a background while scanning the sample -->
+   <img class="common" id="scan" src="images/transparent.png"/>
+   <!-- This image is used to enter the input values to display the graph1/graph2-->
+   <img class="data_validation" id="input_data" src="images/form1.png"/>
+   <!--Displays the graph by clicking on start button -->
+   <img class="data_validation" id="start_btn" src="images/vertical_button.png"/>
+   <!--graph input values -->
+   <input autocomplete="off" class="data_validation" id="input1" type="text"/>
+   <input autocomplete="off" class="data_validation" id="input2" type="text"/>
+   <!-- background image for the graphs instruction -->
+   <img class="common" id="instruction_bkgd" src="images/graph_instruction.png"/>
+   <!-- graphs instruction is displayed here....-->
+   <div class="common" id="graph_instruction">
+   </div>
+   <!-- Video that plots a graph for type 1 sample -->
+   <video class="video" id="video1">
+    <source src="videos/graph1.mp4" type="video/mp4"/>
+   </video>
+   <!-- Video that plots a graph for type 2 sample -->
+   <video class="video" id="video2">
+    <source src="videos/graph2.mp4" type="video/mp4"/>
+   </video>
+   <!-- Transparent image button to close the scanning page and the videos-->
+   <img id="disposegraph" src="images/vertical_button.png"/>
+  </div>
+ </body>
+</html>

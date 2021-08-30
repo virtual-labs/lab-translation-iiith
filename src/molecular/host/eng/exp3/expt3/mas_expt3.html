@@ -1,0 +1,124 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt3.js"></script>
+    <script type="text/javascript" src="mas3_animations.js"></script>
+    <title>Effects of sample path length Dependence of Absorbance (Lambert Law)</title>
+</head>
+<body>  
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class= "row">
+        <h3>Effects of sample path length Dependence of Absorbance (Lambert Law)</h3><br/>
+        <button id='reset_btn'>Reset Experiment</button>
+    </div><br/>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br/><br/>
+
+            <div id="manual" style = "z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times</span>
+                        <h2>Manual</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. Turn on the instrument clicking on the power button and wait for 30 min for initialization of the instrument. </p>
+                        <p>2. Make, say 0.001 M, aqueous solution of potassium dichromate in 0.01 N H2SO4. </p>
+                        <p>3. Click on the beaker to take a clean, dry beaker. Click on the volumetric flask to pour the solution into the clean, dry beaker. </p>
+                        <p>4. Click on the micropipette to collect appropriate quantity of solution from the beaker. Take a cuvette by clicking on it. </p>
+                        <p>5. Pour the solution from the micropipette into the cuvette by clicking on the cuvette. (In actual measurements, the cuvette is filled to approx. two-third of its volume.) </p>
+                        <p>6. Click on the spectrophotometer lid to open it. </p>
+                        <p>7. Click on the cuvette to place it in the sample holder. One has to use aq. 0.01 N H2SO4 as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. In this case, one can place the sample in the sample holder and the sample bank or reference in the reference holder simultaneously. </p>
+                        <p>8. Run the wavelength scan by clicking on the Computer monitor and then on the Scan button and observe the wavelength scan. In the real spectrophotometer operation, an appropriate wavelength range of incident light for the sample can be chosen and the wavelength scan are run via the accompanied computer software. One can run the scan in absorbance or transmittance mode. The scan data is stored in the computer. If the spectrophotometer is a single beam instrument, then first the sample blank or reference is taken in a cuvette and the wavelength scan is run followed by the sample. One has to subtract the reference data from the sample data for respective wavelengths.</p>
+                        <p>9. Click on Reset button to start new measurement. Repeat the measurements with cuvettes of different path lengths. </p>
+                        <p>10. Collect all data by clicking on the Data tab. Plot the absorbance of the sample at various wavelengths for different path lengths and determine the wavelength of maximum absorptions i.e., spectral peak-positions. </p>
+                        <p>11. Plot the absorbance values for a particular wavelength (say, 350 nm) vs. path lengths and calculate linear regression. Note down the correlation coefficient which is a measure of the quality of a calibration and here tells how good a straight line fits to all of the calibration points. </p>
+                        <p>12. Repeat the plotting of the absorbance values vs. path lengths for two other wavelengths say, 375 nm and 440 nm and calculate linear regressions. </p>
+                        <p>13. Construct similar three plots taking transmittance in place of absorbance values vs. path lengths for three wavelengths 350 nm, 375 nm and 440 nm and calculate linear regressions. Note down the correlation coefficients. </p>
+                        <p>14. Verify the Lambert Law observing whether absorbance and transmittance values have linear correlation with path length or not. </p> 
+                        <p>15. Normalize absorbance measurements to 1 mm path length by dividing the absorbance data by the corresponding path length for a given wavelength. Are the normalized data (within experimental error) path length-specific at a given wavelength? Discuss your results. </p> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+        </div>
+
+
+        <!-- This column conatins the shelf with apparatus on top of it. -->
+        <div class="col-sm-6" id="apparatus">
+            <img  id = "shelf" src="images/only_shelf.png">
+            <!-- This column conatins the shelf dropdown box to choose the type of the solution and apparatus-->
+            <select id="solution" >
+                <option selected>Potassium Dichromate</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette1" src="images/cuvette.png">
+            <img id="cuvette2" src="images/cuvette.png">
+            <img id="cuvette3" src="images/cuvette.png">
+        </div>
+    </div><br/><br/><br/>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img  id = "table_with_spec" src="images/table_with_spec.png">
+            <img  id ="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id ="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id ="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id = "reference" src = "images/reference.png">
+            <img id="ref_cuvette" >
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id= "power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen"  src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img  id="clockHand"  src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan"  src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1"  src="images/scan10mm.png">
+    <img id="scanimage2"  src="images/scan5mm.png">
+    <img id="scanimage3"  src="images/scan1mm.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id ="scan_btn" src="images/vertical_button.png" >
+    <!-- Video that plots a graph for 10 mm sample -->
+    <video id="tenmm_graph" class="video"><source src="videos/10mm_scan.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 5 mm sample -->
+    <video id="fivemm_graph" class="video"><source src="videos/5mm_scan.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 1 mm sample -->
+    <video id="onemm_graph" class="video"><source src="videos/1mm_scan.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+</body>
+</html>

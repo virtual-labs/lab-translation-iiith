@@ -1,0 +1,121 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt3.js"></script>
+    <script type="text/javascript" src="mas3_animations.js"></script>
+    <title>Effects of sample path length Dependence of Absorbance (Lambert Law)</title>
+</head>
+<body>  
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>नमूना पथ की लंबाई के प्रभाव की अनुपस्थिति (लैंबर्ट लॉ) की निर्भरता</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. पावर बटन पर क्लिक करने वाले इंस्ट्रूमेंट को चालू करें और इंस्ट्रूमेंट को इनिशियलाइज़ करने के लिए 30 मिनट तक प्रतीक्षा करें।</p>
+                        <p>2. बनाओ, 0.01 N H2SO4 में 0.001 एम, पोटेशियम डाइक्रोमेट का जलीय घोल।</p>
+                        <p>3. साफ, सूखे बीकर लेने के लिए बीकर पर क्लिक करें। स्वच्छ, सूखे बीकर में घोल डालने के लिए वॉल्यूमेट्रिक फ्लास्क पर क्लिक करें।</p>
+                        <p>4. बीकर से उचित मात्रा में घोल एकत्र करने के लिए माइक्रोप्रिपेट पर क्लिक करें। उस पर क्लिक करके एक क्युवेट लें।</p>
+                        <p>5. माइक्रोवेट से क्युवेट पर क्लिक करके समाधान को डालो। (वास्तविक माप में, क्युवेट लगभग लगभग भरा हुआ है। इसकी मात्रा का दो-तिहाई है।)</p>
+                        <p>6. इसे खोलने के लिए स्पेक्ट्रोफोटोमीटर के ढक्कन पर क्लिक करें।</p>
+                        <p>7. नमूना धारक में इसे रखने के लिए क्युवेट पर क्लिक करें। एक aq का उपयोग करना है। इस माप में नमूना रिक्त या संदर्भ के रूप में 0.01 N H2SO4 है। यहाँ एक डबल बीम स्पेक्ट्रोफोटोमीटर दिखाया गया है। इस मामले में, नमूना नमूना धारक और नमूना बैंक या संदर्भ धारक में संदर्भ को एक साथ रख सकता है।</p>
+                        <p>8. कंप्यूटर मॉनिटर और फिर स्कैन बटन पर क्लिक करके तरंग दैर्ध्य स्कैन चलाएं और तरंग दैर्ध्य स्कैन का निरीक्षण करें। वास्तविक स्पेक्ट्रोफोटोमीटर ऑपरेशन में, नमूना के लिए घटना प्रकाश की एक उपयुक्त तरंग दैर्ध्य रेंज को चुना जा सकता है और तरंग दैर्ध्य स्कैन कंप्यूटर सॉफ्टवेयर के माध्यम से चलाया जाता है। एक स्कैन को अवशोषकता या संप्रेषण मोड में चला सकता है। स्कैन डेटा को कंप्यूटर में संग्रहीत किया जाता है। यदि स्पेक्ट्रोफोटोमीटर एक एकल बीम उपकरण है, तो पहले नमूना रिक्त या संदर्भ एक क्यूवेट में लिया जाता है और नमूना के बाद तरंग दैर्ध्य स्कैन चलाया जाता है। संबंधित तरंगदैर्ध्य के लिए नमूना डेटा से संदर्भ डेटा को घटाना है।</p>
+                        <p>9. नया माप शुरू करने के लिए रीसेट बटन पर क्लिक करें। विभिन्न पथ लंबाई के cuvettes के साथ माप दोहराएं।</p>
+                        <p>10. डेटा टैब पर क्लिक करके सभी डेटा एकत्र करें। विभिन्न पथ लंबाई के लिए विभिन्न तरंग दैर्ध्य पर नमूने के अवशोषण को प्लॉट करें और अधिकतम अवशोषण यानी वर्णक्रमीय चोटी के पदों की तरंग दैर्ध्य निर्धारित करें।</p>
+                        <p>11. एक विशेष तरंग दैर्ध्य (जैसे, 350 एनएम) बनाम पथ लंबाई के लिए अवशोषण मानों को प्लॉट करें और रैखिक प्रतिगमन की गणना करें। सहसंबंध गुणांक पर ध्यान दें जो एक अंशांकन की गुणवत्ता का एक उपाय है और यहां बताता है कि अंशांकन बिंदुओं के लिए एक सीधी रेखा कितनी अच्छी है।</p>
+                        <p>12. दो अन्य तरंग दैर्ध्य कहते हैं, 375 एनएम और 440 एनएम के लिए पथ की लंबाई बनाम अवशोषण मूल्यों की साजिश को दोहराएं और रैखिक प्रतिगमन की गणना करें।</p>
+                        <p>13. तीन तरंग दैर्ध्य 350 एनएम, 375 एनएम और 440 एनएम के लिए पथ लंबाई के स्थान पर संप्रेषण मूल्यों के स्थान पर संप्रेषण लेने के समान तीन भूखंडों का निर्माण और रैखिक प्रतिगमन की गणना करें। सहसंबंध गुणांक पर ध्यान दें।</p>
+                        <p>14. लैंबर्ट कानून को देखें कि क्या अवशोषण और संप्रेषण मूल्यों में पथ लंबाई के साथ रैखिक सहसंबंध है या नहीं।</p> 
+                        <p>15. किसी दिए गए तरंग दैर्ध्य के लिए इसी पथ लंबाई द्वारा अवशोषण डेटा को विभाजित करके 1 मिमी पथ की लंबाई के लिए अवशोषण माप को सामान्य करें। किसी दिए गए तरंग दैर्ध्य में सामान्यीकृत डेटा (प्रयोगात्मक त्रुटि के भीतर) पथ की लंबाई के होते हैं? अपने परिणामों पर चर्चा करें।</p> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+        </div>
+
+
+        <!-- This column conatins the shelf with apparatus on top of it. -->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/only_shelf.png">
+            <!-- This column conatins the shelf dropdown box to choose the type of the solution and apparatus-->
+            <select id="solution">
+                <option selected="">पोटेशियम डाइक्रोमेट</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette1" src="images/cuvette.png">
+            <img id="cuvette2" src="images/cuvette.png">
+            <img id="cuvette3" src="images/cuvette.png">
+        </div>
+    </div><br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" src="images/scan10mm.png">
+    <img id="scanimage2" src="images/scan5mm.png">
+    <img id="scanimage3" src="images/scan1mm.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for 10 mm sample -->
+    <video id="tenmm_graph" class="video"><source src="videos/10mm_scan.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 5 mm sample -->
+    <video id="fivemm_graph" class="video"><source src="videos/5mm_scan.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 1 mm sample -->
+    <video id="onemm_graph" class="video"><source src="videos/1mm_scan.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+</body></html>

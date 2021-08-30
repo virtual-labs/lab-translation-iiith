@@ -1,0 +1,137 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt2.js"></script>
+    <title>Solvent Effects</title>
+</head>
+
+<body> 
+   <!-- Body is divided into three rows -->
+   <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+       <h3>यूवी-दृश्य अवशोषण स्पेक्ट्रम पर विलायक प्रभाव</h3><br>
+       <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div>
+    <br>
+    
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+        On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="image-specific/manual_button.png"><br><br>
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align: left">
+                        <ol>   
+                            <li>पांच 1 × 10 तैयार करें<sup>-5</sup>सॉल्वैंट्स में एम Coumarin-138 समाधान: साइक्लोहेक्सेन, डाइऑक्साने, एसिटोनिट्राइल, एथिल अल्कोहल और एथिलीन ग्लाइकॉल। इस तरह के पतला समाधान 1 × 10 से कमजोर पड़ने के माध्यम से तैयार किए जा सकते हैं<sup>-4</sup>संबंधित सॉल्वैंट्स में एम स्टॉक समाधान। यहां विभिन्न सॉल्वैंट्स में समाधान एक विलायक चयन बार पर दिखाए जाते हैं।</li>
+                            <li>सभी समाधानों के साथ अवशोषण माप एक के बाद एक इस प्रकार किया जाता है।</li>
+                            <li>एक विशेष समाधान लेने के लिए, विलायक चयन पट्टी पर उपयुक्त विलायक पर क्लिक करें और फिर समाधान युक्त वॉल्यूम फ्लास्क पर क्लिक करें।</li>
+                            <li>इसे इंस्ट्रूमेंट टेबल पर ले जाने के लिए क्वार्ट्ज क्युवेट (पथ की लंबाई, 1 सेमी × 1 सेमी) पर क्लिक करें।</li>
+                            <li>प्रायोगिक समाधान के लगभग 3 एमएल इकट्ठा करने के लिए ग्लास पाश्चर विंदुक पर क्लिक करें जिसे क्वार्ट्ज क्यूवेट में स्थानांतरित किया जाएगा।</li>
+                            <li>इसमें समाधान निकालने के लिए पिपेट पर क्लिक करें।</li>
+                            <li>इसे वॉल्यूमेट्रिक फ्लास्क से बाहर निकालने के लिए पिपेट पर क्लिक करें।</li>
+                            <li>समाधान को cuvette में स्थानांतरित करने के लिए फिर से पिपेट पर क्लिक करें। अवशोषण वर्णक्रमीय स्कैन शुरू करें, पॉप-अप “प्रारंभ अवशोषण माप” पर क्लिक करें।</li>
+                            <li>पावर बटन पर क्लिक करके स्पेक्ट्रोफोटोमीटर चालू करें। असली ऑपरेशन में, यह लगभग लगता है। साधन के प्रारंभ के लिए 30 मि।</li>
+                            <li>सेल-धारक में नमूना रखने के लिए ढक्कन पर क्लिक करके स्पेक्ट्रोफोटोमीटर के नमूना कक्ष का ढक्कन खोलें। नमूना धारक में रखने के लिए क्युवेट पर क्लिक करें। इस माप में नमूना रिक्त या संदर्भ के रूप में शुद्ध विलायक का उपयोग करना होता है। यहाँ एक डबल बीम स्पेक्ट्रोफोटोमीटर दिखाया गया है।</li>
+                            <li>उस पर क्लिक करके नमूना कक्ष का ढक्कन बंद करें।</li>
+                            <li>कंप्यूटर मॉनिटर पर अवशोषण माप आइकन पर क्लिक करके माप सेट-अप स्क्रीन खोलें।</li>
+                            <li>स्क्रीन पर, तरंग दैर्ध्य रेंज दर्ज करें। प्रारंभ: 430 एनएम अंत: 275 एनएम। वास्तविक ऑपरेशन में, नमूना के लिए घटना प्रकाश की तरंग दैर्ध्य सीमा को चुना जाता है और तरंग दैर्ध्य स्कैन कंप्यूटर सॉफ्टवेयर के माध्यम से चलाया जाता है। एक स्कैन को एब्जॉर्बेंस (ए) या ट्रांसमिटेंस (% टी) मोड में चला सकता है।</li>
+                            <li>तरंग दैर्ध्य स्कैन को चलाने के लिए माप सेट-अप स्क्रीन पर हरे रंग के प्रारंभ बटन पर क्लिक करें। तरंग दैर्ध्य स्कैन का निरीक्षण करें।</li>
+                            <li>स्पेक्ट्रल स्कैन पूरा होने पर क्लोज बटन पर क्लिक करें। वास्तविक ऑपरेशन में, स्कैन डेटा को कंप्यूटर में संग्रहीत किया जाता है। उपकरण डेटा संग्रहीत करता है और इसलिए नमूना फ़ाइल नाम के लिए पूछता है। डेटा सहेजने के लिए एक फ़ाइल नाम दर्ज करता है।</li>
+                            <li>नमूना कक्ष से क्युवेट को बाहर निकालने के लिए, पहले इसे खोलने के लिए नमूना कक्ष के ढक्कन पर क्लिक करें और फिर इसे बंद करने के लिए नमूना कक्ष के ढक्कन पर क्लिक करें।</li>
+                            <li>माप पर प्रारंभ करने के लिए रीसेट बटन पर क्लिक करें।</li>
+                            <li>सभी सॉल्वैंट्स के साथ अवशोषण माप दोहराएं पहले विलायक चयन बार पर और फिर समाधान युक्त वॉल्यूमेट्रिक फ्लास्क पर क्लिक करके।</li>
+                            <li>डेटा टैब पर क्लिक करके सभी डेटा एकत्र करें।</li>
+                            <li>अलग-अलग सॉल्वैंट्स के साथ यूवी-दृश्य अवशोषण स्पेक्ट्रा की जांच करें।</li>
+                            <li>सभी सॉल्वैंट्स के लिए अधिकतम अवशोषण तरंगदैर्ध्य और इसी अवशोषण मूल्यों का पता लगाएं और उन्हें विलायक ढांकता हुआ स्थिरांक और अपवर्तक सूचक मूल्यों के साथ सारणीबद्ध करें।</li>
+                            <li>क्या विलायक ध्रुवता और अधिकतम अवशोषण की तरंग दैर्ध्य के बीच कोई संबंध या प्रवृत्ति है?</li>
+                            <li>अपनी टिप्पणियों पर चर्चा करें।</li>
+	                   </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="image-specific/data_button.png">
+
+            <div id="scale">
+                <img id="scale_image" src="image-specific/scale_image.png">
+                <input type="range" id="slider" min="0" max="4" step="1" value="0" autocomplete="off">
+            </div>
+
+        </div>
+        <!-- This column contains the shelf with apparatus on top of it. -->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="image-specific/shelf.png">
+            <img id="round-bottom-flask" src="image-specific/empty-round-bottom-flask.png">
+            <img id="solution_name">
+            <img id="pipette" src="image-specific/pipette.png">
+            <img id="quartz_cuvette" src="image-specific/quartz-cuvette.png">
+            <img id="cuvette" src="image-specific/cuvette.png">
+        </div>
+    </div><br><br><br>
+
+    <div class="row">
+    <!-- Third row consists of table with various devices on it  -->
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="image-specific/table_with_spec.png">
+            <img id="computerimage" src="image-specific/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="image-specific/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="image-specific/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="image-specific/reference.png">
+            <img id="ref_cuvette" src="image-specific/reference_cuv.png">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="image-specific/vertical_button.png">
+        </div>
+    </div>
+
+    <img id="clockScreen" src="image-specific/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="image-specific/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" class="common" src="image-specific/transparent.png">
+    <button id="start">अवशोषण स्पेक्ट्रोस्कोपी शुरू करें</button>
+    <!-- This image is used to enter the input values to display the graphs-->
+    <img id="input_data" class="data_validation" src="image-specific/form1.png">
+    <!--Displays the graph by clicking on start button -->
+    <img id="start_btn" class="data_validation" src="image-specific/vertical_button.png">
+    <!--graph input values -->
+    <input id="input1" class="data_validation" type="text" autocomplete="off">
+    <input id="input2" class="data_validation" type="text" autocomplete="off">    
+    <!-- background image for the graphs instruction -->
+    <img id="instruction_bkgd" class="common" src="image-specific/graph_instruction.png">
+    <!-- graphs instruction is displayed here....-->
+    <div id="graph_instruction" class="common"></div>
+    <!-- Video that plots a graph for type 1 sample -->
+    <video id="video1" class="video"><source src="videos/1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 2 sample -->
+    <video id="video2" class="video"><source src="videos/2.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 3 sample -->
+    <video id="video3" class="video"><source src="videos/3.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 4 sample -->
+    <video id="video4" class="video"><source src="videos/4.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 5 sample -->
+    <video id="video5" class="video"><source src="videos/5.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page and videos-->
+    <img id="disposegraph" src="image-specific/vertical_button.png">
+
+
+
+</body></html>

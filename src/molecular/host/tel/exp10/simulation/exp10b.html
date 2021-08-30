@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head>
+  	<title>Study of kinetics of a reaction by using spectrophotometric method</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<!-- jQuery library -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<!-- Latest compiled JavaScript -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="exp10.css">
+  	<script type="text/javascript" src="exp10a.js"></script>
+    <script type="text/javascript" src="exp10b.js"></script>
+</head>
+
+<body>
+	<div class="container"> <!-- start of the container -->
+
+      <!-- row consists of a column with an images overlapped on top of the background image. -->
+      <div class="row"> 
+  			<div class="col-sm-12">
+              <!-- drop down menu to select the type of sample --> 
+              <select id="samplenumber" selected="" autocomplete="off">
+                  <option value="sample1">నమూనా సంఖ్య: 1</option>
+                  <option value="sample2">నమూనా సంఖ్య: 2</option>
+                  <option value="sample3">నమూనా సంఖ్య: 3</option>
+              </select> 
+
+    				  <img id="background" src="images/background3.png">
+              <img id="shelf1" src="images/shelf1.png">
+              <img id="instruction_box" src="images/instruction_box.png">
+              <img id="spectrometer" src="images/spectrometer.png">
+              <img id="computer" src="images/computer.png">
+              <img id="pipette" src="images/pipette.png">
+              <img id="shelf2" src="images/shelf2.png">
+              <img id="ascorbic_acid" src="images/ascorbic_acid.png">
+              <img id="Eosin" src="images/Eosin.png">
+              <img id="power_btn" src="images/transparent_btn.png">
+              <img id="spectrometerlid_btn" src="images/transparent_btn.png">
+              <img id="computerscreen_btn" src="images/transparent_btn.png">
+              <img id="clockface2" src="images/clockface2.png">
+              <img id="clockhand2" src="images/clockhand.png">
+              <img id="grey_solution" src="images/grey_solution.png">
+              <img id="yellow_solution" src="images/half_filled_yellow_sol.png">
+              <img id="purple_solution1" src="images/purple_solution.png">
+              <img id="purplesolution2" src="images/purple_solution.png">
+              <img id="ref_cuvette1" src="images/grey_solution.png">
+              <img id="particlegrowth_btn" src="images/particlegrowth_btn.png">
+              <img id="EosinReduction_btn" src="images/EosinReduction_btn.png">
+              <img id="indication_arrow1" src="images/indication_arrow.png">
+              <img id="indication_arrow2" src="images/indication_arrow.png">
+
+              <!-- Graph validation images -->
+              <img id="graph1" class="graph" src="images/graph1.png">
+              <img id="graph2" class="graph" src="images/graph2.png">
+              <img id="graph3" class="graph" src="images/graph3.png">
+              <img id="graph4" class="graph" src="images/graph4.png">
+              <img id="graph5" class="graph" src="images/graph5.png">
+              <img id="graph6" class="graph" src="images/graph6.png">
+              <img id="graph7" class="graph" src="images/graph7.png">
+              <img id="scan_btn" src="images/transparent_btn.png">
+              <img id="close_btn" src="images/transparent_btn.png">
+              <!-- Video that plots a graph for sample1, 2 and 3 ( Abs spectrum of gold seed particle ) -->
+              <video id="video1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample1 (gold particle development)-->
+              <video id="video2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample1 (gold Eosin Reduction development)-->
+              <video id="video3" class="video"><source src="videos/graph3.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample2 (gold particle development)-->
+              <video id="video4" class="video"><source src="videos/graph4.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample2 (gold Eosin Reduction development)-->
+              <video id="video5" class="video"><source src="videos/graph5.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample3 (gold particle development)-->
+              <video id="video6" class="video"><source src="videos/graph6.mp4" type="video/mp4"></video>
+              <!-- Video that plots a graph for sample3 (gold Eosin Reduction development)-->
+              <video id="video7" class="video"><source src="videos/graph7.mp4" type="video/mp4"></video>
+              
+              <!-- instructions to perform the experiment are dislayed here -->
+              <p id="instruction"></p>
+              <p id="Reset_instruction"></p>
+              <!-- solution names -->
+              <p id="sol_name1">ఇయోసిన్</p>
+              <p id="sol_name2">NaBH<sub>4</sub></p>
+              <p id="sol_name3">ఆస్కార్బిక్ ఆమ్లం</p>
+  			</div>
+		  </div>
+
+	</div> <!-- end of the container -->
+
+
+</body></html>

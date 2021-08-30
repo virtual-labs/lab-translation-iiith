@@ -1,0 +1,134 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mas_expt7.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="../../libraries/jQueryRotate.js"></script>
+      <script type="text/javascript" src="mas_expt7.js"></script>
+      <script type="text/javascript" src="mas7_animations.js"></script>
+      <title>Determination of unknown concentration of a light absorbing analyte</title>
+  </head>
+
+
+<!-- Body is divided into three rows -->
+<body>  
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>एक प्रकाश अवशोषित विश्लेषण की अज्ञात एकाग्रता का निर्धारण</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;font-size:18px;">
+                        <p>1. लगभग 3 × 10 की ताकत का एक मानक K2Cr2O7 जलीय घोल तैयार करें<sub>-3</sub>0.01 N H2SO4 में M (यहाँ वर्णित प्रयोगों के लिए हमने ताकत = 3.16 × 10 के घोल का उपयोग किया है<sub>-3</sub>एम। यह स्टॉक समाधान के रूप में उपयोग किया जाता है।</p>
+                        <p>2. उपरोक्त स्टॉक समाधान से, K2Cr2O7 समाधान के पांच अलग-अलग सांद्रता तैयार करें: कहते हैं, 0.158 मिमी, 0.316 मिमी, 0.474 मिमी, 0.632 मिमी और 0.790 मिमी।</p>
+                        <p>3. कंप्यूटर और साधन शक्तियों पर स्विच करें; साधन के 'वार्म-अप' के लिए 30 मिनट तक प्रतीक्षा करें।</p>
+                        <p>4. साधन में एक प्रकाश स्रोतों (यूवी और दृश्यमान) का चयन कर सकता है, भट्ठा चौड़ाई, स्कैन गति और% संप्रेषण या शोषक प्रदर्शन, ब्याज की तरंग दैर्ध्य रेंज, आदि का चयन कर सकता है।</p>
+                        <p>5. एक दिए गए पथ की लंबाई (जैसे, 1 सेमी) के साथ दो साफ और सूखे ग्लास (केवल दृश्यमान रेंज स्कैन के लिए) या क्वार्ट्ज क्यूवेट लें।</p>
+                        <p>6. नमूना रिक्त (aq। 0.01 एन H2SO4 वर्तमान मामले में) के साथ एक क्युवेट भरें और सबसे कम एकाग्रता के साथ जलीय K2Cr2O7 समाधान के साथ अन्य क्युवेट।</p>
+                        <p>7. संदर्भ धारक में नमूना रिक्त स्थान और नमूना धारक में नमूना रखें।</p>
+                        <p>8. स्कैन (ए या% टी बनाम λ) चलाएं।</p>
+                        <p>9. इसी तरह स्पेक्ट्रल रन अन्य सभी नमूनों के लिए सबसे कम सांद्रता से शुरू होकर K2Cr2O7 के अगले उच्च सांद्रता के लिए किया जाता है। हर बार किसी को समाधान का एक छोटा सा हिस्सा लेने वाले क्युवेट को अगले विश्लेषण के लिए कुल्ला करना चाहिए।</p>
+                        <p>10. अज्ञात K2Cr2O7 नमूने के लिए स्पेक्ट्रल रन किया जाता है।</p>
+                        <p>11. अब अधिकतम अवशोषण (λmax) की तरंग दैर्ध्य का पता लगाएं, K2Cr2O7 के सभी सांद्रता के लिए दिए गए λmax में अवशोषण और इन डेटा युक्त एक तालिका बनाते हैं।</p>
+                        <p>12. एक दिए गए λmax के लिए अवशोषण बनाम एकाग्रता की साजिश रचकर एक अंशांकन साजिश का निर्माण करें। इस प्रकार एक K2Cr2O7 के दो शिखर पदों के लिए दो अंशांकन भूखंडों का निर्माण करता है।</p>
+                        <p>13. अंशांकन भूखंडों की ढलानों को निर्धारित करें और इसलिए λ के संबंधित मूल्य।</p>
+                        <p>14. दो अंशांकन भूखंडों से अज्ञात K2Cr2O7 समाधान की एकाग्रता का निर्धारण करें।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <div id="scale">
+                <img id="scale_image" src="images/scale.png">
+                <input type="range" id="slider" min="0" max="4" step="1" value="0" autocomplete="off">
+                <p id="concentration">पोटेशियम डाइक्रोमेट की एकाग्रता</p>
+            </div>
+
+        </div>
+
+        <!-- This column conatins the shelf with apparatus on top of it.-->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/shelf.png">
+            <select id="solution" autocomplete="off">
+                <option value="Potassium Dichromate">पोटेशियम डाइक्रोमेट</option>
+                <option value="Unknown Solution">अज्ञात समाधान</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div>
+    <br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" class="scanimage" src="images/scan1.png">
+    <!-- <img id="scanimage2"  class = 'scanimage' src="images/scan2.png">
+    <img id="scanimage3"  class = 'scanimage' src="images/scan3.png">
+    <img id="scanimage4"  class = 'scanimage' src="images/scan4.png">
+    <img id="scanimage5"  class = 'scanimage' src="images/scan5.png">
+    <img id="scanimage6"  class = 'scanimage' src="images/scan6.png"> -->
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for type potassium dichromate concentration sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- <video id="graph2" class="video" ><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <video id="graph3" class="video" ><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <video id="graph4" class="video" ><source src="videos/graph4.mp4" type="video/mp4"></video>
+    <video id="graph5" class="video" ><source src="videos/graph5.mp4" type="video/mp4"></video> -->
+    <!-- Video that plots a graph for type unknown concentration sample -->
+    <!-- <video id="graph6" class="video" ><source src="videos/graph6.mp4" type="video/mp4"></video> -->
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+</body></html>

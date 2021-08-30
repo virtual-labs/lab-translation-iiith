@@ -1,0 +1,137 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt2.js"></script>
+    <title>Solvent Effects</title>
+</head>
+
+<body> 
+   <!-- Body is divided into three rows -->
+   <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+       <h3>UV- కనిపించే శోషణ స్పెక్ట్రాపై ద్రావణి ప్రభావాలు</h3><br>
+       <button id="reset_btn">ప్రయోగాన్ని రీసెట్ చేయండి</button>
+    </div>
+    <br>
+    
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+        On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="image-specific/manual_button.png"><br><br>
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>మాన్యువల్</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align: left">
+                        <ol>   
+                            <li>ఐదు 1 × 10 సిద్ధం<sup>-5</sup>ద్రావకాలలో M కొమారిన్ -138 పరిష్కారాలు: సైక్లోహెక్సేన్, డయాక్సేన్, అసిటోనిట్రైల్, ఇథైల్ ఆల్కహాల్ మరియు ఇథిలీన్ గ్లైకాల్. ఇటువంటి పలుచన పరిష్కారాలను 1 × 10 నుండి పలుచన ద్వారా తయారు చేయవచ్చు<sup>-4</sup>సంబంధిత ద్రావకాలలో M స్టాక్ సొల్యూషన్స్. ఇక్కడ వివిధ ద్రావకాలలోని పరిష్కారాలు ద్రావణి ఎంపిక పట్టీలో చూపబడతాయి.</li>
+                            <li>అన్ని పరిష్కారాలతో శోషణ కొలతలు ఈ క్రింది విధంగా జరుగుతాయి.</li>
+                            <li>ఒక నిర్దిష్ట పరిష్కారం తీసుకోవడానికి, ద్రావకం ఎంపిక పట్టీపై తగిన ద్రావకంపై క్లిక్ చేసి, ఆపై ద్రావణాన్ని కలిగి ఉన్న వాల్యూమెట్రిక్ ఫ్లాస్క్‌పై క్లిక్ చేయండి.</li>
+                            <li>ఇన్స్ట్రుమెంట్ టేబుల్‌కు తీసుకెళ్లడానికి క్వార్ట్జ్ కువెట్టే (మార్గం పొడవు, 1 సెం.మీ. × 1 సెం.మీ) పై క్లిక్ చేయండి.</li>
+                            <li>క్వార్ట్జ్ క్యూవెట్‌లోకి బదిలీ చేయబడే ప్రయోగాత్మక ద్రావణంలో 3 ఎంఎల్‌ను సేకరించడానికి గాజు పాశ్చర్ పైపెట్‌పై క్లిక్ చేయండి.</li>
+                            <li>దానిలో పరిష్కారాన్ని గీయడానికి పైపెట్ పై క్లిక్ చేయండి.</li>
+                            <li>వాల్యూమెట్రిక్ ఫ్లాస్క్ నుండి తీయడానికి పైపెట్ పై క్లిక్ చేయండి.</li>
+                            <li>క్యూవెట్‌లోకి ద్రావణాన్ని బదిలీ చేయడానికి మళ్లీ పైప్‌పై క్లిక్ చేయండి. శోషణ స్పెక్ట్రల్ స్కాన్‌ను ప్రారంభించడానికి, పాప్-అప్ “స్టార్ట్ శోషణ కొలత” పై క్లిక్ చేయండి.</li>
+                            <li>పవర్ బటన్ పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ ఆన్ చేయండి. నిజమైన ఆపరేషన్లో, ఇది సుమారు పడుతుంది. పరికరం ప్రారంభించడానికి 30 నిమిషాలు.</li>
+                            <li>సెల్-హోల్డర్‌లో నమూనాను ఉంచడానికి మూతపై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ యొక్క నమూనా గది యొక్క మూతను తెరవండి. నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో స్వచ్ఛమైన ద్రావకాన్ని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది.</li>
+                            <li>నమూనా గది యొక్క మూతపై క్లిక్ చేయడం ద్వారా దాన్ని మూసివేయండి.</li>
+                            <li>కంప్యూటర్ మానిటర్‌లోని శోషణ కొలత చిహ్నంపై క్లిక్ చేయడం ద్వారా కొలత సెటప్ స్క్రీన్‌ను తెరవండి.</li>
+                            <li>తెరపై, తరంగదైర్ఘ్యం పరిధిని నమోదు చేయండి. ప్రారంభం: 430 ఎన్ఎమ్ ముగింపు: 275 ఎన్ఎమ్. నిజమైన ఆపరేషన్‌లో, నమూనా కోసం సంఘటన కాంతి యొక్క తరంగదైర్ఘ్యం పరిధి ఎంచుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా నడుస్తుంది. ఒకరు స్కాన్‌ను శోషక (ఎ) లేదా ట్రాన్స్మిటెన్స్ (% టి) మోడ్‌లో అమలు చేయవచ్చు.</li>
+                            <li>తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయడానికి కొలత సెటప్ స్క్రీన్‌పై ఆకుపచ్చ ప్రారంభ బటన్‌పై క్లిక్ చేయండి. తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి.</li>
+                            <li>స్పెక్ట్రల్ స్కాన్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. పరికరం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.</li>
+                            <li>నమూనా గది నుండి క్యూట్‌ను బయటకు తీయడానికి, మొదట దానిని తెరవడానికి నమూనా చాంబర్ మూతపై క్లిక్ చేసి, ఆపై cuvette పై క్లిక్ చేయండి. దాన్ని మూసివేయడానికి నమూనా గది యొక్క మూతపై క్లిక్ చేయండి.</li>
+                            <li>కొలతలను ప్రారంభించడానికి రీసెట్ బటన్ పై క్లిక్ చేయండి.</li>
+                            <li>మొదట ద్రావణి ఎంపిక పట్టీపై క్లిక్ చేసి, ఆపై ద్రావణాన్ని కలిగి ఉన్న వాల్యూమెట్రిక్ ఫ్లాస్క్‌పై క్లిక్ చేయడం ద్వారా అన్ని ద్రావకాలతో శోషణ కొలతలను పునరావృతం చేయండి.</li>
+                            <li>డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా మొత్తం డేటాను సేకరించండి.</li>
+                            <li>వేర్వేరు ద్రావకాలతో UV- కనిపించే శోషణ స్పెక్ట్రాను పరిశీలించండి.</li>
+                            <li>అన్ని ద్రావకాలకు గరిష్ట శోషణ తరంగదైర్ఘ్యాలు మరియు సంబంధిత శోషణ విలువలను కనుగొని, వాటిని ద్రావణి విద్యుద్వాహక స్థిరాంకాలు మరియు వక్రీభవన సూచికల విలువలతో పాటు పట్టిక చేయండి.</li>
+                            <li>ద్రావణ ధ్రువణత మరియు గరిష్ట శోషణ యొక్క తరంగదైర్ఘ్యం మధ్య సంబంధం లేదా ధోరణి ఉందా?</li>
+                            <li>మీ పరిశీలనలను చర్చించండి.</li>
+	                   </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="image-specific/data_button.png">
+
+            <div id="scale">
+                <img id="scale_image" src="image-specific/scale_image.png">
+                <input type="range" id="slider" min="0" max="4" step="1" value="0" autocomplete="off">
+            </div>
+
+        </div>
+        <!-- This column contains the shelf with apparatus on top of it. -->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="image-specific/shelf.png">
+            <img id="round-bottom-flask" src="image-specific/empty-round-bottom-flask.png">
+            <img id="solution_name">
+            <img id="pipette" src="image-specific/pipette.png">
+            <img id="quartz_cuvette" src="image-specific/quartz-cuvette.png">
+            <img id="cuvette" src="image-specific/cuvette.png">
+        </div>
+    </div><br><br><br>
+
+    <div class="row">
+    <!-- Third row consists of table with various devices on it  -->
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="image-specific/table_with_spec.png">
+            <img id="computerimage" src="image-specific/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="image-specific/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="image-specific/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="image-specific/reference.png">
+            <img id="ref_cuvette" src="image-specific/reference_cuv.png">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="image-specific/vertical_button.png">
+        </div>
+    </div>
+
+    <img id="clockScreen" src="image-specific/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="image-specific/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" class="common" src="image-specific/transparent.png">
+    <button id="start">శోషణ స్పెక్ట్రోస్కోపీని ప్రారంభించండి</button>
+    <!-- This image is used to enter the input values to display the graphs-->
+    <img id="input_data" class="data_validation" src="image-specific/form1.png">
+    <!--Displays the graph by clicking on start button -->
+    <img id="start_btn" class="data_validation" src="image-specific/vertical_button.png">
+    <!--graph input values -->
+    <input id="input1" class="data_validation" type="text" autocomplete="off">
+    <input id="input2" class="data_validation" type="text" autocomplete="off">    
+    <!-- background image for the graphs instruction -->
+    <img id="instruction_bkgd" class="common" src="image-specific/graph_instruction.png">
+    <!-- graphs instruction is displayed here....-->
+    <div id="graph_instruction" class="common"></div>
+    <!-- Video that plots a graph for type 1 sample -->
+    <video id="video1" class="video"><source src="videos/1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 2 sample -->
+    <video id="video2" class="video"><source src="videos/2.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 3 sample -->
+    <video id="video3" class="video"><source src="videos/3.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 4 sample -->
+    <video id="video4" class="video"><source src="videos/4.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 5 sample -->
+    <video id="video5" class="video"><source src="videos/5.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page and videos-->
+    <img id="disposegraph" src="image-specific/vertical_button.png">
+
+
+
+</body></html>

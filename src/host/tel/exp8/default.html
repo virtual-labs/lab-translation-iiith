@@ -1,0 +1,405 @@
+<!-- This file default.html has got the default structure of the
+html pages for an experiment. In case we intend to edit it, we
+should edt the content.html file to suit our requirements. --><!DOCTYPE html><html><head></head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg">
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">ఫిజికల్ కెమిస్ట్రీ ల్యాబ్</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->సాధారణ లోలకం<!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg">
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" class="heading">పరిచయం</div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" class="content">	
+            <p>
+            In this module, basic concepts of simple oscillator 
+            are explained. Initially, an example of simple 
+            pendulum is taken and the basic terminology i.e., 
+            what is  --&gt; error!!!<span>initial displacement --&gt; error!!!</span>,  --&gt; error!!!<span>
+            initial velocity --&gt; error!!!</span>, --&gt; error!!!<span>natural frequency
+             --&gt; error!!!</span> and  --&gt; error!!!<span>time period --&gt; error!!!</span> are explained. 
+            Each of these terms is illustrated by giving an 
+            example, where user can enter his value and observe 
+            the behavior of structure for his input.
+             --&gt; error!!!</p>
+
+            <p>
+            Simple harmonic oscillator consists of a  --&gt; error!!!<span> 
+            mass (m)  --&gt; error!!!</span> hanging from a string of  --&gt; error!!!<span>
+            length (l) --&gt; error!!!</span>, fixed at a pivot point P. 
+            When the mass is displaced from its  --&gt; error!!!<span> mean 
+            position  --&gt; error!!!</span> by giving some initial displacement 
+            (angle), oscillator starts swinging back and fourth 
+            with  --&gt; error!!!<span>periodic motion --&gt; error!!!</span>.
+             --&gt; error!!!</p>
+
+          <img src="../images/Pendulum.JPG" alt="pendulum">
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg">
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" class="heading">థియరీ</div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" class="content">
+          <p>
+          There are two solutions to \(ax^2 + bx + c = 0\) and 
+          they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+          By applying  --&gt; error!!!<span>Newton's second law --&gt; error!!!</span> for 
+          rotational systems, the equation of motion for the 
+          pendulum may be obtained.
+           --&gt; error!!!</p> 
+
+          <p>
+          Where,  τ  =   --&gt; error!!!<span>Torque  --&gt; error!!!</span>;   I  =  
+           --&gt; error!!!<span>Moment of Inertia --&gt; error!!!</span>;   α  =  --&gt; error!!!<span>
+          Angular Velocity --&gt; error!!!</span>. m is mass of the 
+          oscillator, l is the length of the  --&gt; error!!!<a class="more" href=""> oscillator  --&gt; error!!!</a> and theta is initial 
+          displacement. The above equation can be rearranged as 
+           --&gt; error!!!</p>
+          
+          <p>							
+          If the amplitude of 
+           --&gt; error!!!<a class="more" href="">angular displacement --&gt; error!!!</a> is 
+          small then we can use the approximation 
+          (sinθ ≈ θ).
+          By considering the above approximation, the equation 
+          of motion reduces to :
+           --&gt; error!!!</p>
+
+          <p>
+          The solution for equation of  --&gt; error!!!<a class="more" href="">simple harmonic oscillator  --&gt; error!!!</a> is 				  		
+           --&gt; error!!!</p> 
+
+          <p>							
+          where, θ(t) is the history of oscillation, 
+          θ --&gt; error!!!<sub>0</sub> is the initial angle, 
+          &amp;omega=(g/l) --&gt; error!!!<sup>1/2 --&gt; error!!!</sup> is the 
+           --&gt; error!!!<a class="more" href=""> natural frequency  --&gt; error!!!</a> of 
+          the motion.
+           --&gt; error!!!</p>
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg">
+	</div>
+     
+        <div id="experiment-article-section-3-heading" class="heading">ఆబ్జెక్టివ్</div>
+
+        <div id="experiment-article-section-3-content" class="content">
+          <p>
+            Objective of simple harmonic oscillator experiment 
+            is to understand the concept of  --&gt; error!!!<span>time period 
+             --&gt; error!!!</span>(natural frequency) in  --&gt; error!!!<span> harmonic 
+            oscillations  --&gt; error!!!</span>.
+           --&gt; error!!!</p> 
+          <!--      
+          <img  src="http://cite.iiit.ac.in/vlab/cITe/
+          images/eerc/Expr1/simple-pendulum.JPG" 
+          alt="simple pendulum" />
+          -->
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg">
+	</div>
+
+        <div id="experiment-article-section-4-heading" class="heading">ప్రయోగం</div>
+
+        <div id="experiment-article-section-4-content" class="content">
+          <p>
+            <embed src="PendulumForces.swf"> 
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg">
+	</div>
+
+        <div id="experiment-article-section-5-heading" class="heading">మాన్యువల్</div>
+
+        <div id="experiment-article-section-5-content" class="content">
+          <p> 
+            Start the experiment with the default values of 
+            length, mass and intial displacement (in angle). 
+            Pause the experiment after few cycles and note 
+            the observation.
+           --&gt; error!!!</p> 
+
+        <h3>పరిశీలన 1:</h3> 
+          <ol> 
+            
+            <li>ప్రతిస్పందన గ్రాఫ్ నుండి ఏదైనా ఒక పూర్తి చక్రం యొక్క సమయ వ్యవధిని పేర్కొనడం ద్వారా లోలకం యొక్క కాల వ్యవధిని కనుగొనండి.</li> 
+
+            <li>ఏదైనా పూర్తి చక్రానికి ఈ సమయ వ్యవధి విలువ సమానంగా ఉంటుందని మీరు గమనించవచ్చు.<a class="more" href="cITe/Documents/eerc/
+              pdf/1.manual.pdf">ఇంకా చదవండి</a>  
+            </li> 
+
+          </ol>
+          <!--
+          <a onclick="window.open('http://cite.iiit.ac.in/vlab/cITe/media/eerc/Expr1/shm.htm', 
+          null,'scrollbars=yes, width=' + (screen.availWidth) 
+          +',height=' + (screen.availHeight)); return false;"
+
+          href="http://cite.iiit.ac.in/vlab/cITe/media/eerc/Expr1/shm.htm">
+          <img src="http://cite.iiit.ac.in/vlab/cITe/images/demo.JPG" 
+          alt="" width="400" height="200"></a>
+          -->
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg">
+	  </div>
+
+          <div id="experiment-article-section-6-heading" class="heading">క్విజెస్</div>
+
+          <div id="experiment-article-section-6-content" class="content">
+            
+            <p>
+              
+              <b>Q1.</b>ఒక పూర్తి డోలనం కోసం తీసుకున్న సమయాన్ని ఓసిలేటర్ యొక్క కాల వ్యవధి అంటారు.<br> 
+              <input type="radio" name="q1" id="q1" value="1"> 
+                <font color="green">ట్రూ</font> <br> 
+              <input type="radio" name="q1" id="q1" value="0">
+                <font color="red">తప్పుడు</font> <br><br> 
+              
+              <b>Q2.</b>ద్రవ్యరాశి, పొడవు మరియు ప్రారంభ పరిస్థితుల యొక్క విలువలకు ఓసిలేటర్ యొక్క కాల వ్యవధి స్థిరంగా ఉంటుంది.<br> 
+              <input type="radio" name="q2" id="q2" value="1"> 
+                <font color="green">ట్రూ</font> <br> 
+              <input type="radio" name="q2" id="q2" value="0">
+                <font color="red">తప్పుడు</font> <br><br> 
+              
+              <b>Q3.</b>కాల వ్యవధి యొక్క విలువ ప్రారంభ పరిస్థితులపై ఆధారపడి ఉంటుంది.<br> 
+              <input type="radio" name="q3" id="q3" value="1"> 
+                <font color="green">ట్రూ</font> <br> 
+              <input type="radio" name="q3" id="q3" value="0">
+                <font color="red">తప్పుడు</font> <br><br> 
+              
+              <b>Q4.</b>కాల వ్యవధి యొక్క విలువ ద్రవ్యరాశిపై ఆధారపడి ఉంటుంది.<br> 
+              <input type="radio" name="q4" id="q4" value="1"> 
+                <font color="green">ట్రూ</font> <br> 
+              <input type="radio" name="q4" id="q4" value="0">
+                <font color="red">తప్పుడు</font> <br><br> 
+              
+              <b>Q5.</b>కాల వ్యవధి యొక్క విలువ ఓసిలేటర్ యొక్క పొడవుపై ఆధారపడి ఉంటుంది.<br> 
+              <input type="radio" name="q5" id="q5" value="1"> 
+                <font color="green">ట్రూ</font> <br> 
+              <input type="radio" name="q5" id="q5" value="0">
+                <font color="red">తప్పుడు</font> <br><br> 
+              <input type="submit" value="Submit Answers" class="button">
+            </p>
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg">
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" class="heading">విధానము</div>
+	
+          <div id="experiment-article-section-7-content" class="content">
+	    <p>ప్రయోగం యొక్క విధానం క్రింది విధంగా ఉంది</p>
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg">
+	  </div>
+
+          <div id="experiment-article-section-8-heading" class="heading">మరింత రీడింగ్స్</div>
+
+          <div id="experiment-article-section-8-content" class="content">
+            <ul>	
+              <li>
+                <a href="http://en.wikipedia.org/wiki/
+                Simple_harmonic_motion">http://en.wikipedia.org/wiki/Simple_harmonic_motion</a>
+              </li>
+              <li>
+                <a href="http://www.physics.uoguelph.ca/
+                tutorials/shm/Q.shm.html">http://www.physics.uoguelph.ca/tutorials/shm/Q.shm.html</a>
+              </li> 
+              <li>అనిల్ కె చోప్రా రచించిన "నిర్మాణాల డైనమిక్స్".</li> 
+              <li>
+                <a href="http://surendranath.tripod.com/Applets/
+                Oscillations/SHM/SHMApplet.html">http://surendranath.tripod.com/Applets/Oscillations/SHM/SHMApplet.html</a> 
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+  <div class="container-fluid footer-div" style="background: #404040; margin-top: 40px;  padding: 20px;">
+    <div class="col-md-4 border-right-green-dotted">
+      <h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;">మెరుగుదలలు చేశారు</h2>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/Download" class="text-normal-gray-small nounderline" style="color: white">ల్యాబ్ ఇంటిగ్రేషన్ కిట్ విడుదల చేయబడింది</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/First_Integration_workshop" class="text-normal-gray-small nounderline" style="color: white">ఐఐఐటి హైదరాబాద్‌లో మొదటి ఇంటిగ్రేషన్ వర్క్‌షాప్</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/Summer_Sprint_Integration_workshop" class="text-normal-gray-small nounderline" style="color: white">ఐఐటి గువహతిలో సమ్మర్ ఇంటిగ్రేషన్ వర్క్‌షాప్</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/QA/Integration_workshop" class="text-normal-gray-small nounderline" style="color: white">ఐఐఐటి హైదరాబాద్‌లో ఇంటిగ్రేషన్ వర్క్‌షాప్</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/A_new_set_of_25_Virtual_Labs_on_Portable_Media" class="text-normal-gray-small nounderline" style="color: white"> పోర్టబుల్ మీడియాలో 25 వర్చువల్ ల్యాబ్‌ల కొత్త సెట్</a>
+    </div>
+
+    <div class="col-md-2 border-right-green-dotted">
+					<a href="http://community.virtual-labs.ac.in/w/index.php/Main_Page" class="text-a-lightgreen" style="text-decoration: underline;">సంఘం</a><br>
+					<a href="http://www.sakshat.ac.in/" class="text-a-lightgreen" style="text-decoration:
+					underline;"> అక్షత్ పోర్టల్</a><br>
+					<a href="http://outreach.vlabs.ac.in/" class="text-a-lightgreen" style="text-decoration:
+					underline;">ఔట్రీచ్ పోర్టల్</a><br>
+					<a href="./faq.html" class="text-a-lightgreen" style="text-decoration: underline;">తరచుగా అడిగే ప్రశ్నలు</a>
+    </div>
+
+    <div class="col-md-3 border-right-green-dotted" id="contact">
+					<h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;">మమ్మల్ని సంప్రదించండి</h2>
+					<a href="#" class="text-a-lightgreen" style="text-decoration: underline;">అభిప్రాయం</a><br>
+					<a class="text-a-lightgreen" style="text-decoration: underline;" href="mailto:support@vlabs.ac.in">support@vlabs.ac.in</a>
+    </div>
+
+    <div class="col-md-2 border-right-green-dotted">
+      <h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;">మమ్మల్ని అనుసరించండి</h2>
+      <a href="https://www.facebook.com/pages/Virtual-Labs-IIT-Delhi/301510159983871" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/fb.png" style="border-radius: 50%;"> </a>
+      <a href="https://twitter.com/TheVirtualLabs" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/twitter.png" style="border-radius: 50%;"></a>
+      <a href="http://linkedin.com" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/linkedin.png" style="border-radius: 50%;"></a>
+      <a href="https://www.youtube.com/watch?v=mVBYNXLaDdg" class="text-a-lightgreen nounderline" target="_blank">
+	<img src="../../images/social/youtube.png" style="border-radius: 50%; width: 38px;
+							  height: 38px"></a>
+
+    </div>
+
+  </div>
+</footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+
+
+</body></html>

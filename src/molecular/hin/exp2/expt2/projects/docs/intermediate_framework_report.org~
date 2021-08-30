@@ -1,0 +1,33 @@
+#+TITLE: Frameworks and Libraries for Recreating Experiments
+#+AUTHOR: Anshuman Karthik, Harsha Vattem
+
+* p5
+** Introduction
+   p5 is a drawing framework with similar goals as the Processing language. It
+   helps in convenient implementation of interactivity and animation with the
+   capacity to introduce objects and style them easily.
+** Areas of Use
+   There are many uses of p5, relevant to the context of creating a lab. These
+   include:
+   + Easier implementation of methods to HTML elements, seeing as they can be
+     created from the script. This includes creating buttons, sliders,etc.
+   + Rotation of objects is much simpler, seeing as direct rotation methods are
+     available. Although JQuery can be used to achieve the same purpose, it
+     should be noted that p5 helps integrate everything into one piece of code,
+     and helps in simplifying it quite a bit.
+   + Drawing simple shapes is possible through p5. This helps in creating
+     schematics of new experiments, after which a graphical interface can be
+     applied.
+   + In various experiments with graphing, p5 provides graphing
+     libraries (developer contributed). These, coupled with animations can help
+     in plotting time dependent graphs were needed.
+   + Use in experiments is possible as well, using multiple user created
+     libraries.
+   + There exist in built animation functions which run fast loops, thereby
+     making repetition/iteration significantly easier.
+** Drawbacks
+   + p5 creates a canvas upon which drawing an animation can be done. This
+     makes interactions with other HTML elements difficult.
+   + It can be overcome by awkward methods of moving your canvas around, which
+     could also lead to blocks in the case of complex animation.
+   + 

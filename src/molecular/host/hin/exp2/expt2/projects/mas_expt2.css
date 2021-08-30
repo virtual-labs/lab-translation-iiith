@@ -1,0 +1,349 @@
+body{
+    width:1080px; 
+    height:715px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+}
+
+h3{  
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#reset_btn{
+    margin: auto;
+    display: block;
+    cursor: default;
+}
+
+#manual_button, #data_button{
+    position:absolute; 
+    left: 110px;
+    cursor: pointer;
+}
+
+.modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        -webkit-animation-name: fadeIn; /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: black;
+        color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+    }
+
+    @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+
+#apparatus{
+    float: right;
+}
+
+#scale_image{
+    position: absolute;
+    width: 320px;
+    left: 115px;
+    top: 90px;
+}
+
+#slider{
+    position: absolute;
+    left: 118px;
+    width: 310px;
+    top: 106px;
+}
+
+#round-bottom-flask{
+    position:absolute;
+    z-index:1; 
+    left:13%; 
+    top:15%;
+    width:10%;
+    height:59%; 
+    z-index: 2;
+    cursor:pointer;
+}
+
+#solution_name{
+    position:absolute; 
+    left:4%; 
+    top:99%; 
+}
+
+#pipette{
+    position:absolute;
+    height: 76%;
+    left: 40%; 
+    top:6%;  
+    z-index:1;
+    -ms-transform: rotate(-12deg); /* IE 9 */
+    -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
+    transform: rotate(-12deg);
+}
+
+#quartz_cuvette{
+    position:absolute;
+    z-index:2;
+    top:48.5%;
+    left:62%;
+    height: 22.5%;
+    width: 3.3%;
+}
+
+#cuvette{
+    position:absolute;
+    z-index:1;
+    top:48.5%;
+    left:71%;
+    height: 22.5%;
+    width: 3.3%;
+}
+
+
+#table_with_spec{
+    margin:auto;
+    display: block;
+}
+
+#computerimage{
+    position: absolute; 
+    left: 48%; 
+    top: 10%; 
+    max-width: 50%; 
+    max-height: 50%; 
+}
+
+#comp_trans_button{
+    position: absolute; 
+    width: 12%;
+    height: 26%; 
+    left: 49%;
+    top: 12%; 
+    z-index: 1;
+}
+
+#spectrolid_trans_button{
+    position: absolute; 
+    z-index:1;
+    width: 5%; 
+    height: 18%;
+    left: 35%; 
+    top: 20%;  
+}
+
+#reference{
+    position: absolute; 
+    width: 15%; 
+    left: 54%; 
+    top: -9%; 
+    visibility: hidden;
+}
+
+#ref_cuvette{
+    position: absolute; 
+    z-index: 1; 
+    width: 1.7%;
+    height: 10%;
+    left: 52.35%; 
+    top: -5%; 
+    visibility: hidden;
+}
+
+#power_trans_button{
+    position: absolute; 
+    z-index:1;
+    left: 17.5%; 
+    top: 45%;
+    width: 3%;
+    height: 6%;
+    visibility: hidden;
+}
+
+#demo{
+    position: absolute;
+    top: 65%;
+    left: 22%;
+    max-width: 60%;
+    color: yellow;
+    font-size: 12px;
+    text-align: left;   
+}
+
+#clockScreen{
+    position: absolute;
+    top: 54px;
+    left: 83px;
+    z-index: 3;
+    height: 92%;
+    visibility: hidden;
+}
+
+#clockHand{
+    position: absolute;
+    top: 298px;
+    left: 59.6%;
+    z-index: 4;
+    visibility: hidden;
+}
+
+#scan{
+    position:absolute;
+    z-index: 5; 
+    top:61px; 
+    left:25px;
+    visibility:hidden;
+}
+
+#start{
+    position: absolute;
+    top: 339px;
+    left: 181px;
+    width: 73%;
+    z-index: 5;
+    background-color: #cad86b;
+    height: 12%;
+    font-size: 35px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#input_data{
+    position: absolute;
+    z-index: 6;
+    top: 6%;
+    left: -12%;
+    width: 127%;
+    height: 100%;
+    visibility: hidden;
+}
+
+#start_btn{
+    position: absolute;
+    z-index: 7;
+    top: 21%;
+    left: 50%;
+    width: 3%;
+    height: 5%;
+    visibility : hidden;
+}
+
+#input1{
+    position: absolute;
+    z-index: 7;
+    top: 49%;
+    left: 26%;
+    width: 7%;
+    height: 5%;
+    visibility : hidden;
+}
+
+#input2{
+    position: absolute;
+    z-index: 7;
+    top: 49%;
+    left: 36%;
+    width: 7%;
+    height: 5%;
+    visibility: hidden;
+}
+
+#instruction_bkgd{
+    position: absolute;
+    z-index: 11;
+    top: 75%;
+    left: 7%;
+    width: 90%;
+    visibility: hidden;
+}
+
+#graph_instruction{
+    position: absolute;
+    z-index: 12;
+    top: 78%;
+    left: 11%;
+    color: white;
+    max-width: 80%;
+    text-align: left;
+    font-size: 15px;
+}
+
+.video{
+    position: absolute;
+    z-index: 8;
+    top: 17%;
+    left: 7%;
+    width: 90%;
+    visibility : hidden;
+}
+
+#disposegraph{
+    position: absolute;
+    z-index: 13;
+    width: 9%;
+    left: 88%;
+    top: 518px;
+    height: 3%;
+}
+

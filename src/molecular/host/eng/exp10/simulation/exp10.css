@@ -1,0 +1,386 @@
+/*Stying for the main file*/
+
+.container{
+	position: relative;
+	width: 1170px;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+h4{
+	text-align:center;
+}
+
+iframe{
+	width: 1190px;
+	height: 563px;
+	border: none;
+	display: block;
+	margin: auto;
+}
+
+#reset_btn{
+	display: block;
+	margin: auto;
+}
+
+/*Styling for the exp10a.html file*/
+
+#background{
+	display: block;
+	margin: auto;
+}
+
+#transparent_btn{
+	position: absolute;
+	width: 52%;
+	height: 19%;
+	top: 41%;
+	left: 26%;
+	cursor: pointer;
+}
+
+#cube{
+	position: absolute;
+	top: 6%;
+	left: 35%;
+	width: 30%;
+	z-index: 2;
+	visibility: hidden;	
+}
+
+#arrow{
+	position: absolute;
+	top: 88.5%;
+	left: 35%;
+	width: 2%;
+	visibility: hidden;
+}
+
+#instruction_tag{
+	position: absolute;
+	top: 89%;
+	left: 38%;
+	visibility: hidden;
+}
+
+#clockface1{
+	position: absolute;
+	top: 41%;
+	left: 39.5%;
+	width: 20%;
+	z-index: 3;
+	visibility: hidden;
+}
+
+#clockhand1{
+	position: absolute;
+	top: 44.1%;
+	left: 48.9%;
+	height: 19%;
+	z-index: 4;
+	visibility: hidden;
+	-webkit-transition: transform 5s;
+	transition: transform 5s;
+}
+
+#lamp1{
+	position: absolute;
+	top: 31%;
+	left: 41%;
+	opacity: 0.2;
+	visibility: hidden;
+}
+
+#yellow_cuvette{
+	position: absolute;
+	top: 51%;
+	left: 37%;
+	width: 13%;
+	visibility: hidden;
+}
+
+#lamp2{
+	position: absolute;
+	top: 30%;
+	left: 27%;
+	opacity: 1;
+	visibility: hidden;
+}
+
+#purple_cuvette{
+	position: absolute;
+	top: 51%;
+	left: 40%;
+	opacity: 1;
+	visibility: hidden;
+}
+
+
+/*Styling for the exp10b.html file*/
+
+#samplenumber{
+	position: absolute;
+	top: 1%;
+	left: 21%;
+}
+
+#shelf1{
+	position: absolute;
+	top: 22%;
+	left: 19%;
+	width: 62%;
+}
+
+#instruction_box{
+	position: absolute;
+	top: 88%;
+	left: 19%;
+	width: 62%;
+}
+
+#spectrometer{
+	position: absolute;
+    top: 55.9%;
+    left: 20%;
+}
+
+#computer{
+	position: absolute;
+	top: 57.2%;
+	left: 46.8%;
+}
+
+#pipette{
+	position: absolute;
+	top: 9.5%;
+	left: 55%;
+	z-index: 2;
+}
+
+#shelf2{
+	position: absolute;
+	top: 48%;
+	left: 62%;
+	z-index: 1;
+}
+
+#ascorbic_acid{
+	position: absolute;
+	top: 37.5%;
+	left: 76%;
+	height: 10.5%;
+	z-index: 2;
+}
+
+#Eosin{
+	position: absolute;
+	top: 36%;
+	left: 70%;
+	visibility: hidden;
+	z-index: 2;
+}
+
+#power_btn{
+	position: absolute;
+	top: 82.5%;
+	left: 22.4%;
+	width: 1%;
+	cursor: pointer;
+}
+
+#spectrometerlid_btn{
+	position: absolute;
+	top: 64%;
+	left: 38.4%;
+	width: 4%;
+}
+
+#computerscreen_btn{
+	position: absolute;
+	top: 58%;
+	left: 48.8%;
+	width: 10.2%;
+	height: 15%;
+}
+
+#clockface2{
+	position: absolute;
+	top: -1%;
+	left: 18.5%;
+	width: 63%;
+	z-index: 3;
+	visibility: hidden;
+	height: 101%;
+}
+
+#clockhand2{
+	position: absolute;
+	top: 35.8%;
+	left: 50.3%;
+	width: 1.3%;
+	z-index: 4;
+	visibility: hidden;
+	-webkit-transition: transform 10s;
+	transition: transform 10s;
+}
+
+#grey_solution{
+	position: absolute;
+	top: 18.4%;
+	left: 41.6%;
+	width: 2%;
+	z-index: 1;
+}
+
+#yellow_solution{
+	position: absolute;
+	top: 74%;
+	left: 64.6%;
+	width: 2%;
+	z-index: 3;
+}
+
+#purple_solution1{
+	position: absolute;
+	top: 74%;
+	left: 74.6%;
+	width: 2%;
+	z-index: 3;
+}
+
+#purplesolution2{
+	position: absolute;
+	top: 74%;
+	left: 74.6%;
+	width: 2%;
+	z-index: 2;
+	visibility: hidden;
+}
+
+#ref_cuvette1{
+	position: absolute;
+	top: 48%;
+	left: 49%;
+	width: 1.2%;
+	z-index: 1;
+	visibility: hidden;
+}
+
+#particlegrowth_btn, #EosinReduction_btn{
+	position: absolute;
+	top: 39%;
+	left: 26.2%;
+	visibility: hidden;
+	z-index: 3;
+}
+
+#indication_arrow1{
+	position: absolute;
+	top: 5%;
+	left: 61%;
+	visibility: hidden;
+}
+
+#indication_arrow2{
+	position: absolute;
+	top: 56%;
+	left: 60%;
+	visibility: hidden;
+}
+
+#graph1, #graph2, #graph3,
+#graph4, #graph5, #graph6, #graph7{
+	position: absolute;
+	top: 8%;
+	left: 20%;
+	width: 60%;
+	z-index: 4;
+	height: 66%;
+	visibility: hidden;
+}
+
+#video1, #video2, #video3, #video4,
+#video5, #video6, #video7, #video8, #video9{
+	position: absolute;
+	top: 2%;
+	left: 20%;
+	width: 60%;
+	z-index: 7;
+	height: 78%;
+	visibility: hidden;
+}
+
+#scan_btn{
+	position: absolute;
+	top: 53%;
+	left: 30.2%;
+	width: 6.5%;
+	height: 5%;
+	z-index: 6;
+}
+
+#close_btn{
+	position: absolute;
+	top: 68%;
+	left: 73.2%;
+	width: 6.5%;
+	height: 5%;
+	z-index: 8;
+}
+
+#instruction{
+	position: absolute;
+	top: 89%;
+	left: 21%;
+	font-size: 80%;
+	color: yellow;
+	max-width: 55%;
+	max-height: 7%;
+	overflow: auto;
+}
+
+#Reset_instruction{
+	position: absolute;
+	top: 4%;
+	left: 38%;
+	color: white;
+	font-size: 121%;
+}
+
+#sol_name1{
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	color: red;
+	font-size: 95%;
+	font-weight: bold;
+	visibility: hidden;
+}
+
+#sol_name2{
+	position: absolute;
+	top: 50%;
+	left: 76%;
+	color: red;
+	font-size: 90%;
+	font-weight: bold;
+	z-index: 3;
+	visibility: hidden;
+}
+
+#sol_name3{
+	position: absolute;
+	top: 50%;
+	left: 74%;
+	color: white;
+	font-size: 74%;
+	font-weight: bold;
+}
+
+
+
+

@@ -1,0 +1,144 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : pH effects on absorption spectra: pKa determination by spectrophotometric method
+     Author : Harsha Vattem --><!DOCTYPE html><html><head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mas_expt9.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="../../libraries/jQueryRotate.js"></script>
+      <script type="text/javascript" src="expt9.js"></script>
+      <title>pH effects on absorption spectra: pKa determination by spectrophotometric method</title>
+  </head>
+
+  <!-- Body is divided into three rows -->
+  <body>  
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>శోషణ స్పెక్ట్రాపై pH ప్రభావాలు: స్పెక్ట్రోఫోటోమెట్రిక్ పద్ధతి ద్వారా pKa నిర్ణయం</h3><br>
+        <button id="reset_btn">ప్రయోగాన్ని రీసెట్ చేయండి</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+      <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+             On clicking this button a box modal appears over the page n displays the instructions -->
+        <img id="manual_button" src="images/manual_button.png"><br><br>
+
+        <div id="manual" style="z-index:1000" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <h2>మాన్యువల్</h2>
+            </div>
+
+            <div class="modal-body" style="text-align:left;font-size:18px;">
+              <ol>
+                  <li>కింది పరిష్కారాలను సిద్ధం చేయండి: (i) 100 గ్రా స్వేదనజలంలో 0.05 గ్రా మిథైల్ నారింజను కరిగించడం ద్వారా 0.5 గ్రా / ఎల్ మిథైల్ ఆరెంజ్ ద్రావణం; (ii) 0.2 M డిసోడియం హైడ్రోజన్ ఆర్థోఫాస్ఫేట్ (Na<sub>2</sub>HPO<sub>4</sub>) 5.68 గ్రా Na కరిగించడం ద్వారా పరిష్కారం<sub>2</sub>HPO<sub>4</sub>200 mL స్వేదనజలంలో; మరియు (iii) 500 ఎంఎల్ స్వేదనజలంలో 9.61 గ్రా సిట్రిక్ ఆమ్లాన్ని కరిగించడం ద్వారా 0.1 ఎం సిట్రిక్ యాసిడ్ ద్రావణం.</li>
+                  <li>Na యొక్క వివిధ మొత్తాలను కలపడం ద్వారా ఎనిమిది బఫర్ పరిష్కారాలను సిద్ధం చేయండి<sub>2</sub>HPO<sub>4</sub>ద్రావణం మరియు సిట్రిక్ యాసిడ్ ద్రావణం టేబుల్ 1 లో ఇచ్చినట్లు.</li>
+                  <li>ప్రతి బఫర్ ద్రావణాన్ని 25 ఎంఎల్ వాల్యూమ్ యొక్క రెండు సమాన భాగాలుగా విభజించండి.</li>
+                  <li>ప్రతి బఫర్ ద్రావణంలో ఒక 25 ఎంఎల్ భాగానికి 0.5 ఎంఎల్ మిథైల్ ఆరెంజ్ ద్రావణాన్ని జోడించండి. మిథైల్ ఆరెంజ్ సూచికను కలిగి ఉన్న బఫర్ పరిష్కారాల శోషణ కొలతలు బఫర్ యొక్క ఇతర భాగాలకు సూచనగా లేదా నమూనా ఖాళీగా నిర్వహించాలి. ఈ నమూనా పరిష్కారాలు ఎంపిక స్థాయిలో చూపబడతాయి.</li>
+                  <li>కంప్యూటర్ మరియు పరికర శక్తులపై మారండి; పరికరం యొక్క ‘సన్నాహక’ కోసం 30 నిమిషాలు వేచి ఉండండి.</li>
+                  <li>వాయిద్యంలో ఒకరు కాంతి వనరులను (UV మరియు కనిపించేవి) ఎంచుకోవచ్చు, చీలిక వెడల్పు, స్కాన్ వేగం మరియు% ప్రసారం లేదా శోషణ ప్రదర్శన, తరంగదైర్ఘ్యం ఆసక్తి శ్రేణి మొదలైనవి ఎంచుకోవచ్చు.</li>
+                  <li>ఇచ్చిన మార్గం పొడవుతో శుభ్రంగా మరియు పొడిగా లేదా సరిగ్గా కడిగిన క్వార్ట్జ్ క్యూవెట్ తీసుకోండి (చెప్పండి, 1 సెం.మీ).</li>
+                  <li>నమూనా ఖాళీ (స్వచ్ఛమైన బఫర్ ద్రావణం) తో ఒక కువెట్టిని మరియు మిథైల్ ఆరెంజ్ ద్రావణాన్ని కలిగి ఉన్న సంబంధిత బఫర్ ద్రావణంతో మరొక క్యూట్ నింపండి.</li>
+                  <li>నమూనా హోల్డర్‌లో నమూనాను ఖాళీగా ఉంచండి మరియు నమూనా హోల్డర్‌లో నమూనాను ఉంచండి.</li>
+                  <li>300 నుండి 650 nm వరకు తరంగదైర్ఘ్యం పరిధిలోని ప్రతి శాంపిల్ కోసం స్కాన్ (A వర్సెస్ λ) ను అమలు చేయండి.</li>
+                  <li>ఇప్పుడు గరిష్ట శోషణ (యొక్క తరంగదైర్ఘ్యాలను కనుగొనండి<sub>గరిష్టంగా</sub>), సంబంధిత శోషణ, వద్ద శోషణ<sup>INH<sup>+</sup></sup>l<sub>గరిష్టంగా</sub>అన్ని pH విలువలకు మరియు ఈ డేటాను కలిగి ఉన్న పట్టికను తయారు చేయండి (టేబుల్ 2).</li>
+                  <li>ఎలాగో చర్చించండి<sub>గరిష్టంగా</sub>మరియు సంబంధిత శోషణ ద్రావణం యొక్క pH తో మారుతుంది.</li>
+                  <li>పికెను లెక్కించండి<sub>ఒక</sub>ప్రతి pH విలువకు. సగటు pK ని కనుగొనండి<sub>ఒక</sub>.</li>
+                  <li>ప్లాట్ pH వర్సెస్ లాగ్ ([In] / [InH<sup>+</sup>]). PK ని నిర్ణయించండి<sub>ఒక</sub>pH అక్షంతో రేఖ యొక్క ఖండన నుండి.</li>
+                  <li>గ్రాఫికల్ గా నిర్ణయించిన pK ని పోల్చండి<sub>ఒక</sub>లెక్కించిన సగటు pK తో విలువ<sub>ఒక</sub>విలువ.</li>
+                  <li>యాసిడ్ డిస్సోసియేషన్ స్థిరాంకాన్ని నిర్ణయించండి, K.<sub>ఒక</sub>మిథైల్ నారింజ కోసం.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths.On clicking this button a new page displaying the graphs fordifferent path length
+      is opened  -->
+      <img id="data_button" src="images/data_button.png"><br><br><br>
+
+      <img id="scale_image" src="images/scale.png">
+      <input type="range" id="slider" min="0" max="7" step="1" value="0" autocomplete="off">
+  </div>
+
+  <!-- This column conatins the shelf with apparatus on top of it.-->
+  <div class="col-sm-6" id="apparatus">
+      <img id="shelf" src="images/shelf.png">
+      <img id="flask" src="images/buffer.png">
+      <img id="micro_pipette" src="images/micro_pipette.png">
+      <img id="pipette" src="images/pipette1.png">
+      <img id="beaker" src="images/beaker.png">
+      <img id="cuvette" src="images/cuvette.png">
+      <img id="orange_flask" src="images/orangeflask.png">
+  </div>
+
+</div><br><br><br>
+
+<!-- Third row consists of table with various devices on it  -->
+<div class="row">
+    <div class="col-sm-12" id="table">
+      <img id="table_with_spec" src="images/table_with_spec.png">
+      <img id="computerimage" src="images/computer.png">
+      <!-- button to scan the sample on the computer-->
+      <img id="comp_trans_button" src="images/vertical_button.png">
+      <!-- button to open and close the spectrophotometer lid -->
+      <img id="spectrolid_trans_button" src="images/vertical_button.png">
+      <!-- reference cuvette -->
+      <img id="reference" src="images/reference.png">
+      <img id="ref_cuvette">
+      <!-- text that shows the instructions to be followed next -->
+      <div id="demo"></div>
+      <!-- button to switch on and switch off the spectrophotometer -->
+      <img id="power_trans_button" src="images/vertical_button.png">
+    </div>
+</div>
+
+<!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+<img id="clockScreen" src="images/clock.png">
+<!-- Image of the hand of the clock -->
+<img id="clockHand" src="images/hand.png">
+<!-- Image of the greyed background displayed as a background while scanning the sample -->
+<img id="scan" src="images/transparent.png">
+<!-- scan images -->
+<img id="scanimage1" class="scanimage" src="images/scan1.png">
+<img id="scanimage2" class="scanimage" src="images/scan2.png">
+<img id="scanimage3" class="scanimage" src="images/scan3.png">
+<img id="scanimage4" class="scanimage" src="images/scan4.png">
+<img id="scanimage5" class="scanimage" src="images/scan5.png">
+<img id="scanimage6" class="scanimage" src="images/scan6.png">
+<img id="scanimage7" class="scanimage" src="images/scan7.png">
+<img id="scanimage8" class="scanimage" src="images/scan8.png">
+<!-- image used to display the graph video by clicking on it -->
+<img id="scan_btn" src="images/vertical_button.png">
+<!-- Video that plots a graph for pH 2.2 sample -->
+<video id="graph1" class="video"><source src="videos/ph22.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 2.6 sample -->
+<video id="graph2" class="video"><source src="videos/ph26.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.0 sample -->
+<video id="graph3" class="video"><source src="videos/ph30.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.4 sample -->
+<video id="graph4" class="video"><source src="videos/ph34.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.8 sample -->
+<video id="graph5" class="video"><source src="videos/ph38.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.2 sample -->
+<video id="graph6" class="video"><source src="videos/ph42.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.6 sample -->
+<video id="graph7" class="video"><source src="videos/ph46.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 5.2 sample -->
+<video id="graph8" class="video"><source src="videos/ph52.mp4" type="video/mp4"></video>
+<!-- Transparent image button to close the scanning page  and videos-->
+<img id="disposegraph" src="images/vertical_button.png">
+
+
+
+
+
+
+
+
+
+</body></html>

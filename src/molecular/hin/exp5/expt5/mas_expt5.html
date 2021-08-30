@@ -1,0 +1,132 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt5.js"></script>
+    <script type="text/javascript" src="mas5_animations.js"></script>
+    <title>Measurement of molar absorptivity</title>
+</head>
+<!-- Body is divided into three rows -->
+<body>
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>दाढ़ अवशोषण की माप</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+    
+    <!-- Second row consists of three columns with one column containing buttons ie manual and data, the other containing concentration scale and another containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. एक जलीय 1 x 10 तैयार करें<sub>-3</sub>एम 2-नाइट्रोनिलिन समाधान। सामग्री के 0.0138 ग्राम वजन और 100 एमएल पानी में भंग। यह स्टॉक समाधान के रूप में उपयोग किया जाता है।</p>
+                        <p>2. उपरोक्त स्टॉक समाधान से, 2-नाइट्रोनिलिन समाधानों के पांच अलग-अलग सांद्रता तैयार करें (उदाहरण के लिए, 0.0001 एम, 0.00008 एम, 0.00006 एम, 0.00004 एम, और 0.00002 एम)।</p>
+                        <p>3. कंप्यूटर और साधन शक्तियों पर स्विच करें; साधन के 'वार्म-अप' के लिए 30 मिनट तक प्रतीक्षा करें।</p>
+                        <p>4. एक पीसी के माध्यम से प्रकाश स्रोतों (यूवी और दृश्यमान), स्कैन गति,% संप्रेषण या शोषक प्रदर्शन मोड, ब्याज की तरंग दैर्ध्य रेंज आदि का चयन कर सकते हैं।</p>
+                        <p>5. एक दिए गए पथ की लंबाई (यहां 1 सेमी) के साथ दो साफ और सूखे क्वार्ट्ज क्यूवेट लें।</p>
+                        <p>6. नमूना रिक्त (वर्तमान मामले में आसुत जल) के साथ एक क्युवेट भरें और 2-नाइट्रोनिलिन समाधान के साथ अन्य क्युवेट। सबसे कम एकाग्रता से शुरू करें। (क्यों?)</p>
+                        <p>7. संदर्भ धारक में नमूना रिक्त स्थान और नमूना धारक में नमूना रखें।</p>
+                        <p>8. अवशोषण स्कैन चलाएँ।</p>
+                        <p>9. इसी तरह अन्य सभी नमूनों के लिए वर्णक्रमीय रन बनाए जाते हैं। विश्लेषण का क्रम निम्न से उच्च सांद्रता तक होना चाहिए। हर बार एक बार (दो या तीन बार) कुवे को नापने के लिए (या फिर पहले विलायक) के एक छोटे से हिस्से को कुल्ला करना चाहिए।</p>
+                        <p>10. सभी डेटा एकत्र करने के लिए डेटा टैब पर क्लिक करें।</p>
+                        <p>11. सभी सांद्रता के लिए प्लॉट अवशोषण बनाम तरंगदैर्ध्य।</p>
+                        <p>12. अधिकतम सांद्रता (λmax) की तरंग दैर्ध्य निर्धारित करें और प्रत्येक एकाग्रता के लिए इसी अवशोषण और इन डेटा युक्त एक तालिका तैयार करें।</p>
+                        <p>13. प्रत्येक λmax के लिए इसी सांद्रता द्वारा अवशोषक को विभाजित करें और (λ मान निर्धारित करें (पथ की लंबाई = 1 सेमी याद रखें)। फिर औसत calculateλ की गणना करें।</p>
+                        <p>14. एक दिए गए λmax के लिए अवशोषण बनाम एकाग्रता की साजिश रचकर अंशांकन भूखंडों का निर्माण। इस प्रकार 2-नाइट्रोनिलिन के तीन शिखर पदों के लिए तीन अंशांकन भूखंडों का निर्माण करता है।</p> 
+                        <p>15. अंशांकन भूखंडों की ढलानों को निर्धारित करें और इसलिए तीन चोटी के पदों के लिए संबंधित λ मूल्यों।</p>
+                        <p>16. अंशांकन भूखंडों से निर्धारित determinedλ मूल्यों के साथ औसत valuesλ मूल्यों की तुलना करें।</p>
+                        <p>17. प्रकाश अवशोषण, in (सेमी 2 में) और थरथरानवाला ताकत, एफएनएम के लिए आणविक क्रॉस-सेक्शन की गणना करें।</p> 
+                        <p>18. अपने परिणामों पर चर्चा करें।</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <img id="scale_image" src="images/scale_bkgd.png">
+            <input type="range" id="slider" min="0.02" max="0.10" step="0.02" value="0" autocomplete="off">
+            <div id="scale_value">0.02 मिमी</div> 
+            <div id="concentration">2-नाइट्रोएनिलीन की एकाग्रता</div>
+        </div><br><br><br>
+
+        <!-- This column conatins the shelf with apparatus on top of it-->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/only_shelf.png">
+            <select id="solution">
+                <option value="k2cr2o7" selected="">2-nitroaniline</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div>
+
+    <!-- Third row consists of table with various devices on it  -->
+   <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette" class="">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" class="scanimage" src="images/scan0.02mm.png">
+    <img id="scanimage2" class="scanimage" src="images/scan0.04mm.png">
+    <img id="scanimage3" class="scanimage" src="images/scan0.06mm.png">
+    <img id="scanimage4" class="scanimage" src="images/scan0.08mm.png">
+    <img id="scanimage5" class="scanimage" src="images/scan0.10mm.png">
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for 0.02 concentration sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 0.04 concentration sample -->
+    <video id="graph2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 0.06 concentration sample -->
+    <video id="graph3" class="video"><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 0.08 concentration sample -->
+    <video id="graph4" class="video"><source src="videos/graph4.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for 0.10 concentration sample -->
+    <video id="graph5" class="video"><source src="videos/graph5.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+
+</body></html>

@@ -1,0 +1,563 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html><html><head>
+</head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg">
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">भौतिकी रसायन विज्ञान प्रयोगशाला (कार्यशाला)</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->नाभिकीय चुंबकीय अनुकम्पन स्पेक्ट्रोस्कोपी और चुने हुए कार्बनिक यौगिकों के सरल 1एच एनएमआर स्पेक्ट्रा का मूल्यांकन<!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg">
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" class="heading">परिचय</div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" class="content">	
+            <p>नाभिकीय चुंबकीय अनुकम्पन (एनएमआर) स्पेक्ट्रोस्कोपी, कार्बनिक यौगिकों की संरचना का निर्धारण करने में उपयोग की जाने वाली प्रभावशाली विश्लेषणात्मक तकनीकों में से एक है। 1एच, 13सी, 19एफ और 31पी के समस्थानिकों में (आइसोटोप्स) I = ½ होता है और बहुत ही महत्व का होता है। 1एच एनएमआर या प्रोटॉन एनएमआर वह तकनीक है जिसमें, अध्ययन करते समय किसी भी यौगिक की संरचना का निर्धारण करने के लिए, उस यौगिक/पदार्थ के हाइड्रोजन नाभिक का अध्ययन किया जाता है। एनएमआर स्पेक्ट्रा की दो सबसे बड़ी विशेषताएँ, रसायन विस्थापन एवं युग्मन स्थिरांक हैं। यह प्रयोग, नमूनों के संग्रह के लिए प्रोटॉन एनएमआर स्पेक्ट्रा को अर्थतः रिकॉर्ड करने और उनके विश्लेषण करने से संबंधित होता है। पढ़ना</p><p>
+
+</p><center><img src="./images/figure1_intro.png" style="width:599px; height:397px;"></center><p></p><p>
+
+        </p></div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg">
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" class="heading">परिकल्पना</div>
+
+
+        <!-- Write the section content inside a paragraph 
+        element, we can also include images with <img> tag -->
+        <div id="experiment-article-section-2-content" class="content">
+          <p>विषम आणविक संख्या (प्रोटॉनों की संख्या) या द्रव्यमान संख्या वाले (प्रोटॉनों और न्यूट्रॉनों की कुल संख्या) नाभिकों में, या दोनों में, प्रमात्रण घुमाव कोणीय आवेग और चुंबकीय गुरुत्व होता है। बाह्य चुंबकीय क्षेत्र के साथ, एक आणविक नाभिक ((µ) के चुंबकीय गुरुत्व के साथ संबंध बनाने से, ऊर्जा का अवशोषण होता है और बाह्य क्षेत्र के संबंध में उनके घुमाव अभिविन्यास में परिवर्तन होता है। एनएमआर, परमाणु नाभिक के चुंबकीय गुणों का अध्ययन करके, परमाणुओं में रासायनिक गुण प्रदान करता है जिसे टैट्रामिथाइलसाइलेननाभिक के अनुकम्पित अवशोषण द्वारा मापा जाता है।<br>
+</p><center>
+<table border="0" spacing="0"><tbody><tr><td><img src="./images/figure3_theory.png" style="width:256px; height:175px;"></td><td><img src="./images/figure4_theory.png" style="width:246px; height:180px;"></td></tr></tbody></table>
+</center><p></p><p>एक बाह्य चुंबकीय क्षेत्र B0 में नाभकीय घुमाव की ऊर्जा का स्तर।<br>स्रोत:<a href="http://www.physicscentral.com/explore/action/fmri1.cfm">http://www.physicscentral.com/explore/action/fmri1.cfm</a> <br>
+</p><p>
+<br>
+<b>रसायन विस्थापन:</b>
+
+<br>अलग-अलग रसायनिक वातावरण में, नाभिक, अलग-अलग चुंबकीय क्षेत्र का अनुभव करते हैं। नाभिक के चारों ओर इलेक्ट्रॉनों का क्षेत्र, इलेक्ट्रॉनों के कोणीय आवेग को प्रवृत करता है जो एक अतिरिक्त चुंबकीय क्षेत्र ß, उत्पन्न करता है, जो निम्नानुसार है:<br><br>σß = -σß0<br><br>जहां 'σ' बचाव स्थिरांक है। नाभिक के चारों ओर के इलेक्ट्रॉन, प्रभावशाली चुंबकीय क्षेत्र से, नाभिक का बचाव करते हैं और अनुकम्पन पैदा करने के लिए उन्हें, कम आवृत्ति की ऊर्जा की आवश्यकता होती है। इसीलिए एक ही यौगिक के विभिन्न नाभिकों में भी, विभिन्न आवृत्तियों के कारण अनुकम्पन पैदा हो जाता है। आम तौर पर, हाइड्रोजनों का उन कार्बनों के साथ अनुबंधन आकर्षण (जुड़ना) जो इलेक्ट्रॉन हटाने के समूहों से जुड़े रहते हैं, उच्च आवृत्तियों पर अनुकम्पन करने में सहायक होता है। उस स्थिति को, जहाँ एक विशेष हाइड्रोजन परमाणु, टीएमएस के सापेक्ष अनुकम्पित होता है, उसे रसायन विस्थापन कहा जाता है।<br><br>δ = अवलोकित रसायन विस्थापन (हर्ट्ज) x 106/स्पेक्ट्रोमीटर आवृत्ति (हर्ट्ज) (प्रति मिलियन भाग)<br><br>टीएमएस का उछाल मान डी = 0.00 के रूप में नियुक्त किया गया है।<br><br>
+
+<b>विलायक और आंतरिक मानक:</b><br>एनएमआर माप के दौरान, टैट्रामिथाइलसाइलेन को, निम्न कारणों से, एक आंतरिक मानक के रूप में उपयोग किया जाता है:<br><br>1. यह एक निष्क्रिय, विषहीन, कम वाष्पांक वाला होता है और इसे आसवन विधि द्वारा पुनः प्राप्त किया जा सकता है<br>2. माप के लिए बहुत ही कम मात्रा की आवश्यकता होती है<br>3. इसमें 12 समतुल्य प्रोटॉन होते हैं और इसीलिए, उसे एक बहुत ही मजबूत उछाल देते हैं<br>4. प्रोटॉन के अधिकांश संकेतों से दूर, इस उछाल का संकेत बाहर की ओर (बहुत ही अधिक विपरीत दिशा में) दिखलाई पड़ता है<br><br>आधुनिक एनएमआर उपकरणों का उपयोग करते समय, नमूने को मापने के लिए कोई आंतरिक मानक प्रयोग में नहीं लाया जाता है। विलायक संकेत और टीएमएस के बीच का अंतर ज्ञात है। आधुनिक उपकरण, विलायक संकेत का पता लगाते हैं और उन्हें संभाल कर रखते हैं, जो अब आंतरिक मानक के रूप में काम कर सकता है।<br>
+</p><center><img src="./images/figure5_theory.png" style="width:350px; height:150px;"></center><p></p><p>स्रोत: jpkc.henu.edu.cn<br><br>एक विशेष नमूने के एनएमआर स्पेक्ट्रम को रिकॉर्ड करने के लिए, नमूने को एक विलायक में घोलना आवश्यक होता है। नमूना संकेतों से बचने के लिए, हमें, ड्यूटीरियम मिश्रित विलायक को इस्तेमाल करने की आवश्यकता होती है। गैर-ध्रुवीय से लेकर सामान्य रूप से ध्रुवीय यौगिकों के लिए, ज्यादातर, ड्यूटीरियम मिश्रित क्लोरोफॉर्म का उपयोग किया जाता है। ध्रुवीय यौगिकों के लिए, आमतौर पर ड्यूटीरियम मिश्रित डाइमिथाइल सल्फॉक्साइड (डीएमएसओ) का उपयोग किया जाता है। इस्तेमाल किए जाने वाले विलायकों में किसी भी तरह की मिलावट का पता, सीएचसीl3: 7.25 पीपीएम और डीएमएसओ: 2.5 पीपीएम पर, लग जाता है।<br><br>
+
+<b>एनएमआर स्पेक्ट्रा:</b>
+<br>एक एनएमआर स्पेक्ट्रम, किसी भी यौगिक के बारे में विभिन्न जानकारी देता है जिससे कार्बनिक अणु की संरचनात्मक व्याख्या करने में मदद मिलती है;<br><br>• संकेतों की संख्या से, मापे गए नमूने में मौजूद प्रोटॉनों के विभिन्न समूहों की संख्या का पता चलता है।<br>• रसायन विस्थापन से प्रोटॉन के परिवेश का पता चलता है<br>• विविधता से, निकटवर्ती परमाणुओं पर प्रोटॉनों की संख्या के बारे में, जानकारी मिलती है<br>• उछालों (उछाल क्षेत्र) के एकीकरण से, प्रत्येक परिवेश में प्रोटॉनों की संख्या का पता लगता है<br>
+</p><center><img src="./images/figure6_theory.png" style="width:437px; height:262px;"></center><p></p><p>स्रोत:<a href="http://cactus.dixie.edu/smblack/chem2310/ch5/LG_key_Ch5.pdf">http://cactus.dixie.edu/smblack/chem2310/ch5/LG_key_Ch5.pdf</a>
+<br><br>
+</p>
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg">
+	</div>
+     
+        <div id="experiment-article-section-3-heading" class="heading">लक्ष्य</div>
+
+        <div id="experiment-article-section-3-content" class="content">
+          <p>
+</p><ul>
+<li>प्रोटॉन एनएमआर के मूल सिद्धांतों को समझने के लिए।</li>
+<li>यौगिकों के तीन सेटों का, प्रोटॉन की समतुल्य संख्या के साथ, व्यवस्थित रूप से, मूल्यांकन करें।</li>
+</ul>
+<center><img src="./images/figure2_objective.png" style="width:566px; height:157px;"></center><p></p><p>स्रोत:<a href="http://www.mhhe.com/physsci/chemistry/carey/student/olc/ch13nmr.html">http://www.mhhe.com/physsci/chemistry/carey/student/olc/ch13nmr.html</a>
+	</p> 
+
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg">
+	</div>
+
+        <div id="experiment-article-section-4-heading" class="heading">प्रयोग</div>
+
+        <div id="experiment-article-section-4-content" class="content">
+          <p>
+	     <a href="NMR.swf">यहां क्लिक करें</a>
+          </p>
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg">
+	</div>
+
+        <div id="experiment-article-section-5-heading" class="heading">गाइड</div>
+
+        <div id="experiment-article-section-5-content" class="content">
+          <p>नीचे दी गई प्रक्रिया का पालन करें:<br><br>
+<span style="color:blue">Step1:</span> नमूने पर क्लिक करें।<br><br>
+<span style="color:blue">चरण 2:</span> Select one sample (Benzene, Acetaldehyde,Ethylacetate). --&gt; error!!!<br>(The sample gets loaded on to the sample cavity). --&gt; error!!!<br><br>
+<span style="color:blue">चरण 3:</span>Press 'Start' to start the experiment. --&gt; error!!!<br>(The NMR spectrum of the corresponding sample gets displayed). --&gt; error!!!<br><br>
+<span style="color:blue">स्टेप 4:</span> मूल्यांकन पृष्ठ पर जाने के लिए 'मूल्यांकन' दबाएँ।<br><br>
+<span style="color:blue">चरण 5:</span> स्पेक्ट्रम की गणना और विश्लेषण करें।</p>
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg">
+	  </div>
+
+          <div id="experiment-article-section-6-heading" class="heading">प्रश्नावलियाँ</div>
+
+          <div id="experiment-article-section-6-content" class="content">
+            
+            <p>
+              
+             </p><div class="success"><h2 style="color:green;text-align:center">सही उत्तर!</h2></div>
+<div class="failure"><h2 style="color:red;text-align:center">उफ़, गलत जवाब!</h2></div>  
+
+ <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+
+ <script type="text/javascript" src="../js/modernizr-1.5.min.js">
+  </script>
+  <script type="text/javascript">
+          $(document).ready(function(){
+
+			          $(".q2").hide();
+				  $(".q3").hide();
+				  $(".q4").hide();
+				  $(".q5").hide();
+				  $(".q6").hide();
+				  $(".q7").hide();
+				  $(".q8").hide();
+				  $(".q9").hide();
+				  $(".q10").hide();
+				  $(".success").hide();
+				  $(".failure").hide();
+				  });
+var count=0;
+function checkAnswer1(value,t)
+{
+	var t1=t+1;
+	if(value==10){
+		$(".failure").hide();
+		$(".success").show();
+		$(".q"+t).hide();
+		$(".success").hide(1000);
+		$(".q"+t1).show(2000);
+		count+=1;
+	}
+	else{
+		$(".success").hide();
+		$(".failure").show();
+		$(".q"+t).hide();
+		$(".failure").hide(1000);
+		$(".q"+t1).show(2000);
+	}
+	if(t1==11)
+	{
+		$(".success").hide();
+		$(".failure").hide();
+		setTimeout("alert('You secured '+ count +' out of 10')",2000);
+	}
+}
+</script>
+
+
+<form name="q1" class="q1">
+
+<p><b>1. एनएमआर तकनीक में निम्नलिखित का उपयोग होता है:</b><br>
+ <input type="radio" name="q1" id="q1" value="0" onclick="checkAnswer1(this.value,1)">माइक्रोवेव<br>
+ <input type="radio" name="q1" id="q1" value="10" onclick="checkAnswer1(this.value,1)">रेडियो तरंगें<br>
+ <input type="radio" name="q1" id="q1" value="1" onclick="checkAnswer1(this.value,1)">इन्फ्रारेड विकिरण<br>
+ <input type="radio" name="q1" id="q1" value="2" onclick="checkAnswer1(this.value,1)">गामा विकिरण<br>
+<br><br></p>
+</form>
+
+<form class="q2">
+<p><b>2. एनएमआर स्पेक्ट्रम में एक्स- अक्ष का अर्थ है</b><br>
+ <input type="radio" name="q2" id="q2" value="10" onclick="checkAnswer1(this.value,2)">पीपीएम में चुंबकीय क्षेत्र की प्रचंडता का अनुपात<br>
+ <input type="radio" name="q2" id="q2" value="1" onclick="checkAnswer1(this.value,2)">सेमी -1 में आवृत्ति<br>
+ <input type="radio" name="q2" id="q2" value="0" onclick="checkAnswer1(this.value,2)">अनुपात को चार्ज करने के लिए द्रव्यमान (एम / जेड)<br>
+ <input type="radio" name="q2" id="q2" value="2" onclick="checkAnswer1(this.value,2)">माप<br>
+<br><br></p>
+</form>
+
+<form class="q3">
+<p><b>3. एक सुरक्षित प्रोटॉन वह होता है जो निम्नलिखित का अनुभव करता है:</b><br>
+ <input type="radio" name="q3" id="q3" value="0" onclick="checkAnswer1(this.value,3)">इलेक्ट्रॉनों का अधिक घनत्व और चुंबकीय क्षेत्र की अधिक प्रचंडता<br>
+ <input type="radio" name="q3" id="q3" value="1" onclick="checkAnswer1(this.value,3)">इलेक्ट्रॉनों का कम घनत्व और चुंबकीय क्षेत्र की कम प्रचंडता<br>
+ <input type="radio" name="q3" id="q3" value="10" onclick="checkAnswer1(this.value,3)">इलेक्ट्रॉनों का अधिक घनत्व और चुंबकीय क्षेत्र की कम प्रचंडता<br>
+ <input type="radio" name="q3" id="q3" value="2" onclick="checkAnswer1(this.value,3)">इलेक्ट्रॉनों का कम घनत्व और चुंबकीय क्षेत्र की अधिक प्रचंडता<br>
+<br><br></p>
+</form>
+
+<form class="q4">
+<p><b>4. एनएमआर प्रयोगों में इस्तेमाल होने वाला, आंतरिक संदर्भ मानक निम्नलिखित है:</b><br>
+ <input type="radio" name="q4" id="q4" value="10" onclick="checkAnswer1(this.value,4)">टैट्रामिथाइलसाइलेन<br>
+ <input type="radio" name="q4" id="q4" value="1" onclick="checkAnswer1(this.value,4)">ड्यूटीरियम मिश्रित विलायक<br>
+ <input type="radio" name="q4" id="q4" value="0" onclick="checkAnswer1(this.value,4)">नॉरल्यूसिन<br>
+ <input type="radio" name="q4" id="q4" value="2" onclick="checkAnswer1(this.value,4)">2,2-डाइफिनाइल 1-पिक्रिलहाइड्राज़िल<br>
+<br><br></p>
+</form>
+
+<form class="q5">
+<p><b>5. टीएमएस (टैट्रामिथाइलसाइलेन) का उछाल मान निम्नलिखित पर नियुक्त किया गया है:</b><br>
+ <input type="radio" name="q5" id="q5" value="2" onclick="checkAnswer1(this.value,5)">δ = 0.05<br>
+ <input type="radio" name="q5" id="q5" value="1" onclick="checkAnswer1(this.value,5)">δ = 0.11<br>
+ <input type="radio" name="q5" id="q5" value="0" onclick="checkAnswer1(this.value,5)">δ = 1.00<br>
+ <input type="radio" name="q5" id="q5" value="10" onclick="checkAnswer1(this.value,5)">δ = 0.00<br>
+<br><br></p>
+</form>
+
+<form class="q6">
+<p><b>6. निम्नलिखित का अध्ययन करके, हाइड्रोजनों की संख्या की गिनती,उछाल अनुकलन से की जाती है</b><br>
+ <input type="radio" name="q6" id="q6" value="1" onclick="checkAnswer1(this.value,6)">उछाल की तीव्रता<br>
+ <input type="radio" name="q6" id="q6" value="10" onclick="checkAnswer1(this.value,6)">वक्र के नीचे का क्षेत्र<br>
+ <input type="radio" name="q6" id="q6" value="0" onclick="checkAnswer1(this.value,6)">उछाल की स्थिति<br>
+ <input type="radio" name="q6" id="q6" value="2" onclick="checkAnswer1(this.value,6)">उपयोग की गई आवृत्ति<br>
+<br><br></p>
+</form>
+
+<form class="q7">
+<p><b>7. ध्रुवीय यौगिकों के लिए, ज्यादातर इस्तेमाल किया गया ड्यूटीरियम मिश्रित विलायक है:</b><br>
+ <input type="radio" name="q7" id="q7" value="1" onclick="checkAnswer1(this.value,7)">डीएमएफ ड्यूटीरियम मिश्रित<br>
+ <input type="radio" name="q7" id="q7" value="10" onclick="checkAnswer1(this.value,7)">डीएमएसओ<br>
+ <input type="radio" name="q7" id="q7" value="0" onclick="checkAnswer1(this.value,7)">क्लोरोफार्म<br>
+ <input type="radio" name="q7" id="q7" value="2" onclick="checkAnswer1(this.value,7)">पानी<br>
+<br><br></p>
+</form>
+
+<form class="q8">
+<p><b>8. 13सी एनएमआर स्पेक्ट्रम, निम्नलिखित की जानकारी देता है:</b><br>
+ <input type="radio" name="q8" id="q8" value="1" onclick="checkAnswer1(this.value,8)">समतुल्य कार्बन अणुओं की संख्या<br>
+ <input type="radio" name="q8" id="q8" value="10" onclick="checkAnswer1(this.value,8)">असमतुल्य कार्बन अणुओं की संख्या<br>
+ <input type="radio" name="q8" id="q8" value="0" onclick="checkAnswer1(this.value,8)">समतुल्य हाइड्रोजन अणुओं की संख्या<br>
+ <input type="radio" name="q8" id="q8" value="2" onclick="checkAnswer1(this.value,8)">असमतुल्य हाइड्रोजन अणुओं की संख्या<br>
+</p></form><p></p>
+
+<br><br>
+<form class="q9">
+<p><b>9. उछालों की संख्या से आपको निम्नलिखित की जानकारी मिलती है:</b><br>
+ <input type="radio" name="q9" id="q9" value="10" onclick="checkAnswer1(this.value,9)">प्रोटॉन के विभिन्न परिवेशों की संख्या<br>
+ <input type="radio" name="q9" id="q9" value="1" onclick="checkAnswer1(this.value,9)">प्रोटॉनों का सामान्य परिवेश<br>
+ <input type="radio" name="q9" id="q9" value="0" onclick="checkAnswer1(this.value,9)">निकटवर्ती अणु पर प्रोटॉन अणुओं की संख्या<br>
+ <input type="radio" name="q9" id="q9" value="2" onclick="checkAnswer1(this.value,9)">प्रत्येक परिवेश में प्रोटॉनों की संख्या<br>
+<br><br></p>
+</form>
+
+<form class="q10">
+<p><b>10. एक एनएमआर स्पेक्ट्रम में, उछाल विविधता निम्नलिखित जानकारी देती है:</b><br>
+ <input type="radio" name="q10" id="q10" value="0" onclick="checkAnswer1(this.value,10)">प्रोटॉन के विभिन्न परिवेशों की संख्या<br>
+ <input type="radio" name="q10" id="q10" value="1" onclick="checkAnswer1(this.value,10)">प्रोटॉनों का सामान्य परिवेश<br>
+ <input type="radio" name="q10" id="q10" value="10" onclick="checkAnswer1(this.value,10)">निकटवर्ती अणु पर प्रोटॉन अणुओं की संख्या<br>
+ <input type="radio" name="q10" id="q10" value="2" onclick="checkAnswer1(this.value,10)">प्रत्येक परिवेश में प्रोटॉनों की संख्या<br>
+</p></form><p></p>
+<br><br> 
+ 
+
+  <h2>समाधान</h2><br><p>
+ <b>1. एनएमआर तकनीक में निम्नलिखित का उपयोग होता है:</b><br>
+<span style="color:green">रेडियो तरंगें</span><br><br>
+
+
+<b>2. एनएमआर स्पेक्ट्रम में एक्स- अक्ष का अर्थ है</b><br>
+<span style="color:green">पीपीएम में चुंबकीय क्षेत्र की प्रचंडता का अनुपात</span><br><br>
+
+ <b>3. एक सुरक्षित प्रोटॉन वह होता है जो निम्नलिखित का अनुभव करता है:</b><br>
+<span style="color:green">इलेक्ट्रॉनों का अधिक घनत्व और चुंबकीय क्षेत्र की कम प्रचंडता</span><br><br>
+
+ <b>4. एनएमआर प्रयोगों में इस्तेमाल होने वाला, आंतरिक संदर्भ मानक निम्नलिखित है:</b><br>
+<span style="color:green">टैट्रामिथाइलसाइलेन</span><br><br>
+
+ <b>5. टीएमएस (टैट्रामिथाइलसाइलेन) का उछाल मान निम्नलिखित पर नियुक्त किया गया है:</b><br>
+<span style="color:green">δ = 0.00</span><br><br>
+
+ <b>6. निम्नलिखित का अध्ययन करके, हाइड्रोजनों की संख्या की गिनती,उछाल अनुकलन से की जाती है</b><br>
+<span style="color:green">वक्र के नीचे का क्षेत्र</span><br><br>
+
+ <b>7. ध्रुवीय यौगिकों के लिए, ज्यादातर इस्तेमाल किया गया ड्यूटीरियम मिश्रित विलायक है:</b><br>
+<span style="color:green">डीएमएसओ</span><br><br>
+
+ <b>8. 13सी एनएमआर स्पेक्ट्रम, निम्नलिखित की जानकारी देता है:</b><br>
+<span style="color:green">असमतुल्य कार्बन अणुओं की संख्या</span><br><br>
+
+ <b>9. उछालों की संख्या से आपको निम्नलिखित की जानकारी मिलती है:</b><br>
+<span style="color:green">प्रोटॉन के विभिन्न परिवेशों की संख्या</span><br><br>
+
+ <b>10. एक एनएमआर स्पेक्ट्रम में, उछाल विविधता निम्नलिखित जानकारी देती है:</b><br>
+<span style="color:green">निकटवर्ती अणु पर प्रोटॉन अणुओं की संख्या</span><br><br>
+
+            </p>
+
+          </div>
+
+        </section>
+
+        
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg">
+	  </div>
+
+          <div id="experiment-article-section-8-heading" class="heading">अतिरिक्त पढ़ने के लिए</div>
+
+          <div id="experiment-article-section-8-content" class="content">
+            <h2>पुस्तक संदर्भ:</h2><br><p>
+ 	1.	J. Keeler (2005). Understanding NMR Spectroscopy. John Wiley &amp; Sons interpreting Infrared, Raman, and Nuclear Magnetic Resonance Spectra, 2-Volume Set R.A. Nyquist, Academic Press, New York, NY, 2001. --&gt; error!!!<br>
+	2.      <a href="http://www.physicscentral.com/explore/action/fmri1.cfm">http://www.physicscentral.com/explore/action/fmri1.cfm</a><br>
+	3.	<a href="http://cactus.dixie.edu/smblack/chem2310/ch5/LG_key_Ch5.pdf">http://cactus.dixie.edu/smblack/chem2310/ch5/LG_key_Ch5.pdf</a><br>
+	4.	<a href="http://www.knockhardy.org.uk/sci_htm_files/nmr2.pdf">http://www.knockhardy.org.uk/sci_htm_files/nmr2.pdf</a><br>
+	5.	<a href="http://www.chemguide.co.uk/analysismenu.html#top">http://www.chemguide.co.uk/analysismenu.html#top</a><br>
+	6.	<a href="http://science.csustan.edu/tutorial/nmr/index.htm">http://science.csustan.edu/tutorial/nmr/index.htm</a><br>
+	7.	<a href="http://www.wisc-online.com/objects/ViewObject.aspx?ID=GCH6304">http://www.wisc-online.com/objects/ViewObject.aspx?ID=GCH6304</a><br>
+	8.	<a href="http://www.youtube.com/watch?v=SBuXwSFyZwU&amp;feature=player_embedded">http://www.youtube.com/watch?v=SBuXwSFyZwU&amp;feature=player_embedded</a><br>
+	9.	<a href="http://www.youtube.com/watch?v=sDVTzayocWk&amp;feature=related">http://www.youtube.com/watch?v=sDVTzayocWk&amp;feature=related</a><br>
+	10.	<a href="http://orgchem.colorado.edu/procedures/NMR/NMRacquisition.html">http://orgchem.colorado.edu/procedures/NMR/NMRacquisition.html</a><br>
+	11.	<a href="http://www.mhhe.com/physsci/chemistry/carey/student/olc/ch13nmr.html">http://www.mhhe.com/physsci/chemistry/carey/student/olc/ch13nmr.html</a><br>
+</p>          
+</div>
+
+        </section>
+      <!-- <section id="experiment-article-section-9">
+	  
+          <div id="experiment-article-section-9-icon" 
+          class="icon"> -->
+	    <!-- Enclose the icon image of your lab. -->
+	<!--    <img src="../images/experiments.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-9-heading" 
+          class="heading">
+	    Experiments
+	  </div>
+	
+          <div id="experiment-article-section-9-content" 
+          class="content">
+	    <p>
+	      <ul id="list-of-experiments">
+	  <li class="experiment-thumb"> 
+					<a href="../exp6/"> 
+						<strong>Instrumentation and working principles of infra red (IR) spectroscopy using salt plates.</strong> 
+					</a> 
+				</li> 
+	
+				<li class="experiment-thumb"> 
+					<a href="../exp7/"> 
+						<strong>Instrumentation and working principles of solutions infra red (IR) spectroscopy </strong> 
+					</a> 
+				</li> 
+ 
+				<li class="experiment-thumb"> 
+					<a href="../exp8/"> 
+						<strong>Instrumentation and working principles principles of mass spectroscopy</strong> 
+					</a> 
+				</li> 
+				<li class="experiment-thumb"> 
+					<a href="../exp9/"> 
+						<strong>Determination of molar mass of simple compounds using mass spectroscopy</strong> 
+					</a> 
+				</li> 
+				<li class="experiment-thumb"> 
+					<a href="../exp5/"> 
+						<strong>Nuclear magnetic resosnace spectrocopy and evaulation of simple 1H NMR spectra of select organic compounds</strong> 
+					</a> 
+				</li> 
+	
+ 
+ 
+				<li class="experiment-thumb"> 
+					<a href="../exp10/"> 
+						<strong>Identification of unknown components using spectroscopic techniques.</strong> 
+					</a> 
+				</li> 
+				<li class="experiment-thumb"> 
+					<a href="../exp1/"> 
+						<strong>Principles of electron paramagnetic resonance spectroscopy</strong> 
+					</a> 
+				</li> 
+				<li class="experiment-thumb"> 
+					<a href="../exp2/"> 
+						<strong>Electron paramagnetic resonance spectral studies of select organic free radicals</strong> 
+					</a> 
+				</li> 
+	  </ul>
+	    </p>
+	  </div>
+	
+        </section> -->
+        <section id="experiment-article-section-10">
+	  
+          <div id="experiment-article-section-10-icon" class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/feedback.jpg">
+	  </div>
+	
+          <div id="experiment-article-section-10-heading" class="heading">प्रतिक्रिया</div>
+	
+          <div id="experiment-article-section-10-content" class="content">
+	    <p>
+	      <a href="http://virtual-labs.ac.in/feedback/" target="_blank">प्रतिक्रिया</a>
+
+	    </p>
+	  </div>
+	
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+  <div class="container-fluid footer-div" style="background: #404040; margin-top: 40px;  padding: 20px;">
+    <div class="col-md-4 border-right-green-dotted">
+      <h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;">सुधार किए गए</h2>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/Download" class="text-normal-gray-small nounderline" style="color: white">लैब इंटीग्रेशन किट जारी</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/First_Integration_workshop" class="text-normal-gray-small nounderline" style="color: white">आईआईआईटी हैदराबाद में पहला एकीकरण कार्यशाला</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/Summer_Sprint_Integration_workshop" class="text-normal-gray-small nounderline" style="color: white">आईआईटी गुवाहाटी में ग्रीष्मकालीन एकीकरण कार्यशाला</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/QA/Integration_workshop" class="text-normal-gray-small nounderline" style="color: white"> आईआईआईटी हैदराबाद  में एकीकरण कार्यशाला</a>
+      <a href="http://community.virtual-labs.ac.in/w/index.php/A_new_set_of_25_Virtual_Labs_on_Portable_Media" class="text-normal-gray-small nounderline" style="color: white"> पोर्टेबल मीडिया पर 25 वर्चुअल लैब्स का एक नया सेट</a>
+    </div>
+
+    <div class="col-md-2 border-right-green-dotted">
+					<a href="http://community.virtual-labs.ac.in/w/index.php/Main_Page" class="text-a-lightgreen" style="text-decoration: underline;">समुदाय</a>
+					<a href="http://www.sakshat.ac.in/" class="text-a-lightgreen" style="text-decoration: underline;"> साक्षत् पोर्टल</a>
+					<a href="http://outreach.vlabs.ac.in/" class="text-a-lightgreen" style="text-decoration: underline;"> आउटरीच पोर्टल</a>
+					<a href="./faq.html" class="text-a-lightgreen" style="text-decoration: underline;">सामान्य प्रश्न</a>
+    </div>
+
+    <div class="col-md-3 border-right-green-dotted" id="contact">
+					<h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;">हमसे संपर्क करें</h2>
+					<a href="#" class="text-a-lightgreen" style="text-decoration: underline;"> प्रतिपुष्टि</a>
+					<a class="text-a-lightgreen" style="text-decoration: underline;" href="mailto:support@vlabs.ac.in">support@vlabs.ac.in</a>
+    </div>
+
+    <div class="col-md-2 border-right-green-dotted">
+      <h2 class="text-h2-lightblue-small" style="font-weight: bold;margin-top: 0px;"> हमारा अनुसरण करें</h2>
+      <a href="https://www.facebook.com/pages/Virtual-Labs-IIT-Delhi/301510159983871" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/fb.png" style="border-radius: 50%;"> </a>
+      <a href="https://twitter.com/TheVirtualLabs" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/twitter.png" style="border-radius: 50%;"></a>
+      <a href="http://linkedin.com" class="text-a-lightgreen nounderline" target="_blank"> <img src="../../images/social/linkedin.png" style="border-radius: 50%;"></a>
+      <a href="https://www.youtube.com/watch?v=mVBYNXLaDdg" class="text-a-lightgreen nounderline" target="_blank">
+	<img src="../../images/social/youtube.png" style="border-radius: 50%; width: 38px;
+							  height: 38px"></a>
+
+    </div>
+
+  </div>
+</footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+
+
+</body></html>

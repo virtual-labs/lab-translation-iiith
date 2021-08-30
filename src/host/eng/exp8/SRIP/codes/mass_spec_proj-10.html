@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery.svg.css">
+    <link rel="stylesheet" href="Mass_spec.css"> 
+</head>
+
+<body>
+    <div class="row">
+        <!-- the row and column property of table has been used to place the buttons and SVG in place-->
+        <div class="column">
+            <div class="btn-group">
+                <!-- the class "btn-group"> has been used for styling the buttons  -->
+                <button id="btn1" type="button">Inject Sample</button>&nbsp;&nbsp;
+                <button id='btn2' type="button">Ionisation</button>&nbsp;&nbsp;
+                <button id='btn3' type="button">Acceleration</button>&nbsp;&nbsp;
+                <button id='btn4' type="button">Deflection</button>&nbsp;&nbsp;&nbsp;
+                <button id='btn5' type="button">Evaluation</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+            </div>
+        </div>
+        <div class="column" style="position:relative">
+            <!-- svg.js has been used to draw images /figures for the project  -->
+            <svg width="775" height="590" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- svg width and height has been selected so as to fit in a single window view  -->
+                    <linearGradient id="svg_22">
+                        <stop offset="0" stop-color="#b2b2b2" />
+                        <stop offset="1" stop-color="#4d4d4d" />
+                    </linearGradient>
+                    <linearGradient id="svg_23">
+                        <stop offset="0" stop-color="#999999" />
+                        <stop offset="1" stop-color="#666666" />
+                    </linearGradient>
+                    <linearGradient id="svg_26" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0.95" stop-color="#56ffff" />
+                        <stop offset="1" stop-color="#aaffff" />
+                    </linearGradient>
+                    <linearGradient id="svg_108">
+                        <stop offset="0" stop-color="#56ff56" />
+                        <stop offset="1" stop-color="#a900a9" />
+                    </linearGradient>
+                </defs> <!-- the gradients reqiuired in the svg images have been defined in the <defs>  -->
+                <g class="layer" display="inline" id="tube">
+                    <!-- the main experiment tube for mass spectroscopy  -->
+                    <title>Layer 6</title>
+                    <text fill="#000000" font-family="serif" font-size="24" id="svg_32" opacity="0.75" stroke="#00ffff"
+                         stroke-width="0"
+                        text-anchor="middle" transform="matrix(1 0 0 1.40705 0 -39.5171)" x="449.5" xml:space="preserve"
+                        y="133.5" />
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                            <stop offset="0%" stop-color="rgb(214,255,255)" />
+                            <stop offset="100%" stop-color="rgb(127,255,212)" />
+                        </linearGradient>
+                    </defs>//stop-color:rgb(0,0,225); ////style=&quot;fill:white&quot;
+                    <path d="m443.5,268c18.25,11.33 54.75,11.33 73,0" fill="transparent" id="svg_1" stroke="#00ffff"
+                        stroke-width="4" transform="rotate(-11.0409 480 272.25)" />
+                    <path d="m419.31,167.86c18.25,11.33 54.75,11.33 73,0" fill="transparent" id="svg_3" stroke="#00ffff"
+                        stroke-width="4" transform="rotate(-11.0409 455.81 172.109)" />
+                    <line fill="none" id="svg_5" stroke="#00ffff"  stroke-width="5" x1="513" x2="750" y1="262.5" y2="89.5" />
+                    <line fill="none" id="svg_8" stroke="#00ffff"  stroke-width="4" x1="491" x2="686" y1="162.5" y2="22.5" />
+                    <path d="m673.05,49.39c24.28,17.41 72.84,17.41 97.11,0" fill="transparent" id="svg_9"
+                        stroke="#00ffff" stroke-width="2" transform="rotate(-132.332 721.61 55.9238)" />
+                    <line fill="none" id="svg_10" stroke="#00ffff"   stroke-width="4" x1="421" x2="53" y1="177.5" y2="84.5" />
+                    <line fill="none" id="svg_11" stroke="#00ffff"  stroke-width="4" x1="447" x2="31" y1="275.5" y2="179.5" />
+                    <path d="m-12.12,124.48c24.4,17.41 73.2,17.41 97.6,0" fill="transparent" id="svg_4" stroke="#00ffff"
+                        stroke-width="4" transform="rotate(104.864 36.68 131.009)" />
+                    <rect fill="#56ffff" height="24" id="svg_6" stroke="#00ffff" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2"
+                        transform="rotate(19.9037 36.239 131.578)" width="48.79" x="11.84" y="119.58" />
+                    <ellipse cx="123.29" cy="181.83" fill="#ffaaaa" id="svg_14" rx="65.21" ry="18" stroke="#ffaaaa"
+                        
+                        transform="rotate(14.9661 123.289 181.829)" />
+                    <ellipse cx="122.28" cy="179.36" fill="#56ffff" id="svg_34" rx="54.62" ry="10.28" stroke="#56ffff"
+                         stroke-width="3"
+                        transform="rotate(14.0594 122.275 179.36)" />
+                    <path
+                        d="m110.06,120.64l15.75,0l2.18,-6.2l3.57,11.93l3.96,-12.08l3.47,11.93l3.76,-11.77l3.76,11.85l2.08,-5.81l15.85,0m-55.69,-0.54l1.31,0l0,1.31l-1.31,0l0,-1.31zm55.69,-0.09l1.31,0l0,1.31l-1.31,0l0,-1.31z"
+                        fill="none" id="svg_12" stroke="#ff0000"  stroke-width="3" transform="rotate(12.1014 137.247 120.33)" />
+                    <line fill="none" id="svg_13" stroke="#191919"  stroke-width="3" transform="rotate(8.45503 111.77 99.412)" x1="109.27"
+                        x2="114.27" y1="115.45" y2="83.38" />
+                    <line fill="none" id="svg_16" stroke="#7f7f7f"  stroke-width="3" x1="164" x2="172" y1="129.5" y2="99.5" />
+                    <ellipse cx="650.5" cy="102.05" fill="#cccccc" id="svg_17" rx="10.67" ry="45.3" stroke="#cccccc"
+                         stroke-width="3"
+                        transform="rotate(-35.2354 650.501 102.047)" />
+                    <ellipse cx="243.45" cy="181.64" fill="#7f7f7f" id="svg_27" opacity="0.75" rx="10.49" ry="33.04"
+                        stroke="url(#svg_26)" 
+                        stroke-opacity="0.66" stroke-width="3" transform="rotate(-2.29061 245.398 182.444)" />
+                    <ellipse cx="242.7" cy="179.44" fill="url(#svg_22)" fill-opacity="0.69" id="svg_215" rx="15.5"
+                        ry="47.49" stroke="url(#svg_23)"  stroke-opacity="0.65" stroke-width="2"
+                        transform="rotate(-2.29061 245.398 182.444)" />
+                    <ellipse cx="245.76" cy="182.07" fill="#cccccc" id="svg_24" opacity="0.75" rx="2.98" ry="15.37"
+                        stroke="#cccccc" 
+                        stroke-width="2" transform="rotate(-2.29061 245.763 182.069)" />
+                    <ellipse cx="287.87" cy="193.59" fill="#7f7f7f" id="svg_38" opacity="0.75" rx="10.49" ry="33.04"
+                        stroke="url(#svg_26)" 
+                        stroke-opacity="0.66" stroke-width="3" transform="rotate(-2.29061 289.819 194.396)" />
+                    <ellipse cx="287.12" cy="191.39" fill="url(#svg_22)" fill-opacity="0.69" id="svg_37" rx="15.5"
+                        ry="47.49" stroke="url(#svg_23)"  stroke-opacity="0.65" stroke-width="2"
+                        transform="rotate(-2.29061 289.819 194.396)" />
+                    <ellipse cx="290.18" cy="194.02" fill="#cccccc" id="svg_36" opacity="0.75" rx="2.98" ry="15.37"
+                        stroke="#cccccc" 
+                        stroke-width="2" transform="rotate(-2.29061 290.184 194.021)" />
+                    <ellipse cx="332.87" cy="202.59" fill="#7f7f7f" id="svg_41" opacity="0.75" rx="10.49" ry="33.04"
+                        stroke="url(#svg_26)" 
+                        stroke-opacity="0.66" stroke-width="3" transform="rotate(-2.29061 334.819 203.396)" />
+                    <ellipse cx="332.12" cy="200.39" fill="url(#svg_22)" fill-opacity="0.69" id="svg_40" rx="15.5"
+                        ry="47.49" stroke="url(#svg_23)"  stroke-opacity="0.65" stroke-width="2"
+                        transform="rotate(-2.29061 334.819 203.396)" />
+                    <ellipse cx="335.18" cy="203.02" fill="#cccccc" id="svg_39" opacity="0.75" rx="2.98" ry="15.37"
+                        stroke="#cccccc" 
+                        stroke-width="2" transform="rotate(-2.29061 335.184 203.021)" />
+                    <rect fill="#56ffff" height="38" id="svg_43" opacity="0.75" stroke="#00ffff" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" width="38" x="422" y="296.5" />
+                    <path
+                        d="m461,296.5c20,-16 22,-15 21.5,-15.5c-0.5,-0.5 0.5,34.5 0,34c-0.5,-0.5 -24.5,18.5 -22.5,20.5"
+                        fill="#aaffff" id="svg_19" opacity="0.75" stroke="#00ffff" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" />
+                    <text fill="#000000" font-family="serif" font-size="24" id="svg_20" opacity="0.75" stroke="#00ffff"
+                         stroke-width="0"
+                        text-anchor="middle" transform="matrix(1 0 0 0.910749 0 43.0877)" x="440" xml:space="preserve"
+                        y="305.54014">S</text>
+                    <path d="m423,295.5c24,-21 24,-20 23.5,-20.5c-0.5,-0.5 35.5,3.5 35,3" fill="#aaffff" id="svg_21"
+                        opacity="0.75" stroke="#00ffff"  stroke-width="0" />
+                    <rect fill="#56ffff" height="38" id="svg_31" opacity="0.75" stroke="#00ffff" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" width="38" x="422.68"
+                        y="112.27" />
+                    <path
+                        d="m461.68,112.27c20,-16 22,-15 21.5,-15.5c-0.5,-0.5 0.5,34.5 0,34c-0.5,-0.5 -24.5,18.5 -22.5,20.5"
+                        fill="#aaffff" id="svg_30" opacity="0.75" stroke="#00ffff" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" />
+                    <path d="m423.68,111.27c24,-21 24,-20 23.5,-20.5c-0.5,-0.5 35.5,3.5 35,3" fill="#aaffff" id="svg_28"
+                        opacity="0.75" stroke="#00ffff"  stroke-width="0" />
+                    <text fill="#000000" font-family="serif" font-size="24" id="svg_35" opacity="0.75" stroke="#00ffff"
+                         stroke-width="0"
+                        text-anchor="middle" transform="matrix(1 0 0 0.777328 0 38.168)" x="439" xml:space="preserve"
+                        y="121.63105">N</text>
+                    <line fill="none" id="svg_42" opacity="0.75" stroke="#7f7f7f" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="9"
+                        transform="rotate(4.21418 241.5 113)" x1="243" x2="240" y1="132.5" y2="93.5" />
+                    <line fill="none" id="svg_44" opacity="0.75" stroke="#7f7f7f" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="9"
+                        transform="rotate(4.21418 286 125.5)" x1="287.5" x2="284.5" y1="145" y2="106" />
+                    <line fill="none" id="svg_45" opacity="0.75" stroke="#7f7f7f" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="9"
+                        transform="rotate(4.21418 332 134.5)" x1="333.5" x2="330.5" y1="154" y2="115" />
+                    <line fill="none" id="svg_46" opacity="0.75" stroke="#7f7f7f" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="7"
+                        transform="rotate(15.1858 114.5 212.5)" x1="114" x2="115" y1="198.5" y2="226.5" />
+                    <line fill="none" id="svg_47" opacity="0.75" stroke="#333333" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" x1="627" x2="628" y1="-4.5"
+                        y2="23.5" />
+                    <line fill="none" id="svg_49" opacity="0.75" stroke="#333333" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" x1="632" x2="633" y1="-1.5"
+                        y2="22.5" />
+                    <rect fill="transparent" height="318" id="svg_98" rx="10" stroke="#333333" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="2" width="756.99999" x="5.50001"
+                        y="19.5" />
+                </g>
+
+                <g id="ionization">
+                    <!-- the svg image for showing ionization position along with animation -->
+                    <ellipse cx="159" 
+                    cy="457" 
+                    fill="cyan" 
+                    id="svg_48" 
+                    rx="120" 
+                    ry="100" 
+                    stroke="purple"
+                    stroke-width="2" />
+                    <ellipse cx="159" 
+                    cy="457" 
+                    fill="url(#grad1)" 
+                    id="svg_55" 
+                    rx="100" ry="80" />
+                    <circle cx="209" 
+                    cy="507" 
+                    fill="yellow" 
+                    id="svg_57" 
+                    r="8" 
+                    stroke="yellow" 
+                    stroke-width="2">
+                    <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="447" to="500" 
+                        begin="0s" dur="2s"
+                        fill="opposite" 
+                        repeatCount="indefinite" />
+                    </circle> <!-- the SMIL animation for positive charges  -->
+                    <circle cx="230" 
+                    cy="417" 
+                    r="8" 
+                    style="stroke: none; fill: yellow;">
+                        <animate attributeName="cx" 
+                        attributeType="XML" 
+                        from="60" to="100" 
+                        begin="0s" dur="2s"
+                        fill="remove" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="229" 
+                    cy="417" fill="yellow" 
+                    id="svg_60" r="8" 
+                    stroke="yellow" 
+                    stroke-width="2">
+                        <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="400" to="470" 
+                        begin="0s" dur="2s"
+                        fill="remove" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="169" 
+                    cy="457" fill="yellow" 
+                    id="svg_68" r="8" 
+                    style="stroke: none; fill: yellow;">
+                        <animate attributeName="cx" 
+                        attributeType="XML" 
+                        from="160" to="200" 
+                        begin="0s" dur="2s"
+                        fill="freeze" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="159" cy="437" fill="yellow" id="svg_69" r="6" style="stroke: none; fill: yellow;">
+                        <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="385" to="460" 
+                        begin="0s" dur="1s"
+                        fill="freeze" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="109" cy="457" fill="yellow" id="svg_70" r="8" style="stroke: none; fill: yellow;">
+                        <animate attributeName="cx" 
+                        attributeType="XML" 
+                        from="110" to="170" 
+                        begin="0s" dur="1s"
+                        fill="remove" 
+                        repeatCount="100" />
+                    </circle>
+                    <circle cx="94" cy="497" fill="yellow" id="svg_71" r="8" style="stroke: none; fill: yellow;">
+                        <animate attributeName="cx" 
+                        attributeType="XML" 
+                        from="90" to="150" 
+                        begin="0s" dur="1s"
+                        fill="freeze" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="229" cy="477" fill="yellow" id="svg_72" r="6" style="stroke: none; fill: yellow;">
+                        <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="420" to="470" 
+                        begin="0s" dur="1s"
+                        fill="remove" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="141.5" cy="480.5" fill="#ffff56" id="svg_85" rx="6" ry="5" stroke="#ffff56"
+                         stroke-width="2">
+                        <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="440" to="480" 
+                        begin="0s" dur="1s"
+                        fill="remove" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="191" cy="421" fill="#ffff56" id="svg_86" rx="6.5" ry="5.5" stroke="#ffff56"
+                        stroke-width="2">
+                        <animate attributeName="cx" 
+                        attributeType="XML" 
+                        from="185" to="215" 
+                        begin="0s" dur="1s"
+                        fill="remove" 
+                        repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="160" cy="509.5" fill="#ffff56" id="svg_87" rx="7.5" ry="7" stroke="#ffff56"
+                         stroke-width="2">
+                        <animate attributeName="cy" 
+                        attributeType="XML" 
+                        from="470" to="508" 
+                        begin="0s" dur="1s"
+                        fill="opposite" 
+                        repeatCount="indefinite" />
+                    </circle>
+
+                    <g id="elec1">
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="40"                            
+                        to="56" repeatCount="indefinite" 
+                        dur="1s" />
+                        
+                        <ellipse cx="46.78408" 
+                        cy="425.59942" 
+                        fill="white" 
+                        rx="7" 
+                        ry="6" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        id="svg_76" 
+                        x="44" 
+                        y="425" />
+                    </g>
+
+                    <g id="elec2">
+                        <circle cx="194" 
+                        cy="492" 
+                        fill=" white" 
+                        id="svg_73" 
+                        r="6" 
+                        stroke="1" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        id="svg_76" 
+                        x="191" 
+                        y="490" />
+                        
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="50"
+                        to="68" 
+                        begin="0" 
+                        dur="1s" 
+                        repeatCount="indefinite" 
+                        fill="freeze" />
+                    </g>
+
+                    <g id="elec3">
+                        
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="69"
+                        to="81" 
+                        repeatCount="indefinite" 
+                        dur="1s" />
+                        
+                        <circle cx="114" 
+                        cy="512" fill="white" 
+                        id="svg_75" 
+                        r="6" 
+                        stroke="1" 
+                        opacity="0.9" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        x="110" 
+                        y="513" />
+                    </g>
+
+                    <g id="elec4">
+                        
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="70"
+                        to="81" 
+                        repeatCount="indefinite" 
+                        dur="2s" />
+                        
+                        <circle cx="114" 
+                        cy="470" 
+                        fill=" white" 
+                        id="svg_75" 
+                        r="6" 
+                        stroke="1" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        id="svg_79" 
+                        x="109" 
+                        y="470" />
+                    </g>
+
+                    <g id="elec5">
+                        <circle cx="78" 
+                        cy="442" 
+                        fill="white" 
+                        id="svg_73" 
+                        r="6" 
+                        stroke="1" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        x="69" 
+                        y="442" />
+                        
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="40"
+                        to="55" 
+                        repeatCount="indefinite" 
+                        dur="2s" />
+                    </g>
+
+                    <g id="elec6">
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="30"
+                        to="56" 
+                        repeatCount="indefinite" 
+                        dur="1s" />
+                        
+                        <circle cx="114" 
+                        cy="420" 
+                        fill="white" 
+                        id="svg_75" r="6" 
+                        stroke="1" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        id="svg_79" 
+                        x="109" 
+                        y="420" />
+                    </g>
+
+                    <g id="elec7">
+                        <circle cx="124" 
+                        cy="412" 
+                        fill="white" 
+                        
+                        id="svg_73" 
+                        r="6" 
+                        stroke="1" />
+                        
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        x="119" 
+                        y="412" />
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="47"
+                        to="64" 
+                        repeatCount="indefinite" 
+                        dur="2s" />
+                    </g>
+
+                    <g id="elec8">
+                        <circle cx="34" 
+                        cy="512" 
+                        fill="white" 
+                        id="svg_73" 
+                        r="7" 
+                        stroke="1" />
+                        <rect fill="black" 
+                        width="9" 
+                        height="1" 
+                        x="31" 
+                        y="512" />
+                        <animateTransform attributeType="XML" 
+                        attributeName="transform" 
+                        type="translate" 
+                        from="70"
+                        to="80" 
+                        repeatCount="indefinite" 
+                        dur="2s" />
+                    </g>
+
+
+                    <text fill="black" font-family="Verdana" font-size="15" id="svg_76" x="109" y="513">-</text>
+                    <circle cx="114" cy="402" fill=" white" id="svg_77" r="6" stroke="1" />
+                    <text fill="black" font-family="Verdana" font-size="15" id="svg_78" x="108" y="406">-</text>
+                    <circle cx="229" cy="437" fill=" white" id="svg_79" r="6" stroke="1" />
+                    <text fill="black" font-family="Verdana" font-size="15" id="svg_80" x="228" y="443">-</text>
+                    <circle cx="169" cy="397" fill=" white" id="svg_81" r="6" stroke="1" />
+                    <text fill="black" font-family="Verdana" font-size="15" id="svg_82" x="164" y="402">-</text>
+                    <circle cx="79" cy="447" fill=" white" id="svg_83" r="6" stroke="1" />
+                    <text fill="black" font-family="Verdana" font-size="13" id="svg_84" x="77" y="449">-</text>
+
+                    <path d="m148.36474,405.44007c49.41817,91.14398 148.2545,91.14398 197.67266,0" 
+                    fill="transparent"
+                    id="svg_137" 
+                    stroke="#999999" 
+                    transform="rotate(-104.913 247.201 439.619)" />
+                    
+                    <path d="m-29.30386,401.46702c47.99401,88.6323 143.98204,88.6323 191.97605,0" 
+                    fill="transparent"
+                    id="svg_138" 
+                    stroke="#b2b2b2" 
+                    transform="rotate(108.298 66.6842 434.704)" />
+                    
+                    <line fill="none" 
+                    id="svg_139" 
+                    stroke="#b2b2b2"  
+                    x1="58.5" x2="123.5" y1="191.5" y2="352.5" />
+
+                    <line fill="none" 
+                    id="svg_140" 
+                    stroke="#b2b2b2"  
+                    x1="190.5" x2="179.5" y1="354.5" y2="218.5" />
+                </g>
+
+
+                <g id="positively">
+                    <!-- the text messages to be displyed on screen  -->
+                    <rect fill="none" 
+                    height="24" 
+                    id="svg_47" rx="10" 
+                    stroke="#333333" 
+                    stroke-dasharray="null"
+                    stroke-linecap="null" 
+                    stroke-linejoin="null" 
+                    stroke-width="3" 
+                    width="640" 
+                    x="28.50004"
+                    y="551.5" />
+                    <text fill="#000000" 
+                    font-family="Serif" 
+                    font-size="14" 
+                    font-style="italic" 
+                    font-weight="bold"
+                    id="svg_88" 
+                    stroke="#00ffff"  
+                    stroke-width="0" 
+                    text-anchor="middle" 
+                    x="323.5" 
+                    xml:space="preserve"
+                    y="568.5">Positively charged radical ions are formed by bombardment of beam of high energy electrons</text></g>
+                
+                    <g id="sample">
+                        <rect fill="none" 
+                        height="24" 
+                        id="svg_47" 
+                        rx="10" 
+                        stroke="#333333" 
+                        stroke-width="3" 
+                        width="740" 
+                        x="28.50004"
+                        y="551.5" />
+                    <text fill="#000000" 
+                        font-family="Serif" 
+                        font-size="13" 
+                        font-style="italic" 
+                        font-weight="bold"
+                        id="svg_88" stroke="#00ffff"  
+                        stroke-width="0" 
+                        text-anchor="middle" 
+                        x="390.5" 
+                        xml:space="preserve"
+                        y="568.5">The sample is introduced into the vaporisation chamber which is instantly vaporised due to high vaccume and heat</text></g>
+
+                
+                        <g id="magnet">
+                    <rect fill="none" 
+                        height="24" 
+                        id="svg_47" 
+                        rx="10" stroke="#333333" 
+                        stroke-width="3" 
+                        width="637.99996" 
+                        x="28.50004"
+                        y="551.5" />
+                    <text fill="#000000" 
+                        font-family="Serif" 
+                        font-size="14" 
+                        font-style="italic" 
+                        font-weight="bold"
+                        id="svg_88" 
+                        stroke="#00ffff"  
+                        stroke-width="0" 
+                        text-anchor="middle" 
+                        x="323.5" 
+                        xml:space="preserve"
+                        y="568.5">The ions are sorted out and separated by the magnetic field according to their mass/charge ratio</text></g>
+                
+                        <g id="acceler">
+                        <rect fill="none" height="24" id="svg_47" rx="10" stroke="#333333" stroke-dasharray="null"
+                        stroke-linecap="null" stroke-linejoin="null" stroke-width="3" width="637.99996" x="28.50004"
+                        y="551.5" />
+                    <text fill="#000000" font-family="Serif" font-size="14" font-style="italic" font-weight="bold"
+                        id="svg_88" stroke="#00ffff"  stroke-width="0" text-anchor="middle" x="323.5" xml:space="preserve"
+                        y="568.5">The positively charged radical ions are accelerated by perforated negative elctrodes</text></g>
+
+                <g id="deflection">
+                    <!-- the svg showing the deflection of the beams in magnetic filed -->
+                    <rect fill="#56ffff" 
+                        height="38" 
+                        id="svg_90" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        stroke-dasharray="null"
+                        stroke-linecap="null" 
+                        stroke-linejoin="null" 
+                        stroke-width="2" 
+                        width="38" 
+                        x="388.17783"
+                        y="573.27168" />
+                    <path class="path"
+                        d="m427.17783,573.27168c20,-16 22,-15 21.5,-15.5c-0.5,-0.5 0.5,34.5 0,34c-0.5,-0.5 -24.5,18.5 -22.5,20.5"
+                        fill="#aaffff" 
+                        id="svg_89" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        fill="transparent"
+                        stroke-dasharray="null" 
+                        stroke-linecap="null" 
+                        fill="transparent" 
+                        stroke-linejoin="null"
+                        stroke-width="2" />
+                    <text fill="#000000" 
+                        font-family="serif" 
+                        font-size="24" 
+                        id="svg_88" 
+                        opacity="0.75" 
+                        stroke="#00ffff"
+                        stroke-width="0"
+                        text-anchor="middle" 
+                        transform="matrix(1 0 0 0.910749 0 43.0877)" 
+                        x="406.17783"
+                        xml:space="preserve" y="609.43471">S</text>
+                    <path d="m389.17783,572.27168c24,-21 24,-20 23.5,-20.5c-0.5,-0.5 35.5,3.5 35,3" fill="#aaffff"
+                        id="svg_7" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        stroke-dasharray="null" 
+                        stroke-linecap="null"
+                        fill="transparent" 
+                        stroke-linejoin="null" 
+                        stroke-width="0" />
+                    
+                    <rect fill="#56ffff" 
+                        height="38" 
+                        id="svg_94" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        stroke-dasharray="null"
+                        stroke-linecap="null" 
+                        stroke-linejoin="null" 
+                        stroke-width="2" 
+                        width="38" x="390.17783"
+                        y="359.27168" />
+                    <path
+                        d="m429.17783,359.27168c20,-16 22,-15 21.5,-15.5c-0.5,-0.5 0.5,34.5 0,34c-0.5,-0.5 -24.5,18.5 -22.5,20.5"
+                        fill="#aaffff" 
+                        id="svg_93" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        stroke-dasharray="null"
+                        fill="transparent" 
+                        stroke-linecap="null" 
+                        stroke-linejoin="null" 
+                        stroke-width="2" />
+                    <path d="m391.17783,358.27168c24,-21 24,-20 23.5,-20.5c-0.5,-0.5 35.5,3.5 35,3" 
+                        fill="#aaffff"
+                        id="svg_92" 
+                        opacity="0.75" 
+                        stroke="#00ffff" 
+                        stroke-dasharray="null" 
+                        stroke-linecap="null"
+                        fill="transparent" 
+                        stroke-linejoin="null" 
+                        stroke-width="0" />
+                    <text fill="#000000" 
+                        font-family="serif" 
+                        font-size="24" 
+                        id="svg_91" 
+                        opacity="0.75" 
+                        stroke="#00ffff"
+                        stroke-width="0"
+                        text-anchor="middle" 
+                        transform="matrix(1 0 0 0.777328 0 38.168)" x="406.49783"
+                        xml:space="preserve" y="439.38838">N</text>
+                    
+                    <path d="m366.81372,439.86079c18.25,11.33 54.75,11.33 73,0" 
+                        fill="transparent" 
+                        id="svg_95"
+                        stroke="#56ffaa" 
+                        stroke-width="5" 
+                        transform="rotate(0.401091 403.314 444.11)" />
+                    <path d="m377.81372,531.86079c18.25,11.33 54.75,11.33 73,0" 
+                        fill="transparent" 
+                        id="svg_96"
+                        stroke="#56ffff" 
+                        stroke-width="5" 
+                        transform="rotate(-1.52279 414.314 536.109)" />
+                    <line fill="none" 
+                        id="svg_97" 
+                        stroke="#56ffff"  
+                        stroke-width="5" 
+                        transform="rotate(2.92734 564 467.5)" x1="449.47"
+                        x2="678.53001" y1="540.50023" y2="394.49978" />
+                    <line fill="none" 
+                        id="svg_99" 
+                        stroke="#00ffff"  
+                        stroke-width="5" 
+                        transform="rotate(5.19442 517 395.5)" 
+                        x1="440.44975"
+                        x2="593.55026" y1="449.98567" y2="341.01433" />
+                    <line fill="none" 
+                        id="svg_100" 
+                        stroke="#56ffaa"  
+                        stroke-width="5" 
+                        transform="rotate(3.45332 302 502.5)" 
+                        x1="225.5"
+                        x2="378.5" y1="475.5" y2="529.5" />
+                    <line fill="none" 
+                        id="svg_103" 
+                        stroke="#56ffff"  
+                        stroke-width="5" 
+                        x1="294.5" x2="375.5" y1="403.5" y2="442.5" />
+                    <line fill="none" 
+                        id="svg_104" 
+                        stroke="#ffff00"  
+                        stroke-width="2" 
+                        x1="267.5" x2="379.5" y1="434.5" y2="485.5" />
+                    
+                    <ellipse cx="607.70488" 
+                        cy="390.91841" 
+                        fill="#b2b2b2" 
+                        id="svg_105" 
+                        rx="8.86557"                         
+                        ry="43"
+                        stroke="#999999" 
+                        stroke-width="2" transform="rotate(-30.0407 607.705 390.918)" />
+                    
+                    <path class="path"
+                        d="m376.5,482.5c0,0 8,2 8,2c0,0 7,0 6.5,-0.5c-0.5,-0.5 7.5,-0.5 7,-1c-0.5,-0.5 8.5,-0.5 9.5,-0.5c1,0 8,-4 9,-4c1,0 9,-6 9,-6c0,0 170,-100 169.5,-100.5"
+                        fill="transparent" 
+                        id="svg_1099" 
+                        stroke="#00bf00" 
+                        stroke-miterlimit="5" 
+                        stroke-width="2" />
+                    
+                    <path class="path"
+                        d="m268.5,434.5c116,52 123,57 122.5,56.5c-0.5,-0.5 7.5,0.5 7,0c-0.5,-0.5 7.5,0.5 7,0c-0.5,-0.5 7.5,-0.5 7,-1c-0.5,-0.5 7.5,0.5 7,0c-0.5,-0.5 8.5,-2.5 8,-3c-0.5,-0.5 7.5,-4.5 9.5,-3.5c2,1 172,-96 171.5,-96.5"
+                        fill="transparent" 
+                        id="svg_33" 
+                        stroke="#ffff00" 
+                        stroke-miterlimit="5" 
+                        stroke-width="2" />
+                    <path class="path"
+                        d="m379.5,484.5c4,3 10,9 9.5,8.5c-0.5,-0.5 8.5,4.5 8,4c-0.5,-0.5 7.5,0.5 7,0c-0.5,-0.5 8.5,1.5 8,1c-0.5,-0.5 10.5,-0.5 10,-1c-0.5,-0.5 10.5,0.5 10,0c-0.5,-0.5 8.5,-4.5 8,-5c-0.5,-0.5 176.5,-83.5 176,-84"
+                        fill="transparent" 
+                        id="svg_142" 
+                        stroke="#3f007f" 
+                        stroke-miterlimit="5" 
+                        stroke-width="2" />
+                </g>
+
+                <g id="accelaration">
+                    <!-- the svg image showing acceleration of the ions  -->
+                    <ellipse cx="652.20114" 
+                        cy="478.25087" 
+                        fill="#aaffd4" 
+                        id="svg_110" 
+                        rx="21.60471" 
+                        ry="55.56153"
+                        stroke="#56ffff" 
+                        stroke-width="2" 
+                        transform="rotate(7.2756 652.201 478.251)" />
+                    <ellipse cx="627.5" 
+                        cy="448.5" 
+                        fill="#00ffff" 
+                        id="svg_116" 
+                        rx="1" ry="0" 
+                        stroke="#00ffff"
+                        stroke-width="5" />
+                    <ellipse cx="184.32557" 
+                        cy="420.57539" 
+                        fill="#aaffd4" 
+                        id="svg_29" 
+                        rx="40.03864" 
+                        ry="57.12634"
+                        stroke="#00ffff" 
+                        stroke-width="3" 
+                        transform="rotate(8.23098 184.326 420.575)" />
+                    <rect fill="#aaffff" 
+                        height="112" id="svg_118" opacity="0.75" stroke="#aaffff"
+                        stroke-width="5"
+                        transform="rotate(7.12502 413 448.5)" width="467" x="179.5" y="392.5" />
+                    <ellipse cx="374.25502" 
+                        cy="421.87364" 
+                        fill="#57b2b2" 
+                        id="svg_40" 
+                        opacity="0.8" 
+                        rx="17.90689"
+                        ry="51.12622" 
+                        stroke="#aaffd4"  
+                        stroke-width="2"
+                        transform="matrix(0.973112 0.271626 -0.230334 1.14756 41.3946 -153.284)" />
+                    <ellipse cx="405.75219" 
+                        cy="428.86515" 
+                        fill="#aaffff" 
+                        id="svg_39" 
+                        rx="6.78482" 
+                        ry="15.37"
+                        stroke="#e5e5e5" 
+                        stroke-width="2" transform="matrix(0.955024 0.349689 -0.29653 1.12623 59.1563 -189.724)" />
+                    <ellipse cx="385.09694" 
+                        cy="424.49496" fill="#57b2b2" id="svg_102" opacity="0.75" rx="19.11034"
+                        ry="51.61278" stroke="#aad4ff"  stroke-width="2"
+                        transform="matrix(0.973112 0.271625 -0.230333 1.14756 42.2898 -156.145)" />
+                    <ellipse cx="434.22862" cy="414.66048" fill="#57b2b2" id="svg_112" opacity="0.8" rx="17.90689"
+                        ry="51.12622" stroke="#aaffd4"  stroke-width="2"
+                        transform="matrix(0.973112 0.271626 -0.230334 1.14756 41.3946 -153.284)" />
+                    <ellipse cx="465.08987" cy="417.55584" fill="#aaffff" id="svg_117" rx="6.78482" ry="15.37"
+                        stroke="#e5e5e5" 
+                        stroke-width="2" transform="matrix(0.955024 0.349689 -0.29653 1.12623 59.1563 -189.724)" />
+                    <ellipse cx="445.07055" cy="417.28184" fill="#57b2b2" id="svg_119" opacity="0.75" rx="19.11034"
+                        ry="51.61278" stroke="#aad4ff"  stroke-width="2"
+                        transform="matrix(0.973112 0.271625 -0.230333 1.14756 42.2898 -156.145)" />
+                    <ellipse cx="493.98252" cy="406.61671" fill="#57b2b2" id="svg_121" opacity="0.8" rx="17.90689"
+                        ry="51.12622" stroke="#aaffd4"  stroke-width="2"
+                        transform="matrix(0.973112 0.271626 -0.230334 1.14756 41.3946 -153.284)" />
+                    <ellipse cx="524.15142" cy="405.43294" fill="#aaffff" id="svg_122" rx="6.78482" ry="15.37"
+                        stroke="#e5e5e5" 
+                        stroke-width="2" transform="matrix(0.955024 0.349689 -0.29653 1.12623 59.1563 -189.724)" />
+                    <ellipse cx="504.82447" cy="409.23811" fill="#57b2b2" id="svg_123" opacity="0.75" rx="19.11034"
+                        ry="51.61278" stroke="#aad4ff"  stroke-width="2"
+                        transform="matrix(0.973112 0.271625 -0.230333 1.14756 42.2898 -156.145)" />
+
+                    <rect cx="243.5" cy="440.5" width="13" height="4" rx="3" style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion path="m357.5,446.5c263,40 263,40 262.5,39.5c-0.5,-0.5 -262.5,-39.5 -262.5,-39.5z"
+                            begin="0s" 
+                            dur="5s" 
+                            loop="2" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="261.5" cy="405.5" fill="#ffff00" id="svg_124" width="12" height="5" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion path="m267.5,442.5c345,42 344,41 343.5,40.5c-0.5,-0.5 -343.5,-40.5 -343.5,-40.5z"
+                            begin="0s" 
+                            dur="4s" 
+                            fill="remove" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="273.5" cy="428.5" fill="#ffff00" id="svg_125" stroke-width="1" width="12" height="3"
+                        rx="2" style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                        path="m326.5,409.5c297,35 294,34 293.5,33.5c-0.5,-0.5 -293.5,-33.5 -293.5,-33.5z,0"
+                        begin="0s" 
+                        dur="5s" 
+                        fill="remove" 
+                        repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="302" 
+                        cy="410" 
+                        width="14" 
+                        height="5" 
+                        rx="3" 
+                        id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                            path="m325.5,432.5c294,38 291,37 290.5,36.5c-0.5,-0.5 -290.5,-36.5 -290.5,-36.5z,0"
+                            begin="0s" 
+                            dur="5s" 
+                            fill="remove" 
+                            repeatCount="indefinite" />
+                    </rect>
+
+                    <rect cx="313.5" cy="448.5" width="13" height="4" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                            path="m274.5,407.5c345,47 345,47 344.5,46.5c-0.5,-0.5 -344.5,-46.5 -344.5,-46.5z,0"
+                            begin="0s" 
+                            dur="5s" 
+                            fill="freeze" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="324" cy="432.5" fill="#ffff00" id="svg_127" width="14" height="5" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                            path="m310.5,449.5c308,49 308,49 307.5,48.5c-0.5,-0.5 -307.5,-48.5 -307.5,-48.5z,0"
+                            begin="0s" 
+                            dur="4.5s" 
+                            fill="freeze" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="295.5" cy="445.5" fill="#ffff00" id="svg_131" width="13" height="5" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion path="m297.5,428.5c321,31 320,30 320,31c0,1 -320,-31 -320,-31z,0" begin="0s"
+                            dur="5s" 
+                            fill="freeze" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="309.5" cy="407.5" fill="#ffff00" id="svg_132" width="13" height="5" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                            path="m267.5,442.5c345,42 344,41 343.5,40.5c-0.5,-0.5 -343.5,-40.5 -343.5,-40.5z,0"
+                            begin="0s" 
+                            dur="4.5s" 
+                            fill="remove" 
+                            repeatCount="indefinite" />
+                    </rect>
+                    <rect cx="342.5" cy="443.5" fill="#ffff00" id="svg_133" width="13" height="5" rx="3" id="svg_129"
+                        style="stroke: #ffff00; fill: #ffff00;">
+                        <animateMotion
+                            path="m277.5,442.5c345,42 344,41 343.5,40.5c-0.5,-0.5 -343.5,-40.5 -343.5,-40.5z,0"
+                            begin="0s" 
+                            dur="4.5s" 
+                            fill="remove" 
+                            repeatCount="indefinite" />
+                    </rect>
+
+                    <rect fill="none" 
+                        height="166" 
+                        id="svg_101" 
+                        opacity="0.75" 
+                        stroke="#7f7f7f" 
+                        stroke-dasharray="null"
+                        stroke-linecap="null" 
+                        stroke-linejoin="null" 
+                        stroke-width="2" 
+                        width="156" 
+                        x="211.5" 
+                        y="89.5" />
+                    <line fill="none" 
+                        id="svg_128" 
+                        opacity="0.75" 
+                        stroke="#7f7f7f"                          
+                        stroke-width="2" 
+                        x1="283.5" x2="283.5" y1="20.5"
+                        y2="52.5" />
+                    <line fill="none" 
+                        id="svg_129" 
+                        opacity="0.75" 
+                        stroke="#7f7f7f"                          
+                        stroke-width="2" x1="276.5" x2="283.5" y1="44.5"
+                        y2="53.5" />
+                    <line fill="none" 
+                        id="svg_130" 
+                        opacity="0.75" 
+                        stroke="#7f7f7f"                          
+                        stroke-width="2" x1="289.5" x2="283.5" y1="46.5"
+                        y2="52.5" />
+                </g>
+
+                <g id="small_tube">
+                    <!-- the svg image showing the introduction of sample and its evaporation    -->
+                    
+                    <line fill="none" 
+                    id="svg_34" 
+                    stroke="#00ffff"  
+                    x1="419.5" 
+                    x2="420.5" 
+                    y1="412.5" 
+                    y2="465.5" />
+                    
+                    <ellipse cx="503.1" 
+                    cy="442.9" 
+                    fill="none" 
+                    id="svg_1" 
+                    rx="30" 
+                    ry="87" 
+                    stroke="#00ffff"
+                    stroke-width="7" />
+                    
+                    <line fill="none" 
+                    id="svg_3" 
+                    stroke="#00ffff"  
+                    stroke-width="17" 
+                    x1="761.1" x2="503.1" y1="356.9" y2="355.9" />
+                    
+                    <line fill="none" 
+                    id="svg_4" 
+                    stroke="#00ffff"  
+                    stroke-width="17" 
+                    x1="754.1" x2="509.1" y1="527.9" y2="527.9" />
+                    
+                    <ellipse cx="643.1" 
+                    cy="498.9" 
+                    fill="#ffd4aa" 
+                    id="svg_9" 
+                    rx="63" ry="25" 
+                    stroke="#ffaaaa"
+                    stroke-width="3" />
+                    
+                    <ellipse cx="643.1" 
+                    cy="484.9" 
+                    fill="#ffaaff" 
+                    id="svg_10" 
+                    rx="1" 
+                    ry="0" 
+                    stroke="#ffaaff"
+                    stroke-width="7" />
+                    
+                    <ellipse cx="643.1" 
+                    cy="498.9" 
+                    fill="#aaffff" 
+                    id="svg_15" 
+                    rx="47" 
+                    ry="15" 
+                    stroke="#ffaaff"
+                    stroke-width="4" />
+                    
+                    <line fill="none" 
+                    id="svg_14" 
+                    stroke="#000000"  
+                    stroke-width="3" 
+                    x1="578.1" x2="571.1" y1="338.9" y2="372.9" />
+                    
+                    <line fill="none" 
+                    id="svg_16" 
+                    stroke="#000000"  
+                    stroke-width="3" 
+                    x1="658.1" x2="650.1" y1="341.9" y2="371.9" />
+                    
+                    <ellipse cx="501.5" 
+                    cy="439.5" 
+                    fill="none" 
+                    id="svg_28" 
+                    rx="6" ry="27" 
+                    stroke="#00ffff"
+                    stroke-width="4" />
+                    
+                    <line fill="none" 
+                    id="svg_30" 
+                    stroke="#00ffff"  
+                    stroke-width="4" 
+                    x1="418.5" x2="502.5" y1="413.5" y2="410.5" />
+                    
+                    <line fill="none" 
+                    id="svg_32" 
+                    stroke="#00ffff"  
+                    stroke-width="4" 
+                    x1="418.5" x2="501.5" y1="468.5" y2="466.5" />
+                    
+                    <path
+                    d="m573.28,372.39l22.1,0l3.06,-8.69l5,16.74l5.56,-16.96l4.87,16.74l5.28,-16.52l5.28,16.63l2.92,-8.15l22.24,0m-78.16,-0.76l1.84,0l0,1.84l-1.84,0l0,-1.84zm78.16,-0.12l1.84,0l0,1.84l-1.84,0l0,-1.84z"
+                    fill="none" 
+                    id="svg_25" 
+                    stroke="#000000"  
+                    stroke-width="3" />
+                    
+                    <g id="bubbles">
+                        <ellipse cx="643" 
+                        cy="404" 
+                        fill="#ffff56" 
+                        id="svg_58" 
+                        rx="8.5" 
+                        ry="9.5" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="691.5" 
+                        cy="398.5" 
+                        fill="#ffff56" 
+                        id="svg_59" 
+                        rx="10" 
+                        ry="9" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse 
+                        cx="665.5" 
+                        cy="429.5" 
+                        fill="#ffff56" 
+                        id="svg_61" 
+                        rx="8" ry="9" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="722.5" 
+                        cy="428.5" 
+                        fill="#ffff56" 
+                        id="svg_62" 
+                        rx="8" 
+                        ry="9" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="602.5" 
+                        cy="433.5" 
+                        fill="#ffff56" 
+                        id="svg_63" 
+                        rx="9" 
+                        ry="8" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="633.5" 
+                        cy="432.5" 
+                        fill="#ffff56" 
+                        id="svg_64" 
+                        rx="9" 
+                        ry="8" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="698.5" 
+                        cy="435.5" 
+                        fill="#ffff56" 
+                        id="svg_65" 
+                        rx="7" ry="9" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="613.5" 
+                        cy="454.5" 
+                        fill="#ffff56" 
+                        id="svg_66" 
+                        rx="12" 
+                        ry="8" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                        
+                        <ellipse cx="668.5" 
+                        cy="454.5" 
+                        fill="#ffff56" 
+                        id="svg_67" 
+                        rx="12" 
+                        ry="8" 
+                        stroke="#ffffff"
+                        stroke-width="2" />
+                    </g>
+
+                    <svg id="samdrop">
+                        <g id="drop" />
+                        <path
+                            d="m611.354,439.50169c-3.7568,0 -6.80252,2.80093 -6.80252,6.2558c0,3.45571 6.80252,15.11486 6.80252,15.11486s6.80252,-11.65915 6.80252,-15.11486c0,-3.45487 -3.04481,-6.2558 -6.80252,-6.2558zm0,9.24524c-1.79496,0 -3.2507,-1.33791 -3.2507,-2.98944s1.45574,-2.98944 3.2507,-2.98944s3.2507,1.33874 3.2507,2.98944s-1.45574,2.98944 -3.2507,2.98944z"
+                            fill="#ffff00" 
+                            id="move" 
+                            stroke="#ffff00"  
+                            stroke-width="2" 
+                            transform="rotate(177.695 611.354 450.187)" />
+                            <animate id="samdrop" 
+                            attributeName="y" 
+                            attributeType="XML" 
+                            from="0" to="50" 
+                            begin="animate.end"
+                            dur="3.5s" 
+                            attributeName="opacity" 
+                            from="0.1" to="1" 
+                            fill="freeze" />
+                        </g>
+                            <rect fill="transparent" 
+                            height="117" 
+                            id="svg_2" 
+                            stroke="#666666" 
+                            stroke-width="2" 
+                            transform="rotate(22.4359 44.5 124)"
+                            width="86" 
+                            x="1.5" y="65.5" />
+                 </g>
+
+                <svg id="inj">
+                    <!-- the syrenge animation and inroduction of sample   -->
+                    <g class="inject" display="inline" />
+                    
+                    <rect fill="url(#svg_108)" 
+                    height="27" 
+                    id="svg_51" 
+                    opacity="0.75" 
+                    stroke="#4c4c4c"   
+                    stroke-width="2"
+                    width="226" x="10.5" y="425.5" />
+                    
+                    <rect fill="#56ffff" 
+                    height="27" 
+                    id="svg_53" 
+                    opacity="0.75" 
+                    stroke="#333333"  
+                    stroke-width="2" 
+                    width="56" x="235.5" 
+                    y="424.5" />
+                    
+                    <path d="m280.52,435.53c7.52,10 22.55,10 30.07,0" 
+                    fill="transparent" id="svg_50" 
+                    stroke="#00ffff"
+                    stroke-width="2" 
+                    transform="rotate(-88.7213 295.555 439.28)" />
+                    
+                    <rect fill="#ffff56" 
+                    height="11" 
+                    id="svg_52" 
+                    opacity="0.75" 
+                    stroke="#00ffff"  
+                    stroke-width="2" 
+                    width="144" 
+                    x="102.5" 
+                    y="433.5" />
+                    
+                    <rect fill="#aa56ff" 
+                    height="8" 
+                    id="svg_54" 
+                    opacity="0.75" 
+                    stroke="#00ffff"  
+                    stroke-width="2" 
+                    width="69" 
+                    x="247.5" 
+                    y="435.5" />
+                    
+                    <line fill="none" 
+                    id="svg_56" 
+                    opacity="0.75" 
+                    stroke="#666666"  
+                    x1="316.5" 
+                    x2="386.5" 
+                    y1="439.5" 
+                    y2="439.5" />
+                    
+                    </g>
+                </svg>
+            </svg>
+            </svg>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+<script type="text/javascript" src="jquery.svganim.js"></script>
+<script type="text/javascript" src="js/jquery.svg.js"></script>
+</script>
+
+<script src="Mass_spec.js"></script>
+
+</html>

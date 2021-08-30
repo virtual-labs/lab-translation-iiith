@@ -1,0 +1,126 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment :  Absorption (and transmittance) measurements of a colourless and a coloured light absorbing substance in a solution by using a spectrophotometer
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt1.js"></script>
+    <script type="text/javascript" src="mas1_animations.js"></script>
+    <title>Absorption (and transmittance) measurements of a colourless and a coloured light absorbing substance in a solution by using a spectrophotometer</title>
+</head>
+
+<body>  
+<div>
+    <!-- Body is divided into three rows -->
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>एक स्पेक्ट्रोफोटोमीटर का उपयोग करके एक समाधान में एक रंगहीन और एक रंगीन प्रकाश अवशोषित पदार्थ का अवशोषण (और संप्रेषण) माप</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1200" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;">
+                        <p>1. स्पेक्ट्रोफोटोमीटर से परिचित।</p>
+                        <p>2. पावर बटन पर क्लिक करने वाले इंस्ट्रूमेंट को चालू करें और इंस्ट्रूमेंट के इनिशियलाइज़ेशन के लिए 30 मिनट तक प्रतीक्षा करें।</p>
+                        <p>3. निम्नलिखित दो समाधान तैयार करें: एक) ~ 0.001 एम पोटेशियम डाइक्रोमेट (K2Cr2O7) और बी) ~ 5mg / एल कैफीन आसुत जल में। यहां समाधान दो वॉल्यूमेट्रिक फ्लास्क पर दिखाए गए हैं। एक ड्रॉप-डाउन मेनू से वांछित समाधान पर क्लिक करके माप के लिए एक समाधान का चयन कर सकते हैं।</p>
+                        <p>4. साफ, सूखे बीकर लेने के लिए बीकर पर क्लिक करें।</p>
+                        <p>5. स्वच्छ, सूखे बीकर में घोल डालने के लिए वॉल्यूमेट्रिक फ्लास्क पर क्लिक करें।</p>
+                        <p>6. बीकर से उचित मात्रा में घोल इकट्ठा करने के लिए माइक्रोप्रिपेट पर क्लिक करें। वास्तविक ऑपरेशन में, एक माइक्रोप्रिपेट को एक उपयुक्त टिप देता है और समाधान में डुबाने से पहले उस पर आवश्यक मात्रा के पैमाने को सेट करता है।</p>
+                        <p>7. उस पर क्लिक करके एक क्युवेट लें।</p>
+                        <p>8. माइक्रोवेट से क्युवेट पर क्लिक करके समाधान को डालो। वास्तविक माप में, क्युवेट इसकी मात्रा का लगभग दो-तिहाई तक भरा हुआ है।</p>
+                        <p>9. इसे खोलने के लिए स्पेक्ट्रोफोटोमीटर के ढक्कन पर क्लिक करें।</p>
+                        <p>10. इसे नमूना धारक में रखने के लिए क्युवेट पर क्लिक करें। इस माप में नमूने के रिक्त या संदर्भ के रूप में पानी का उपयोग करना होता है। यहाँ एक डबल बीम स्पेक्ट्रोफोटोमीटर दिखाया गया है। इस मामले में, एक नमूना धारक (अक्सर सामने वाला) और नमूना बैंक या संदर्भ धारक (अक्सर पीछे वाला) में एक साथ नमूना रख सकता है।</p>
+                        <p>11. स्क्रीन पर, वर्णक्रमीय स्कैन की तरंग दैर्ध्य रेंज दर्ज करें।<br>कैफीन के लिए: प्रारंभ: 590 एनएम अंत: 290 एनएम।<br>K2Cr2O7 के लिए: प्रारंभ: 700 एनएम अंत: 325 एनएम। वास्तविक ऑपरेशन में, नमूना के लिए घटना प्रकाश की तरंग दैर्ध्य सीमा को चुना जाता है और तरंग दैर्ध्य स्कैन कंप्यूटर सॉफ्टवेयर के माध्यम से चलाया जाता है। एक स्कैन को एब्जॉर्बेंस (ए) या ट्रांसमिटेंस (% टी) मोड में चला सकता है।</p>
+                        <p>12. तरंग दैर्ध्य स्कैन को चलाने के लिए माप सेट-अप स्क्रीन पर हरे ’प्रारंभ’ बटन पर क्लिक करें। तरंग दैर्ध्य स्कैन का निरीक्षण करें। यदि स्पेक्ट्रोफोटोमीटर एक एकल बीम उपकरण है, तो पहले नमूना रिक्त या संदर्भ एक क्यूवेट में लिया जाता है और नमूना के बाद तरंग दैर्ध्य स्कैन चलाया जाता है। संबंधित तरंगदैर्ध्य के लिए नमूना डेटा से संदर्भ डेटा को घटाना है।</p>
+                        <p>13. स्पेक्ट्रल स्कैन पूरा होने पर क्लोज बटन पर क्लिक करें। वास्तविक ऑपरेशन में, स्कैन डेटा को कंप्यूटर में संग्रहीत किया जाता है। उपकरण डेटा संग्रहीत करता है और इसलिए नमूना फ़ाइल नाम के लिए पूछता है। डेटा सहेजने के लिए एक फ़ाइल नाम दर्ज करता है।</p>
+                        <p>14. दूसरे नमूने के लिए माप को दोहराएं।</p> 
+                        <p>15. डेटा टैब पर क्लिक करके डेटा एकत्र करें।</p> 
+                        <p>16. दोनों नमूनों के लिए नमूना बनाम तरंगदैर्ध्य के अवशोषण (या संप्रेषण) को प्लॉट करें और यदि संभव हो तो, दो नमूनों के स्पेक्ट्रा को ओवरले करें।</p>
+                        <p>17. दोनों नमूनों के लिए मुख्य चोटियों के लिए अधिकतम अवशोषण की तरंग दैर्ध्य निर्धारित करें</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+        </div>
+
+        <!--This column contains a shelf with apparatus on it -->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/shelf.png">
+            <select id="solution" autocomplete="off">
+                <option value="potassium" selected="">पोटेशियम डाइक्रोमेट</option>
+                <option value="caffeine">कैफीन</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div><br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" class="common" src="images/transparent.png">
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
+    <img id="input_data" class="data_validation" src="images/form1.png">
+    <!--Displays the graph by clicking on start button -->
+    <img id="start_btn" class="data_validation" src="images/vertical_button.png">
+    <!--graph input values -->
+    <input id="input1" class="data_validation" type="text" autocomplete="off">
+    <input id="input2" class="data_validation" type="text" autocomplete="off">    
+    <!-- background image for the graphs instruction -->
+    <img id="instruction_bkgd" class="common" src="images/graph_instruction.png">
+    <!-- graphs instruction is displayed here....-->
+    <div id="graph_instruction" class="common"></div>
+    <!-- Video that plots a graph for type 1 sample -->
+    <video id="video1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 2 sample -->
+    <video id="video2" class="video"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page and the videos-->
+    <img id="disposegraph" src="images/vertical_button.png">
+   
+
+</div></body></html>

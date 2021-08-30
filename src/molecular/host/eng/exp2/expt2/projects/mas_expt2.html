@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mas_expt2.js"></script>
+    <title>Solvent Effects</title>
+</head>
+
+<body> 
+   <!-- Body is divided into three rows -->
+   <!-- First row consists of title of the experiment and the reset button -->
+    <div class= "row">
+       <h3>Solvent Effects on the UV-visible Absorption Spectra</h3><br/>
+       <button id="reset_btn">Reset Experiment</button>
+    </div>
+    <br/>
+    
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+        On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="image-specific/manual_button.png" ><br/><br/>
+            <div id="manual" style = "z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times</span>
+                        <h2>Manual</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align: left">
+                        <ol>   
+                            <li>
+                            Prepare five 1 × 10<sup>-5</sup> M coumarin-138 solutions in solvents: cyclohexane, dioxane, acetonitrile, ethyl alcohol and ethylene glycol. Such dilute solutions can be prepared via dilution from 1 × 10<sup>-4</sup> M stock solutions in respective solvents. Here solutions in different solvents are shown on a solvent selection bar.</li>
+                            <li>The absorption measurements with all the solutions are carried out one after another as follows.</li>
+                            <li>To take a particular solution, click on the appropriate solvent on the solvent selection bar and then click on the volumetric flask containing the solution.</li>
+                            <li>Click on the quartz cuvette (path length, 1 cm ×1 cm) to take it to the instrument table. </li>
+                            <li>Click on the glass Pasteur pipette to collect about 3 mL of the experimental solution which will be transferred into the quartz cuvette.</li>
+                            <li>Click on the pipette to draw the solution into it.</li>
+                            <li>Click on the pipette to take it out of the volumetric flask.</li>
+                            <li>Click on the pipette again to transfer the solution into the cuvette.To start the absorption spectral scan, click on the pop-up “Start Absorption Measurement”.</li>
+                            <li>Turn on the spectrophotometer clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.</li>
+                            <li>Open the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell-holder.Click on the cuvette to place it in the sample holder. One has to use pure solvent as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown.</li>
+                            <li>Close the lid of the sample chamber by clicking on it.</li>
+                            <li>Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor.</li>
+                            <li>On the screen, enter the wavelength range. 	Start: 430 nm 		End: 275 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A) or transmittance (%T) mode.</li>
+                            <li>Click on the green Start button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan.</li>
+                            <li>Click on Close button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.</li>
+                            <li>To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette.Click on the lid of the sample chamber to close it.</li>
+                            <li>Click on Reset button to start over the measurements.</li>
+                            <li> Repeat the Absorption measurements with all the solvents by clicking on the solvent selection bar first and then on the volumetric flask containing the solution.</li>
+                            <li>Collect all data by clicking on the Data tab.</li>
+                            <li>Examine UV-visible absorption spectra with different solvents.</li>
+                            <li>Find out the maximum absorption wavelengths and corresponding absorbance values for all the solvents and tabulate them along with the solvent dielectric constants and refractive indices values.</li>
+                            <li>Is there a relationship or trend between solvent polarity and the wavelength of maximum absorbance?</li>
+                            <li>Discuss your observations.</li>
+	                   </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="image-specific/data_button.png">
+
+            <div id = "scale">
+                <img  id ="scale_image" src="image-specific/scale_image.png" >
+                <input type="range" id="slider" min="0" max="4" step="1" value="0" autocomplete="off">
+            </div>
+
+        </div>
+        <!-- This column contains the shelf with apparatus on top of it. -->
+        <div class="col-sm-6" id ="apparatus">
+            <img  id="shelf" src="image-specific/shelf.png">
+            <img  id="round-bottom-flask"  src="image-specific/empty-round-bottom-flask.png" >
+            <img  id = "solution_name" >
+            <img  id="pipette" src="image-specific/pipette.png" >
+            <img  id="quartz_cuvette" src="image-specific/quartz-cuvette.png" >
+            <img  id="cuvette" src="image-specific/cuvette.png" >
+        </div>
+    </div><br/><br/><br/>
+
+    <div class="row">
+    <!-- Third row consists of table with various devices on it  -->
+        <div class="col-sm-12" id="table">
+            <img id = "table_with_spec" src="image-specific/table_with_spec.png">
+            <img id ="computerimage" src="image-specific/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id ="comp_trans_button" src="image-specific/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id ="spectrolid_trans_button"  src="image-specific/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id = "reference" src = "image-specific/reference.png" >
+            <img id="ref_cuvette" src='image-specific/reference_cuv.png'>
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="image-specific/vertical_button.png"></button>
+        </div>
+    </div>
+
+    <img id="clockScreen" src="image-specific/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img  id="clockHand"  src="image-specific/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" class="common"  src="image-specific/transparent.png">
+    <button id ="start" >Start Absorption Spectroscopy</button>
+    <!-- This image is used to enter the input values to display the graphs-->
+    <img id="input_data" class="data_validation" src="image-specific/form1.png">
+    <!--Displays the graph by clicking on start button -->
+    <img id="start_btn" class="data_validation" src="image-specific/vertical_button.png">
+    <!--graph input values -->
+    <input id = "input1" class="data_validation" type="text" autocomplete="off">
+    <input id = "input2" class="data_validation" type="text" autocomplete="off">    
+    <!-- background image for the graphs instruction -->
+    <img id = "instruction_bkgd" class='common' src="image-specific/graph_instruction.png">
+    <!-- graphs instruction is displayed here....-->
+    <div id = "graph_instruction" class='common'></div>
+    <!-- Video that plots a graph for type 1 sample -->
+    <video id="video1" class="video"><source src="videos/1.mp4" type="video/mp4"></video>
+    <!-- Video that plots a graph for type 2 sample -->
+    <video id="video2" class="video"><source src="videos/2.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 3 sample -->
+    <video id="video3" class="video"><source src="videos/3.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 4 sample -->
+    <video id="video4" class="video"><source src="videos/4.mp4" type="video/mp4"></video>
+     <!-- Video that plots a graph for type 5 sample -->
+    <video id="video5" class="video"><source src="videos/5.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page and videos-->
+    <img id="disposegraph" src="image-specific/vertical_button.png">
+</body>
+</center>
+</html>

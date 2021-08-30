@@ -1,0 +1,128 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag --><!DOCTYPE html><html><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mas_expt6.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="../../libraries/jQueryRotate.js"></script>
+      <script type="text/javascript" src="mas_expt6.js"></script>
+      <script type="text/javascript" src="mas6_animations.js"></script>
+      <title>Verification of Beer-Lambert Law</title>
+  </head>
+
+
+<!-- Body is divided into three rows -->
+<body>  
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>बीयर-लैंबर्ट लॉ का सत्यापन</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <img id="manual_button" src="images/manual_button.png"><br><br>
+
+            <div id="manual" style="z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">×</span>
+                        <h2>गाइड</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left;font-size:18px;">
+                        <p>1. साधन पर स्विच पर क्लिक करके स्पेक्ट्रोफोटोमीटर पर क्लिक करें।</p> 
+                        <p>2. नीचे पैनल में प्रतिदीप्ति बोतल पर क्लिक करें। आपको एक बीकर में फ्लोरेसिन डालना चाहिए।</p>
+                        <p>3. पिपेट पर क्लिक करें। आपको विंदुक द्वारा खींचे जा रहे तरल को देखना चाहिए।</p>
+                        <p>4. 10 मिमी क्युवेट पर क्लिक करें। आपको विंदुक के नीचे क्युवेट रखा जाना चाहिए।</p>
+                        <p>5. फिर से पिपेट पर क्लिक करें। क्युवेट अब तरल से भर जाना चाहिए। और पानी से भरा एक्यूवेट दिखाई देना चाहिए।</p>
+                        <p>6. इसे खोलने के लिए उपकरण को ढक्कन पर क्लिक करें।</p>
+                        <p>7. साधन के ढक्कन के अंदर डालने के लिए एक के बाद एक क्यूवेट पर क्लिक करें।</p>
+                        <p>8. उस पर क्लिक करके ढक्कन को बंद करें।</p> 
+                        <p>9. मुख्य फ्रेम में दिखाए गए मॉनिटर पर क्लिक करें।</p>
+                        <p>10. स्कैन बटन पर क्लिक करें और स्पेक्ट्रा उत्पन्न होने की प्रतीक्षा करें।</p>
+                        <p>11.Go नोट्स और अपने एकत्रित डेटा की जाँच करें।</p>
+                        <p>12. नीचे पैनल में 5 मिमी और 1 मिमी क्युवेट के साथ 2-11 कदम।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <div id="scale">
+                <img id="scale_image" src="images/scale.png">
+                <input type="range" id="slider" min="0" max="5" step="1" value="0" autocomplete="off">
+            </div>
+
+        </div>
+
+        <!-- This column conatins the shelf with apparatus on top of it.-->
+        <div class="col-sm-6" id="apparatus">
+            <img id="shelf" src="images/shelf.jpg">
+            <select id="solution" autocomplete="off">
+                <option value="Potassium Dichromate">पोटेशियम डाइक्रोमेट</option>
+            </select>
+            <img id="flask" src="images/flask.png">
+            <img id="pipette" src="images/pipette.png">
+            <img id="beaker" src="images/beaker.png">
+            <img id="cuvette" src="images/cuvette.png">
+        </div>
+
+    </div><br><br><br>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img id="table_with_spec" src="images/table_with_spec.png">
+            <img id="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img id="comp_trans_button" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img id="spectrolid_trans_button" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id="reference" src="images/reference.png">
+            <img id="ref_cuvette">
+            <!-- text that shows the instructions to be followed next -->
+            <div id="demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img id="clockHand" src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample -->
+    <img id="scan" src="images/transparent.png">
+    <!-- scan images -->
+    <img id="scanimage1" class="scanimage" src="images/scan1.png">
+    <!-- <img id="scanimage2"  class = 'scanimage' src="images/scan2.png">
+    <img id="scanimage3"  class = 'scanimage' src="images/scan3.png">
+    <img id="scanimage4"  class = 'scanimage' src="images/scan4.png">
+    <img id="scanimage5"  class = 'scanimage' src="images/scan5.png">
+    <img id="scanimage6"  class = 'scanimage' src="images/scan6.png"> -->
+    <!-- image used to display the graph video by clicking on it -->
+    <img id="scan_btn" src="images/vertical_button.png">
+    <!-- Video that plots a graph for type potassium dichromate concentration sample -->
+    <video id="graph1" class="video"><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- <video id="graph2" class="video" ><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <video id="graph3" class="video" ><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <video id="graph4" class="video" ><source src="videos/graph4.mp4" type="video/mp4"></video>
+    <video id="graph5" class="video" ><source src="videos/graph5.mp4" type="video/mp4"></video> 
+    <video id="graph6" class="video" ><source src="videos/graph6.mp4" type="video/mp4"></video>  -->
+    <!-- Transparent image button to close the scanning page -->
+    <img id="disposegraph" src="images/vertical_button.png">
+
+
+</body></html>

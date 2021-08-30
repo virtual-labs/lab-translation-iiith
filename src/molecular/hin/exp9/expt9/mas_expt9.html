@@ -1,0 +1,144 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : pH effects on absorption spectra: pKa determination by spectrophotometric method
+     Author : Harsha Vattem --><!DOCTYPE html><html><head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mas_expt9.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+      <script src="../../libraries/jQueryRotate.js"></script>
+      <script type="text/javascript" src="expt9.js"></script>
+      <title>pH effects on absorption spectra: pKa determination by spectrophotometric method</title>
+  </head>
+
+  <!-- Body is divided into three rows -->
+  <body>  
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class="row">
+        <h3>अवशोषण स्पेक्ट्रा पर पीएच प्रभाव: स्पेक्ट्रोफोटोमेट्रिक विधि द्वारा पीकेए निर्धारण</h3><br>
+        <button id="reset_btn">प्रयोग को रीसेट करें</button>
+    </div><br>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+      <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+             On clicking this button a box modal appears over the page n displays the instructions -->
+        <img id="manual_button" src="images/manual_button.png"><br><br>
+
+        <div id="manual" style="z-index:1000" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <h2>गाइड</h2>
+            </div>
+
+            <div class="modal-body" style="text-align:left;font-size:18px;">
+              <ol>
+                  <li>निम्नलिखित समाधान तैयार करें: (i) 0.5 ग्राम / एल मिथाइल नारंगी समाधान 100 एमएल डिस्टिल्ड पानी में 0.05 ग्राम मिथाइल नारंगी भंग करके; (ii) एक 0.2 एम डिसोडियम हाइड्रोजन ऑर्थोफोस्फेट (Na)<sub>2</sub>HPO<sub>4</sub>) 5.68 ग्राम Na को भंग करके समाधान<sub>2</sub>HPO<sub>4</sub>200 एमएल आसुत जल में; और (iii) 500 एमएल डिस्टिल्ड वॉटर में 9.61 ग्राम साइट्रिक एसिड को भंग करके 0.1 एम साइट्रिक एसिड समाधान।</li>
+                  <li>ना के अलग-अलग मात्रा को मिलाकर आठ बफर समाधान तैयार करें<sub>2</sub>HPO<sub>4</sub>समाधान और साइट्रिक एसिड समाधान जैसा कि तालिका 1 में दिया गया है।</li>
+                  <li>प्रत्येक बफर समाधान को 25 एमएल मात्रा के दो समान भागों में विभाजित करें।</li>
+                  <li>प्रत्येक बफर समाधान के एक 25 एमएल हिस्से में मिथाइल नारंगी समाधान के 0.5 एमएल जोड़ें। मिथाइल ऑरेंज इंडिकेटर वाले बफर सॉल्यूशन के एब्सॉर्बेंस माप को बफर के अन्य भागों के खिलाफ रेफरेंस या सैंपल ब्लैंक के रूप में किया जाना है। ये नमूना समाधान चयन पैमाने पर दिखाए जाते हैं।</li>
+                  <li>कंप्यूटर और साधन शक्तियों पर स्विच करें; साधन के 'वार्म-अप' के लिए 30 मिनट तक प्रतीक्षा करें।</li>
+                  <li>साधन में एक प्रकाश स्रोतों (यूवी और दृश्य) का चयन कर सकते हैं, भट्ठा चौड़ाई, गति स्कैन और% संचरण या अवशोषण प्रदर्शन, ब्याज की तरंग दैर्ध्य रेंज, आदि का चयन</li>
+                  <li>एक दिए गए पथ की लंबाई (कहते हैं, 1 सेमी) के साथ एक साफ और सूखी या ठीक से rinsedquartz क्युवेट लें।</li>
+                  <li>नमूना रिक्त (शुद्ध बफर समाधान) के साथ एक क्युवेट भरें और इसी बफर समाधान के साथ अन्य क्युवेट मिथाइल नारंगी समाधान युक्त।</li>
+                  <li>संदर्भ धारक में नमूना रिक्त रखें और नमूना धारक में नमूना।</li>
+                  <li>प्रत्येक नमूना के लिए स्कैन (ए बनाम λ) चलाएं 300 से 650 एनएम तक तरंग दैर्ध्य रेंज।</li>
+                  <li>अब अधिकतम अवशोषण (λ) के तरंग दैर्ध्य का पता लगाएं<sub>अधिकतम</sub>), इसी अवशोषण, पर अवशोषण<sup>INH<sup>+</sup></sup>एल<sub>अधिकतम</sub>सभी pH मानों के लिए और इन डेटा (तालिका 2) वाली तालिका बनाएं।</li>
+                  <li>Λ पर चर्चा कैसे करें<sub>अधिकतम</sub>और इसी अवशोषण समाधान के पीएच के साथ बदलती हैं।</li>
+                  <li>गणना करें पी.के.<sub>ए</sub>प्रत्येक पीएच मान के लिए। औसत पीके का पता लगाएं<sub>ए</sub>।</li>
+                  <li>प्लॉट पीएच बनाम लॉग ([In] / [InH)<sup>+</sup>])। पीके निर्धारित करें<sub>ए</sub>पीएच अक्ष के साथ लाइन के चौराहे से।</li>
+                  <li>तुलनात्मक रूप से निर्धारित pK की तुलना करें<sub>ए</sub>मूल्य की गणना औसत पीके के साथ<sub>ए</sub>मूल्य।</li>
+                  <li>एसिड पृथक्करण स्थिरांक, K निर्धारित करें<sub>ए</sub>मिथाइल ऑरेंज के लिए।</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths.On clicking this button a new page displaying the graphs fordifferent path length
+      is opened  -->
+      <img id="data_button" src="images/data_button.png"><br><br><br>
+
+      <img id="scale_image" src="images/scale.png">
+      <input type="range" id="slider" min="0" max="7" step="1" value="0" autocomplete="off">
+  </div>
+
+  <!-- This column conatins the shelf with apparatus on top of it.-->
+  <div class="col-sm-6" id="apparatus">
+      <img id="shelf" src="images/shelf.jpg">
+      <img id="flask" src="images/buffer.png">
+      <img id="micro_pipette" src="images/micro_pipette.png">
+      <img id="pipette" src="images/pipette1.png">
+      <img id="beaker" src="images/beaker.png">
+      <img id="cuvette" src="images/cuvette.png">
+      <img id="orange_flask" src="images/orangeflask.png">
+  </div>
+
+</div><br><br><br>
+
+<!-- Third row consists of table with various devices on it  -->
+<div class="row">
+    <div class="col-sm-12" id="table">
+      <img id="table_with_spec" src="images/table_with_spec.png">
+      <img id="computerimage" src="images/computer.png">
+      <!-- button to scan the sample on the computer-->
+      <img id="comp_trans_button" src="images/vertical_button.png">
+      <!-- button to open and close the spectrophotometer lid -->
+      <img id="spectrolid_trans_button" src="images/vertical_button.png">
+      <!-- reference cuvette -->
+      <img id="reference" src="images/reference.png">
+      <img id="ref_cuvette">
+      <!-- text that shows the instructions to be followed next -->
+      <div id="demo"></div>
+      <!-- button to switch on and switch off the spectrophotometer -->
+      <img id="power_trans_button" src="images/vertical_button.png">
+    </div>
+</div>
+
+<!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+<img id="clockScreen" src="images/clock.png">
+<!-- Image of the hand of the clock -->
+<img id="clockHand" src="images/hand.png">
+<!-- Image of the greyed background displayed as a background while scanning the sample -->
+<img id="scan" src="images/transparent.png">
+<!-- scan images -->
+<img id="scanimage1" class="scanimage" src="images/scan1.png">
+<img id="scanimage2" class="scanimage" src="images/scan2.png">
+<img id="scanimage3" class="scanimage" src="images/scan3.png">
+<img id="scanimage4" class="scanimage" src="images/scan4.png">
+<img id="scanimage5" class="scanimage" src="images/scan5.png">
+<img id="scanimage6" class="scanimage" src="images/scan6.png">
+<img id="scanimage7" class="scanimage" src="images/scan7.png">
+<img id="scanimage8" class="scanimage" src="images/scan8.png">
+<!-- image used to display the graph video by clicking on it -->
+<img id="scan_btn" src="images/vertical_button.png">
+<!-- Video that plots a graph for pH 2.2 sample -->
+<video id="graph1" class="video"><source src="videos/ph22.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 2.6 sample -->
+<video id="graph2" class="video"><source src="videos/ph26.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.0 sample -->
+<video id="graph3" class="video"><source src="videos/ph30.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.4 sample -->
+<video id="graph4" class="video"><source src="videos/ph34.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.8 sample -->
+<video id="graph5" class="video"><source src="videos/ph38.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.2 sample -->
+<video id="graph6" class="video"><source src="videos/ph42.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.6 sample -->
+<video id="graph7" class="video"><source src="videos/ph46.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 5.2 sample -->
+<video id="graph8" class="video"><source src="videos/ph52.mp4" type="video/mp4"></video>
+<!-- Transparent image button to close the scanning page  and videos-->
+<img id="disposegraph" src="images/vertical_button.png">
+
+
+
+
+
+
+
+
+
+</body></html>

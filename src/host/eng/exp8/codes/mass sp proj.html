@@ -1,0 +1,56 @@
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+  background-color: Red /*#4CAF50*/; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 20%; /* Set a width if needed */
+  /*margin: 100 10px;/* increase margin*/
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: Pink/*#3e8e41*/;
+}
+</style>
+<body>
+
+
+</script>
+<div class="btn-group">
+  <button id='btn1' type="button" onclick="function1()">Inject Sample</button>&nbsp;&nbsp;&nbsp;
+  <button id='btn2' type="button" onclick="function2()">Ionisation</button>&nbsp;&nbsp;&nbsp;
+  <button id='btn3' type="button" onclick="function3()">Acceleration</button>&nbsp;&nbsp;&nbsp;
+  <button id='btn4' type="button" onclick="function4()">Deflection</button>&nbsp;&nbsp;&nbsp;
+  <button id='btn5' type="button" onclick="function5()">Evaluation</button>
+</div>
+</script>
+
+ <script>
+  function function1() {
+ document.body.style.backgroundColor = 'blue';
+ }
+ function function2() {
+ document.body.style.backgroundColor = 'violet'; 
+ }
+ function function3() {
+ document.body.style.backgroundColor = 'green'; 
+ } 
+function function4() {
+ document.body.style.backgroundColor = 'yellow'; 
+ }
+function function5() {
+ document.body.style.backgroundColor = 'cyan'; 
+ }
+ </script>
+
+</body>
+</html>

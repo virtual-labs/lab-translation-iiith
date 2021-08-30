@@ -1,0 +1,294 @@
+body{
+    width:1080px; 
+    height:740px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+}
+
+h3{  
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#reset_btn{
+    margin: auto;
+    display: block;
+    cursor: default;
+}
+
+#manual_button, #data_button{
+    position:absolute; 
+    left: 30px;
+    cursor: pointer;
+}
+
+#scale_image{
+    position:absolute; 
+    left: 30px;
+}
+
+.modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        -webkit-animation-name: fadeIn; /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: black;
+        color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+    }
+
+    @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+
+#slider{
+    position:absolute; 
+    width:325px; 
+    left: 30px;
+    top:125px;
+}
+
+#apparatus{
+    float:right;
+}
+
+#flask{
+    position:absolute; 
+    z-index:1; 
+    width:11%; 
+    left:13%; 
+    top:18%; 
+}
+
+#micro_pipette{
+    position:absolute;
+    z-index:1; 
+    width:3%; 
+    left:38%; 
+    top:19%;  
+}
+
+#pipette{
+    position:absolute;
+    z-index:1; 
+    width:8%; 
+    left:46%; 
+    top:10%;  
+}
+
+#beaker{
+    position:absolute;
+    z-index:1; 
+    width:10%; 
+    left:58%; 
+    top:28%;  
+}
+
+#cuvette{
+    position:absolute;
+    z-index:2; 
+    width:3%; 
+    left:75%; 
+    top:45%; 
+}
+
+#orange_flask{
+    position:absolute;
+    z-index:1; 
+    width:11%; 
+    left:82%;
+    top:18%;
+}
+
+#table_with_spec{
+    margin:auto;
+    display: block;
+}
+
+#computerimage{
+    position: absolute; 
+    left: 48%; 
+    top: 10%; 
+    max-width: 50%; 
+    max-height: 50%; 
+}
+
+#comp_trans_button{
+    position: absolute; 
+    z-index: 1; 
+    width: 12%;
+    height: 26%; 
+    left: 49%;
+    top: 12%; 
+}
+
+#spectrolid_trans_button{
+    position: absolute; 
+    z-index:1;
+    width: 5%; 
+    height: 18%;
+    left: 35%; 
+    top: 20%;  
+}
+
+#reference{
+    position: absolute; 
+    width: 15%; 
+    left: 54%; 
+    top: -9%; 
+    visibility: hidden;
+}
+
+#ref_cuvette{
+    position: absolute; 
+    z-index: 1; 
+    width: 1.4%;
+    left: 52.35%; 
+    top: -5%; 
+}
+
+#power_trans_button{
+    position: absolute; 
+    z-index:1;
+    left: 18.4%; 
+    top: 45%;
+    width: 1.4%;
+    height: 6%;
+    cursor: pointer;
+}
+
+#demo{
+    position: absolute; 
+    top: 65%; 
+    left: 27%;
+    max-width: 50%; 
+    color: yellow; 
+    height: 80px; 
+    overflow : auto;
+    text-align: left;
+}
+
+#clockScreen{
+   position: absolute;
+   top: 45px;
+   left: -12px;
+   visibility: hidden;
+   z-index: 3;
+   width: 1100px;
+}
+
+#clockHand{
+    position: absolute;
+    top: 289px;
+    left: 50.60%;
+    visibility: hidden;
+    z-index: 4;
+}
+
+#scan{
+    position: absolute;
+    z-index: 6;
+    top: 56px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    visibility:hidden;
+}
+
+.scanimage{
+    position: absolute;
+    z-index: 8;
+    top: 27%;
+    left: 13%;
+    visibility:hidden; 
+}
+
+#scan_btn{
+    position: absolute;
+    z-index: 10;
+    top: 461px;
+    left: 311px;
+    width: 8%;
+    height: 5%;
+}
+
+.video{
+    position: absolute;
+    z-index: 12;
+    top: 27%;
+    left: 13%;
+    visibility: hidden;
+}
+
+#disposegraph{
+    position: absolute;
+    z-index: 14;
+    width: 7%;
+    left: 81%;
+    top: 625px;
+    height: 3%;
+}
+
+
+   

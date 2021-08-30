@@ -1,0 +1,150 @@
+<html>
+
+
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+<head>
+	<script type="text/javascript" src="basic.js">
+		window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+ <script type="text/javascript"> var value=0;</script>
+</head>
+<body>
+<div style="width:80%;height:98%;border:1px solid #000;margin-left:150px;border-width:medium 2px;">
+<div class="split left">
+    <div class="centered">
+     <div class="dropdown">
+  <button    class="dropbtn"  onclick="myFunction()" id="sample"  style="float: center;" >Sample</button>
+   <div id="myDropdown" class="dropdown-content">
+    <button onclick="Benzene()" class="Benzene" style="float: top;" id="benzenebtn">&nbsp &nbsp  Benzene &nbsp&nbsp</button>
+    <button onclick="Acetaldehyde()" class="Acetaldehyde" style="float: center" id="acetaldehydebtn">Acetaldehyde</button>
+    <button onclick="Acetate()" class="Acetate" style="float: right;" id="acetatebtn">Ethyl Acetate</button>
+  </div>
+</div>
+    
+
+    <div class="button2" style="float: center;" onclick="myMove()" >Load</div><br><br> 
+    <div class="button2" onclick="myMove1()"  >Start</div><br><br>
+    <div class="button2" onclick="plot()" > &nbspPlot</div>
+    <div class="arrow" id="arrow1" style="display: none;"></div>
+    <div class="arrow" id="arrowmov" style="display: none;"></div>
+    
+       
+    <div class="tube"  id="myAnimation">
+     <div class="tube__top"></div>
+     <div class="tube__contents" ></div>
+     <div class="tube__outer-glass" id="ttcontent"></div>
+     </div><!--for test tube div-->
+<div class="square" style="float: left;" id="square1" >Frequency Generator</div>
+<div class="square1" style="float: left;" >Frequency Receiver</div>
+   <br><br>
+<div class="tv" style="float: left;">NORTH</div>
+<div class="flask" style="float: left;"> </div>
+<div class="tv" style="float: left;">SOUTH</div>
+<div class="canvas">
+  
+<svg width="250px" height="80px" style="margin-left: 150px;">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+    </marker>
+  </defs>
+  <line x1="50" y1="50" x2="200" y2="50" stroke="#000" stroke-width="5" marker-end="url(#arrow)" id="line1" display="none"/>
+  <text x="100" y="20" id="text1" display="none" >Magnetic Field</text>
+</svg>
+</div><!---for canvas-->
+
+<div class="button3" onclick="evalaute()" id="evaluatebutton" style="display: none;">Evaluate</div>
+</div>
+</div>
+<div style="border-left:2.5px dotted ;margin-left:600px;height:100%;width:0px;">
+</div>
+<div class="split right">
+  <div class="centered" >
+       <div class="rectangle" style="float: left;"> <div class="headingns">NORTH</div> </div>
+
+           <div class="canvas" style="float: center;">
+      	<div class="ball1"><div class="right1" id="ballstop1"></div></div>
+ 		<div class="ball2"><div class="right1" id="ballstop2"></div></div>
+ 	<div class="ball3"><div class="right1" id="ballstop3"></div></div><br><br>
+     <div class="ball4"><div class="right1" id="ballstop4"></div></div>
+ 		<div class="ball5"><div class="right1" id="ballstop5"></div></div>
+ 		<div class="ball6"><div class="right1" id="ballstop6"></div></div><br><br>
+     <div class="ball1"><div class="right1" id="ballstop7"></div></div>
+ 		<div class="ball2"><div class="right1" id="ballstop8"></div></div>
+ 		<div class="ball3"><div class="right1" id="ballstop9"></div></div><br><br>
+    
+   
+    
+  
+   <img id="arrowright"  style="display: none;" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_right_48px-128.png">
+  
+
+ 		<svg width="250px" height="80px" >
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+    </marker>
+  </defs>
+  <line x1="50" y1="50" x2="200" y2="50" stroke="#000" stroke-width="5" marker-end="url(#arrow)" id="line2" display="none"/>
+  <text x="100" y="20" id="text2"  display="none">Magnetic Field</text>
+</svg>
+       </div>
+        <div class="rectangle1" style="float: right;" ><div class="headingns">SOUTH </div></div>
+
+       <div style="border-top:2.5px dotted;width:600px;"></div>
+       
+       
+       <div id="chartContainer" style="height:250px; width: 100%;" ></div>
+
+
+
+<br><br><br>
+
+
+
+
+
+      </div>
+    </div>
+<script type="text/javascript" src="svgmagnetic.js"></script>   
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="charts.js"></script>
+<script type="text/javascript">
+  function evalaute()
+  {
+
+    if(window.value=="1")
+      window.open("../../plot_benzene.html");
+    else if(window.value=="2")
+      window.open("../../plot_acetaldehyde.html");
+    else if(window.value=="3")
+      window.open("../../plot_ethylacetate.html");
+    else
+      alert("select an option");
+    
+
+
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
+
